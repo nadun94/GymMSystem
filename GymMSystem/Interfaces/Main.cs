@@ -27,6 +27,8 @@ namespace GymMSystem
 
         private void panel6_MouseClick(object sender, MouseEventArgs e)
         {
+
+            //window changing
             Interfaces.OtherServices ot = new Interfaces.OtherServices();
 
             this.Hide();
