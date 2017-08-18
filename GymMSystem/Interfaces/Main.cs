@@ -39,5 +39,12 @@ namespace GymMSystem
         {
             
         }
+
+        private void panel3_MouseClick(object sender, MouseEventArgs e)
+        {
+            Interfaces.Members mem = new Interfaces.Members();
+            this.Hide();
+            mem.Show();
+        }
     }
 }
