@@ -145,6 +145,7 @@
             this.Controls.Add(this.panel3);
             this.Name = "Main";
             this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
