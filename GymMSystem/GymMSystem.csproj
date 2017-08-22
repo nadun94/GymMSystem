@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\Softs\Programming\visual studio framwork files\Bunifu_UI_v1.52.dll\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="Metro">
       <HintPath>..\packages\Metro.dll</HintPath>
@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\dashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\dashBoard.Designer.cs">
+      <DependentUpon>dashBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\Main.cs">
       <SubType>Form</SubType>
     </Compile>
