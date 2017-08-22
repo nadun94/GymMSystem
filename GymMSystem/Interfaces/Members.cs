@@ -80,6 +80,7 @@ namespace GymMSystem.Interfaces
             cmbM_gender.SelectedItem = null;
             cmbM_paymentPlan.SelectedItem = null;
             picuturebox_member.Image = null;
+            txtM_fat.Text = "";
             txtM_name.Focus();
 
             
@@ -96,6 +97,21 @@ namespace GymMSystem.Interfaces
         }
 
         private void cmbM_paymentPlan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnM3_check_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnM3_clear_Click(object sender, EventArgs e)
         {
 
         }

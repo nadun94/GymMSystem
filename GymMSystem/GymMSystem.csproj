@@ -84,6 +84,12 @@
     <Compile Include="Interfaces\OtherServices.Designer.cs">
       <DependentUpon>OtherServices.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\setting.Designer.cs">
+      <DependentUpon>setting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Interfaces\Main.resx">
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\OtherServices.resx">
       <DependentUpon>OtherServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\setting.resx">
+      <DependentUpon>setting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

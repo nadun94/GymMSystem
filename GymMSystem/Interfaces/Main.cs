@@ -11,7 +11,7 @@ using MetroFramework.Forms;
 
 namespace GymMSystem
 {
-    public partial class Main : MetroForm
+    public partial class Main : MetroForm   
     {
         public Main()
         {
