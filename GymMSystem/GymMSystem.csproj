@@ -72,6 +72,18 @@
     <Compile Include="Interfaces\dashBoard.Designer.cs">
       <DependentUpon>dashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\Finance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Finance.Designer.cs">
+      <DependentUpon>Finance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Interfaces\Finance.resx">
+      <DependentUpon>Finance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

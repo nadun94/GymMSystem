@@ -46,5 +46,12 @@ namespace GymMSystem
             this.Hide();
             mem.Show();
         }
+
+        private void panel7_MouseClick(object sender, MouseEventArgs e)
+        {
+            Interfaces.Finance fin = new Interfaces.Finance();
+            this.Hide();
+            fin.Show();
+        }
     }
 }
