@@ -67,5 +67,12 @@ namespace GymMSystem
             this.Hide();
             emp.Show();
         }
+
+        private void panel5_MouseClick(object sender, MouseEventArgs e)
+        {
+            Interfaces.salesManagement smg = new Interfaces.salesManagement();
+            this.Hide();
+            smg.Show();
+        }
     }
 }

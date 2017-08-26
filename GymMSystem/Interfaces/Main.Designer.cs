@@ -84,6 +84,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(134, 141);
             this.panel5.TabIndex = 8;
+            this.panel5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseClick);
             // 
             // panel9
             // 

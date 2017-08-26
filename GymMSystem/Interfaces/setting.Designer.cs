@@ -30,6 +30,7 @@
         {
             this.settings = new MetroFramework.Controls.MetroTabControl();
             this.tabUserAccounts = new MetroFramework.Controls.MetroTabPage();
+            this.btnInvHome = new MetroFramework.Controls.MetroTile();
             this.settings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,11 +68,25 @@
             this.tabUserAccounts.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabUserAccounts.VerticalScrollbarBarColor = true;
             // 
+            // btnInvHome
+            // 
+            this.btnInvHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInvHome.Location = new System.Drawing.Point(1299, 63);
+            this.btnInvHome.Name = "btnInvHome";
+            this.btnInvHome.Size = new System.Drawing.Size(134, 44);
+            this.btnInvHome.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.btnInvHome.TabIndex = 45;
+            this.btnInvHome.Text = "Home";
+            this.btnInvHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnInvHome.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnInvHome.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            // 
             // setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1734, 900);
+            this.Controls.Add(this.btnInvHome);
             this.Controls.Add(this.settings);
             this.Name = "setting";
             this.Style = MetroFramework.MetroColorStyle.Magenta;
@@ -86,5 +101,6 @@
 
         private MetroFramework.Controls.MetroTabControl settings;
         private MetroFramework.Controls.MetroTabPage tabUserAccounts;
+        private MetroFramework.Controls.MetroTile btnInvHome;
     }
 }

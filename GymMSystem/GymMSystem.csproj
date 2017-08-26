@@ -51,10 +51,13 @@
       <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -115,17 +118,17 @@
     <Compile Include="Interfaces\OtherServices.Designer.cs">
       <DependentUpon>OtherServices.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\salesManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\salesManagement.Designer.cs">
+      <DependentUpon>salesManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\setting.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaces\setting.Designer.cs">
       <DependentUpon>setting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaces\settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interfaces\settings.Designer.cs">
-      <DependentUpon>settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,11 +153,12 @@
     <EmbeddedResource Include="Interfaces\OtherServices.resx">
       <DependentUpon>OtherServices.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Report1.rdlc" />
+    <EmbeddedResource Include="Interfaces\salesManagement.resx">
+      <DependentUpon>salesManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\setting.resx">
       <DependentUpon>setting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces\settings.resx">
-      <DependentUpon>settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

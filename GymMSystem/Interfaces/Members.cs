@@ -25,6 +25,7 @@ namespace GymMSystem.Interfaces
         private void Members_Load(object sender, EventArgs e)
         {
 
+            this.reportViewer1.RefreshReport();
         }
 
         private void metroTextBox1_Click(object sender, EventArgs e)
