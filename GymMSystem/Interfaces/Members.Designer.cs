@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.msmMember = new MetroFramework.Components.MetroStyleManager(this.components);
             this.mem = new MetroFramework.Controls.MetroTabControl();
             this.memadd = new MetroFramework.Controls.MetroTabPage();
@@ -60,10 +60,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.mem_payemtPending = new MetroFramework.Controls.MetroTabPage();
-            this.btnMem4_clear = new MetroFramework.Controls.MetroTile();
-            this.bntMem4_checkPp = new MetroFramework.Controls.MetroTile();
-            this.dataGridPayementPending = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.memfee = new MetroFramework.Controls.MetroTabPage();
             this.btnM3_clear1 = new MetroFramework.Controls.MetroTile();
             this.btnM2_addfee = new MetroFramework.Controls.MetroTile();
@@ -111,19 +107,23 @@
             this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.tabWorkout = new MetroFramework.Controls.MetroTabPage();
+            this.mem_payemtPending = new MetroFramework.Controls.MetroTabPage();
+            this.btnMem4_clear = new MetroFramework.Controls.MetroTile();
+            this.bntMem4_checkPp = new MetroFramework.Controls.MetroTile();
+            this.dataGridPayementPending = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.openFIleDialog_mem = new System.Windows.Forms.OpenFileDialog();
             this.btnMemHme = new MetroFramework.Controls.MetroTile();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.msmMember)).BeginInit();
             this.mem.SuspendLayout();
             this.memadd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picuturebox_member)).BeginInit();
-            this.mem_payemtPending.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridPayementPending)).BeginInit();
             this.memfee.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.mem_payemtPending.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPayementPending)).BeginInit();
             this.SuspendLayout();
             // 
             // msmMember
@@ -138,10 +138,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mem.Controls.Add(this.memadd);
-            this.mem.Controls.Add(this.tabWorkout);
             this.mem.Controls.Add(this.mem_payemtPending);
             this.mem.Controls.Add(this.memfee);
             this.mem.Controls.Add(this.metroTabPage1);
+            this.mem.Controls.Add(this.metroTabPage2);
             this.mem.FontSize = MetroFramework.MetroTabControlSize.Tall;
             this.mem.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.mem.ItemSize = new System.Drawing.Size(200, 70);
@@ -544,74 +544,6 @@
             this.metroLabel1.Text = "Name";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // mem_payemtPending
-            // 
-            this.mem_payemtPending.Controls.Add(this.btnMem4_clear);
-            this.mem_payemtPending.Controls.Add(this.bntMem4_checkPp);
-            this.mem_payemtPending.Controls.Add(this.dataGridPayementPending);
-            this.mem_payemtPending.HorizontalScrollbarBarColor = true;
-            this.mem_payemtPending.Location = new System.Drawing.Point(4, 74);
-            this.mem_payemtPending.Name = "mem_payemtPending";
-            this.mem_payemtPending.Size = new System.Drawing.Size(1747, 702);
-            this.mem_payemtPending.TabIndex = 3;
-            this.mem_payemtPending.Text = "Payment Pending";
-            this.mem_payemtPending.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.mem_payemtPending.VerticalScrollbarBarColor = true;
-            // 
-            // btnMem4_clear
-            // 
-            this.btnMem4_clear.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnMem4_clear.Location = new System.Drawing.Point(1115, 78);
-            this.btnMem4_clear.Name = "btnMem4_clear";
-            this.btnMem4_clear.Size = new System.Drawing.Size(182, 48);
-            this.btnMem4_clear.Style = MetroFramework.MetroColorStyle.Teal;
-            this.btnMem4_clear.TabIndex = 52;
-            this.btnMem4_clear.Text = "Clear";
-            this.btnMem4_clear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnMem4_clear.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnMem4_clear.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            // 
-            // bntMem4_checkPp
-            // 
-            this.bntMem4_checkPp.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.bntMem4_checkPp.Location = new System.Drawing.Point(835, 78);
-            this.bntMem4_checkPp.Name = "bntMem4_checkPp";
-            this.bntMem4_checkPp.Size = new System.Drawing.Size(182, 44);
-            this.bntMem4_checkPp.Style = MetroFramework.MetroColorStyle.Teal;
-            this.bntMem4_checkPp.TabIndex = 51;
-            this.bntMem4_checkPp.Text = "Check ";
-            this.bntMem4_checkPp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bntMem4_checkPp.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.bntMem4_checkPp.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            // 
-            // dataGridPayementPending
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridPayementPending.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridPayementPending.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridPayementPending.BackgroundColor = System.Drawing.Color.Gray;
-            this.dataGridPayementPending.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridPayementPending.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridPayementPending.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridPayementPending.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPayementPending.DoubleBuffered = true;
-            this.dataGridPayementPending.EnableHeadersVisualStyles = false;
-            this.dataGridPayementPending.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dataGridPayementPending.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dataGridPayementPending.Location = new System.Drawing.Point(15, 187);
-            this.dataGridPayementPending.Name = "dataGridPayementPending";
-            this.dataGridPayementPending.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridPayementPending.RowTemplate.Height = 24;
-            this.dataGridPayementPending.Size = new System.Drawing.Size(1692, 259);
-            this.dataGridPayementPending.TabIndex = 50;
             // 
             // memfee
             // 
@@ -1294,16 +1226,73 @@
             this.metroLabel15.Text = "Name";
             this.metroLabel15.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // tabWorkout
+            // mem_payemtPending
             // 
-            this.tabWorkout.HorizontalScrollbarBarColor = true;
-            this.tabWorkout.Location = new System.Drawing.Point(4, 74);
-            this.tabWorkout.Name = "tabWorkout";
-            this.tabWorkout.Size = new System.Drawing.Size(1747, 702);
-            this.tabWorkout.TabIndex = 4;
-            this.tabWorkout.Text = "Workout Card";
-            this.tabWorkout.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tabWorkout.VerticalScrollbarBarColor = true;
+            this.mem_payemtPending.Controls.Add(this.btnMem4_clear);
+            this.mem_payemtPending.Controls.Add(this.bntMem4_checkPp);
+            this.mem_payemtPending.Controls.Add(this.dataGridPayementPending);
+            this.mem_payemtPending.HorizontalScrollbarBarColor = true;
+            this.mem_payemtPending.Location = new System.Drawing.Point(4, 74);
+            this.mem_payemtPending.Name = "mem_payemtPending";
+            this.mem_payemtPending.Size = new System.Drawing.Size(1747, 702);
+            this.mem_payemtPending.TabIndex = 3;
+            this.mem_payemtPending.Text = "Payment Pending";
+            this.mem_payemtPending.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.mem_payemtPending.VerticalScrollbarBarColor = true;
+            // 
+            // btnMem4_clear
+            // 
+            this.btnMem4_clear.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnMem4_clear.Location = new System.Drawing.Point(1115, 78);
+            this.btnMem4_clear.Name = "btnMem4_clear";
+            this.btnMem4_clear.Size = new System.Drawing.Size(182, 48);
+            this.btnMem4_clear.Style = MetroFramework.MetroColorStyle.Teal;
+            this.btnMem4_clear.TabIndex = 52;
+            this.btnMem4_clear.Text = "Clear";
+            this.btnMem4_clear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMem4_clear.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnMem4_clear.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            // 
+            // bntMem4_checkPp
+            // 
+            this.bntMem4_checkPp.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.bntMem4_checkPp.Location = new System.Drawing.Point(835, 78);
+            this.bntMem4_checkPp.Name = "bntMem4_checkPp";
+            this.bntMem4_checkPp.Size = new System.Drawing.Size(182, 44);
+            this.bntMem4_checkPp.Style = MetroFramework.MetroColorStyle.Teal;
+            this.bntMem4_checkPp.TabIndex = 51;
+            this.bntMem4_checkPp.Text = "Check ";
+            this.bntMem4_checkPp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bntMem4_checkPp.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.bntMem4_checkPp.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            // 
+            // dataGridPayementPending
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridPayementPending.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridPayementPending.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridPayementPending.BackgroundColor = System.Drawing.Color.Gray;
+            this.dataGridPayementPending.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridPayementPending.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridPayementPending.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridPayementPending.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridPayementPending.DoubleBuffered = true;
+            this.dataGridPayementPending.EnableHeadersVisualStyles = false;
+            this.dataGridPayementPending.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dataGridPayementPending.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dataGridPayementPending.Location = new System.Drawing.Point(15, 187);
+            this.dataGridPayementPending.Name = "dataGridPayementPending";
+            this.dataGridPayementPending.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridPayementPending.RowTemplate.Height = 24;
+            this.dataGridPayementPending.Size = new System.Drawing.Size(1692, 259);
+            this.dataGridPayementPending.TabIndex = 50;
             // 
             // openFIleDialog_mem
             // 
@@ -1322,6 +1311,17 @@
             this.btnMemHme.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btnMemHme.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnMemHme.Click += new System.EventHandler(this.btnMemHme_Click);
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 74);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(1747, 702);
+            this.metroTabPage2.TabIndex = 4;
+            this.metroTabPage2.Text = "Workout Card";
+            this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
             // 
             // Members
             // 
@@ -1345,14 +1345,14 @@
             this.memadd.ResumeLayout(false);
             this.memadd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picuturebox_member)).EndInit();
-            this.mem_payemtPending.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridPayementPending)).EndInit();
             this.memfee.ResumeLayout(false);
             this.memfee.PerformLayout();
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.mem_payemtPending.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPayementPending)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1438,6 +1438,6 @@
         private MetroFramework.Controls.MetroTile btnMem4_clear;
         private MetroFramework.Controls.MetroTile bntMem4_checkPp;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridPayementPending;
-        private MetroFramework.Controls.MetroTabPage tabWorkout;
+        private MetroFramework.Controls.MetroTabPage metroTabPage2;
     }
 }
