@@ -47,21 +47,11 @@ namespace GymMSystem
             mem.Show();
         }
 
-        private void panel9_MouseClick(object sender, MouseEventArgs e)
+        private void panel7_MouseClick(object sender, MouseEventArgs e)
         {
-            Interfaces.Inventory inv = new Interfaces.Inventory();
+            Interfaces.Finance fin = new Interfaces.Finance();
             this.Hide();
-            inv.Show();
-        }
-
-        private void Main_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
+            fin.Show();
         }
     }
 }
