@@ -46,5 +46,22 @@ namespace GymMSystem
             this.Hide();
             mem.Show();
         }
+
+        private void panel9_MouseClick(object sender, MouseEventArgs e)
+        {
+            Interfaces.Inventory inv = new Interfaces.Inventory();
+            this.Hide();
+            inv.Show();
+        }
+
+        private void Main_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -94,6 +94,8 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(134, 141);
             this.panel9.TabIndex = 11;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            this.panel9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel9_MouseClick);
             // 
             // panel7
             // 
@@ -147,6 +149,7 @@
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Main_KeyPress);
             this.ResumeLayout(false);
 
         }
