@@ -16,9 +16,206 @@ namespace GymMSystem.Interfaces
         public OtherServices()
         {
             InitializeComponent();
+           
         }
 
         private void OtherServices_Load(object sender, EventArgs e)
+        {
+            radio_hc.Checked = true;
+
+            lbl_monthlyRate.Visible = false;
+            lbl_hr.Refresh();
+            metroLabel1.Visible = false;
+            txtOS1_EndingTime.Visible = false;
+            txtOS1_statingTime.Visible = false;
+            txt_cordinator.Visible = false;
+            cmbOS1_day.Visible = false;
+            metroLabel2.Visible = false;
+            metroLabel3.Visible = false;
+            metroLabel4.Visible = false;
+
+            metroLabel2.Refresh();
+            metroLabel3.Refresh();
+            metroLabel4.Refresh();
+            txt_cordinator.Refresh();
+            txtOS1_statingTime.Refresh();
+            txtOS1_EndingTime.Refresh();
+            cmbOS1_day.Refresh();
+            metroLabel1.Refresh();
+
+
+        }
+
+        private void servicesTabPage_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void radio_hc_CheckedChanged(object sender, EventArgs e)
+        {
+          // radio button initialization
+
+            if (radio_mc.Checked == true)
+            {
+                lbl_monthlyRate.Visible = true;
+                lbl_monthlyRate.Refresh();
+                lbl_hr.Visible = false;
+                lbl_hr.Refresh();
+
+            }
+            else if (radio_hc.Checked == true)
+            {
+                lbl_monthlyRate.Visible = false;
+                lbl_monthlyRate.Refresh();
+                lbl_hr.Visible = true;
+                lbl_hr.Refresh();
+            }
+
+            // check button initialization
+            
+           if( checkOS2Mem.Checked == false)
+            {
+                lblHint1.Visible = false;
+                lblHint2.Visible = false;
+                btnOS2_searchMember.Visible = false;
+
+                lblHint1.Refresh();
+                lblHint2.Refresh();
+                btnOS2_searchMember.Refresh();
+            }
+           else if(checkOS2Mem.Checked == true)
+            {
+
+                lblHint1.Visible = true;
+                lblHint2.Visible = true;
+                btnOS2_searchMember.Visible = true;
+
+                lblHint1.Refresh();
+                lblHint2.Refresh();
+                btnOS2_searchMember.Refresh();
+
+            }
+            
+        }
+
+        private void radio_mc_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (radio_mc.Checked == true)
+            {
+                lbl_monthlyRate.Visible = true;
+                lbl_monthlyRate.Refresh();
+                lbl_hr.Visible = false;
+                lbl_hr.Refresh();
+
+                metroLabel1.Visible = true;
+                txtOS1_EndingTime.Visible = true;
+                txtOS1_statingTime.Visible = true;
+                txt_cordinator.Visible = true;
+                cmbOS1_day.Visible = true;
+                metroLabel2.Visible = true;
+                metroLabel3.Visible = true;
+                metroLabel4.Visible = true;
+
+                metroLabel2.Refresh();
+                metroLabel3.Refresh();
+                metroLabel4.Refresh();
+                txt_cordinator.Refresh();
+                txtOS1_statingTime.Refresh();
+                txtOS1_EndingTime.Refresh();
+                cmbOS1_day.Refresh();
+                metroLabel1.Refresh();
+
+
+            }
+            else if (radio_hc.Checked == true)
+            {
+                lbl_monthlyRate.Visible = false;
+                lbl_monthlyRate.Refresh();
+                lbl_hr.Visible = true;
+                lbl_hr.Refresh();
+
+                metroLabel1.Visible = false;
+                txtOS1_EndingTime.Visible = false;
+                txtOS1_statingTime.Visible = false;
+                txt_cordinator.Visible = false;
+                cmbOS1_day.Visible = false;
+                metroLabel2.Visible = false;
+                metroLabel3.Visible = false;
+                metroLabel4.Visible = false;
+
+                metroLabel2.Refresh();
+                metroLabel3.Refresh();
+                metroLabel4.Refresh();
+                txt_cordinator.Refresh();
+                txtOS1_statingTime.Refresh();
+                txtOS1_EndingTime.Refresh();
+                cmbOS1_day.Refresh();
+                metroLabel1.Refresh();
+
+
+
+
+
+            }
+
+        }
+
+        private void lbl_monthlyRate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOS1_Save_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tab_addMemOS2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOS1_update_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOS2_Save_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOS_home_Click(object sender, EventArgs e)
+        {
+            Main home = new Main();
+            this.Hide();
+            home.Show();
+
+
+
+        }
+
+        private void cmbOS2_serviceType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkOS2Mem_CheckedChanged(object sender, EventArgs e)
+        {
+            //Already a member or not
+
+            lblHint1.Visible = true;
+            lblHint2.Visible = true;
+            btnOS2_searchMember.Visible = true;
+
+            lblHint1.Refresh();
+            lblHint2.Refresh();
+            btnOS2_searchMember.Refresh();
+
+        }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
         {
 
         }
