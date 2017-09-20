@@ -11,23 +11,28 @@ using MetroFramework.Forms;
 
 namespace GymMSystem.Interfaces
 {
-    public partial class dashBoard : MetroForm
+    public partial class workouts : MetroForm
     {
-        public dashBoard()
+        public workouts()
         {
             InitializeComponent();
         }
 
-        private void dashBoard_Load(object sender, EventArgs e)
+        private void workouts_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
+        private void metroTabPage2_Click(object sender, EventArgs e)
         {
-            Main ty = new Main();
+
+        }
+
+        private void btnWorvHome_Click(object sender, EventArgs e)
+        {
+            Main gh = new Main();
             this.Hide();
-            ty.Show();
+            gh.Show();
         }
     }
 }

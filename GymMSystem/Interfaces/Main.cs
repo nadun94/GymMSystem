@@ -74,5 +74,12 @@ namespace GymMSystem
             this.Hide();
             smg.Show();
         }
+
+        private void panel10_MouseClick(object sender, MouseEventArgs e)
+        {
+            Interfaces.dashBoard dbd = new Interfaces.dashBoard();
+            this.Hide();
+            dbd.Show();
+        }
     }
 }

@@ -668,7 +668,7 @@
             this.metroTabPage5.Location = new System.Drawing.Point(4, 74);
             this.metroTabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(1745, 676);
+            this.metroTabPage5.Size = new System.Drawing.Size(1760, 676);
             this.metroTabPage5.TabIndex = 6;
             this.metroTabPage5.Text = "Records";
             this.metroTabPage5.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -834,10 +834,11 @@
             // 
             // mtrtil3splmnt_brows
             // 
+            this.mtrtil3splmnt_brows.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.mtrtil3splmnt_brows.Location = new System.Drawing.Point(708, 310);
             this.mtrtil3splmnt_brows.Margin = new System.Windows.Forms.Padding(4);
             this.mtrtil3splmnt_brows.Name = "mtrtil3splmnt_brows";
-            this.mtrtil3splmnt_brows.Size = new System.Drawing.Size(144, 50);
+            this.mtrtil3splmnt_brows.Size = new System.Drawing.Size(144, 35);
             this.mtrtil3splmnt_brows.Style = MetroFramework.MetroColorStyle.Teal;
             this.mtrtil3splmnt_brows.TabIndex = 7;
             this.mtrtil3splmnt_brows.Text = "Brows";
@@ -847,10 +848,11 @@
             // 
             // mtrtil2splmnt_clear
             // 
-            this.mtrtil2splmnt_clear.Location = new System.Drawing.Point(971, 153);
+            this.mtrtil2splmnt_clear.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.mtrtil2splmnt_clear.Location = new System.Drawing.Point(971, 204);
             this.mtrtil2splmnt_clear.Margin = new System.Windows.Forms.Padding(4);
             this.mtrtil2splmnt_clear.Name = "mtrtil2splmnt_clear";
-            this.mtrtil2splmnt_clear.Size = new System.Drawing.Size(155, 59);
+            this.mtrtil2splmnt_clear.Size = new System.Drawing.Size(140, 58);
             this.mtrtil2splmnt_clear.Style = MetroFramework.MetroColorStyle.Teal;
             this.mtrtil2splmnt_clear.TabIndex = 6;
             this.mtrtil2splmnt_clear.Text = "Clear";
@@ -861,10 +863,11 @@
             // 
             // mtrtil1splmnt_save
             // 
-            this.mtrtil1splmnt_save.Location = new System.Drawing.Point(971, 33);
+            this.mtrtil1splmnt_save.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.mtrtil1splmnt_save.Location = new System.Drawing.Point(971, 89);
             this.mtrtil1splmnt_save.Margin = new System.Windows.Forms.Padding(4);
             this.mtrtil1splmnt_save.Name = "mtrtil1splmnt_save";
-            this.mtrtil1splmnt_save.Size = new System.Drawing.Size(155, 57);
+            this.mtrtil1splmnt_save.Size = new System.Drawing.Size(140, 54);
             this.mtrtil1splmnt_save.Style = MetroFramework.MetroColorStyle.Teal;
             this.mtrtil1splmnt_save.TabIndex = 5;
             this.mtrtil1splmnt_save.Text = "Save";
@@ -875,6 +878,7 @@
             // 
             // picBox1_addproduct
             // 
+            this.picBox1_addproduct.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.picBox1_addproduct.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.picBox1_addproduct.Location = new System.Drawing.Point(670, 62);
             this.picBox1_addproduct.Margin = new System.Windows.Forms.Padding(4);
@@ -885,7 +889,8 @@
             // 
             // txtAddp_discription
             // 
-            this.txtAddp_discription.Location = new System.Drawing.Point(259, 287);
+            this.txtAddp_discription.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAddp_discription.Location = new System.Drawing.Point(259, 374);
             this.txtAddp_discription.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddp_discription.Name = "txtAddp_discription";
             this.txtAddp_discription.Size = new System.Drawing.Size(297, 28);
@@ -894,7 +899,8 @@
             // 
             // txtAddp_price
             // 
-            this.txtAddp_price.Location = new System.Drawing.Point(259, 244);
+            this.txtAddp_price.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAddp_price.Location = new System.Drawing.Point(259, 317);
             this.txtAddp_price.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddp_price.Name = "txtAddp_price";
             this.txtAddp_price.Size = new System.Drawing.Size(297, 28);
@@ -903,7 +909,8 @@
             // 
             // txtAddp_make
             // 
-            this.txtAddp_make.Location = new System.Drawing.Point(259, 197);
+            this.txtAddp_make.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAddp_make.Location = new System.Drawing.Point(259, 257);
             this.txtAddp_make.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddp_make.Name = "txtAddp_make";
             this.txtAddp_make.Size = new System.Drawing.Size(297, 28);
@@ -939,7 +946,8 @@
             // 
             // txtAddp_model
             // 
-            this.txtAddp_model.Location = new System.Drawing.Point(259, 153);
+            this.txtAddp_model.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAddp_model.Location = new System.Drawing.Point(259, 199);
             this.txtAddp_model.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddp_model.Name = "txtAddp_model";
             this.txtAddp_model.Size = new System.Drawing.Size(297, 28);
@@ -948,7 +956,8 @@
             // 
             // txtAddp_ID
             // 
-            this.txtAddp_ID.Location = new System.Drawing.Point(259, 107);
+            this.txtAddp_ID.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAddp_ID.Location = new System.Drawing.Point(259, 139);
             this.txtAddp_ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddp_ID.Name = "txtAddp_ID";
             this.txtAddp_ID.Size = new System.Drawing.Size(297, 28);
@@ -957,7 +966,8 @@
             // 
             // txtAddp_name
             // 
-            this.txtAddp_name.Location = new System.Drawing.Point(259, 62);
+            this.txtAddp_name.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAddp_name.Location = new System.Drawing.Point(259, 89);
             this.txtAddp_name.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddp_name.Name = "txtAddp_name";
             this.txtAddp_name.Size = new System.Drawing.Size(297, 28);
@@ -966,8 +976,9 @@
             // 
             // metroLabel5
             // 
+            this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(56, 249);
+            this.metroLabel5.Location = new System.Drawing.Point(56, 322);
             this.metroLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(40, 20);
@@ -995,8 +1006,9 @@
             // 
             // metroLabel6
             // 
+            this.metroLabel6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(56, 292);
+            this.metroLabel6.Location = new System.Drawing.Point(56, 379);
             this.metroLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(74, 20);
@@ -1015,8 +1027,9 @@
             // 
             // metroLabel4
             // 
+            this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(56, 202);
+            this.metroLabel4.Location = new System.Drawing.Point(56, 262);
             this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(43, 20);
@@ -1026,16 +1039,16 @@
             // 
             // metroTabPage1
             // 
-            this.metroTabPage1.Controls.Add(this.metroTile25);
             this.metroTabPage1.Controls.Add(this.metroTile26);
-            this.metroTabPage1.Controls.Add(this.metroTile27);
             this.metroTabPage1.Controls.Add(this.metroTile28);
             this.metroTabPage1.Controls.Add(this.metroTile29);
             this.metroTabPage1.Controls.Add(this.metroTile30);
             this.metroTabPage1.Controls.Add(this.metroTile31);
+            this.metroTabPage1.Controls.Add(this.metroTile27);
             this.metroTabPage1.Controls.Add(this.metroTile32);
-            this.metroTabPage1.Controls.Add(this.metroTile33);
             this.metroTabPage1.Controls.Add(this.metroTile34);
+            this.metroTabPage1.Controls.Add(this.metroTile25);
+            this.metroTabPage1.Controls.Add(this.metroTile33);
             this.metroTabPage1.Controls.Add(this.metroTile35);
             this.metroTabPage1.Controls.Add(this.metroTile36);
             this.metroTabPage1.Controls.Add(this.metroTile37);
@@ -1338,8 +1351,9 @@
             // 
             // metroLabel3
             // 
+            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(56, 158);
+            this.metroLabel3.Location = new System.Drawing.Point(56, 204);
             this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(48, 20);
@@ -1349,8 +1363,9 @@
             // 
             // metroLabel2
             // 
+            this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(56, 112);
+            this.metroLabel2.Location = new System.Drawing.Point(56, 144);
             this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(74, 20);
@@ -1360,8 +1375,9 @@
             // 
             // metroLabel1
             // 
+            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(56, 66);
+            this.metroLabel1.Location = new System.Drawing.Point(56, 93);
             this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(96, 20);
@@ -1392,7 +1408,7 @@
             this.danceTabPage.Location = new System.Drawing.Point(4, 74);
             this.danceTabPage.Margin = new System.Windows.Forms.Padding(4);
             this.danceTabPage.Name = "danceTabPage";
-            this.danceTabPage.Size = new System.Drawing.Size(1745, 676);
+            this.danceTabPage.Size = new System.Drawing.Size(1760, 676);
             this.danceTabPage.Style = MetroFramework.MetroColorStyle.Teal;
             this.danceTabPage.TabIndex = 0;
             this.danceTabPage.Text = "Add product";
@@ -1406,12 +1422,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.otherServieces.Controls.Add(this.danceTabPage);
+            this.otherServieces.Controls.Add(this.metroTabPage5);
             this.otherServieces.Controls.Add(this.metroTabPage1);
             this.otherServieces.Controls.Add(this.metroTabPage2);
-            this.otherServieces.Controls.Add(this.Beverages);
             this.otherServieces.Controls.Add(this.metroTabPage3);
+            this.otherServieces.Controls.Add(this.Beverages);
             this.otherServieces.Controls.Add(this.metroTabPage4);
-            this.otherServieces.Controls.Add(this.metroTabPage5);
             this.otherServieces.Controls.Add(this.metroTabPage6);
             this.otherServieces.FontSize = MetroFramework.MetroTabControlSize.Tall;
             this.otherServieces.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
@@ -1420,9 +1436,9 @@
             this.otherServieces.Margin = new System.Windows.Forms.Padding(5);
             this.otherServieces.Multiline = true;
             this.otherServieces.Name = "otherServieces";
-            this.otherServieces.SelectedIndex = 6;
+            this.otherServieces.SelectedIndex = 0;
             this.otherServieces.ShowToolTips = true;
-            this.otherServieces.Size = new System.Drawing.Size(1753, 754);
+            this.otherServieces.Size = new System.Drawing.Size(1768, 754);
             this.otherServieces.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.otherServieces.Style = MetroFramework.MetroColorStyle.Teal;
             this.otherServieces.TabIndex = 6;

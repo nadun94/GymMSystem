@@ -219,5 +219,10 @@ namespace GymMSystem.Interfaces
         {
 
         }
+
+        private void metroLabel15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

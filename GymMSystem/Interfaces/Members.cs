@@ -8,6 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using System.IO;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
+
+
 
 
 namespace GymMSystem.Interfaces
@@ -89,7 +95,64 @@ namespace GymMSystem.Interfaces
 
         private void btnM_save_Click(object sender, EventArgs e)
         {
+           
+            try
+            {
+                //initialize image
 
+                MemoryStream memt1p1 = new MemoryStream();
+                picuturebox_member.Image.Save(memt1p1, System.Drawing.Imaging.ImageFormat.Jpeg);
+                byte[] photo_memt1 = memt1p1.ToArray();
+
+                //******************************************
+               
+               
+               
+                // create gymMember object 
+                Buisness_Logic.gymMember t1Addmem = new Buisness_Logic.gymMember();
+
+                //*******************************************
+
+                // set values to gymMember class
+                t1Addmem.name = txtM_name.Text;
+                t1Addmem.dob = dateTimePickerMem.Value.ToShortDateString();
+                t1Addmem.gender = cmbM_gender.SelectedItem.ToString();
+                t1Addmem.phone = int.Parse(txtM_phone.Text);
+                t1Addmem.addresss = txtM_address.Text;
+                t1Addmem.nic = txtM_nic.Text;
+
+                t1Addmem.height = double.Parse(txtM_height.Text);
+                t1Addmem.weight = double.Parse(txtM_weight.Text);
+                t1Addmem.email = txtM_email.Text;
+                t1Addmem.photo = photo_memt1;
+                t1Addmem.paymentPlan = cmbM_paymentPlan.SelectedItem.ToString();
+                t1Addmem.fatLevel = double.Parse(txtM_fat.Text);
+
+                //**********************************************
+
+               
+
+                Buisness_Logic.gymMemberRepository gr = new Buisness_Logic.gymMemberRepository();
+                if (gr.save(t1Addmem))
+                {
+                    MessageBox.Show("Success","Data Insertion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+
+
+
+
+
+
+
+            }
+
+            catch(Exception exm1)
+            {
+                MessageBox.Show(exm1.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
+
+            
         }
 
         private void metroLabel3_Click(object sender, EventArgs e)

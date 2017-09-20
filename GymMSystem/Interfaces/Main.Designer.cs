@@ -37,6 +37,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pan_Exercises = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // panel10
@@ -45,10 +46,11 @@
             this.panel10.BackColor = System.Drawing.Color.Transparent;
             this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel10.Location = new System.Drawing.Point(1026, 261);
+            this.panel10.Location = new System.Drawing.Point(914, 380);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(134, 141);
             this.panel10.TabIndex = 10;
+            this.panel10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel10_MouseClick);
             // 
             // panel8
             // 
@@ -56,7 +58,7 @@
             this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel8.Location = new System.Drawing.Point(787, 380);
+            this.panel8.Location = new System.Drawing.Point(688, 380);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(134, 141);
             this.panel8.TabIndex = 9;
@@ -104,7 +106,7 @@
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel7.Location = new System.Drawing.Point(321, 380);
+            this.panel7.Location = new System.Drawing.Point(222, 380);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(134, 141);
             this.panel7.TabIndex = 5;
@@ -116,7 +118,7 @@
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.Location = new System.Drawing.Point(561, 380);
+            this.panel6.Location = new System.Drawing.Point(462, 380);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(134, 141);
             this.panel6.TabIndex = 6;
@@ -128,11 +130,23 @@
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(91, 261);
+            this.panel3.Location = new System.Drawing.Point(114, 117);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(134, 141);
             this.panel3.TabIndex = 7;
             this.panel3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseClick);
+            // 
+            // pan_Exercises
+            // 
+            this.pan_Exercises.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pan_Exercises.BackColor = System.Drawing.Color.Transparent;
+            this.pan_Exercises.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pan_Exercises.BackgroundImage")));
+            this.pan_Exercises.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pan_Exercises.Location = new System.Drawing.Point(1030, 117);
+            this.pan_Exercises.Name = "pan_Exercises";
+            this.pan_Exercises.Size = new System.Drawing.Size(134, 141);
+            this.pan_Exercises.TabIndex = 8;
+            this.pan_Exercises.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseClick);
             // 
             // Main
             // 
@@ -142,6 +156,7 @@
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pan_Exercises);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel7);
@@ -165,6 +180,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pan_Exercises;
     }
 }
 
