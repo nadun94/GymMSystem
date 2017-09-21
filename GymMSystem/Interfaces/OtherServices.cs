@@ -183,6 +183,15 @@ namespace GymMSystem.Interfaces
 
         private void btnOS2_Save_Click(object sender, EventArgs e)
         {
+            //create areobicmember object
+            Buisness_Logic.AreobicMember am = new Buisness_Logic.AreobicMember();
+
+            am.name = txtOS2_memName.Text;
+            am.dob = dateTime_OS2Mem.Value.ToShortDateString();
+            am.nic = txtOS2_nic.Text;
+            am.phone = int.Parse(txtOS2_phone.Text);
+            am.service_type = cmbOS2_serviceType.SelectedItem.ToString();
+
 
         }
 

@@ -109,44 +109,48 @@ namespace GymMSystem.Interfaces
                
                
                 // create gymMember object 
-                Buisness_Logic.gymMember t1Addmem = new Buisness_Logic.gymMember();
+                Buisness_Logic.gymMember mem = new Buisness_Logic.gymMember();
 
                 //*******************************************
 
                 // set values to gymMember class
-                t1Addmem.name = txtM_name.Text;
-                t1Addmem.dob = dateTimePickerMem.Value.ToShortDateString();
-                t1Addmem.gender = cmbM_gender.SelectedItem.ToString();
-                t1Addmem.phone = int.Parse(txtM_phone.Text);
-                t1Addmem.addresss = txtM_address.Text;
-                t1Addmem.nic = txtM_nic.Text;
+                mem.name = txtM_name.Text;
+                mem.dob = dateTimePickerMem.Value.ToShortDateString();
+                mem.gender = cmbM_gender.SelectedItem.ToString();
+                mem.phone = int.Parse(txtM_phone.Text);
+                mem.addresss = txtM_address.Text;
+                mem.nic = txtM_nic.Text;
 
-                t1Addmem.height = double.Parse(txtM_height.Text);
-                t1Addmem.weight = double.Parse(txtM_weight.Text);
-                t1Addmem.email = txtM_email.Text;
-                t1Addmem.photo = photo_memt1;
-                t1Addmem.paymentPlan = cmbM_paymentPlan.SelectedItem.ToString();
-                t1Addmem.fatLevel = double.Parse(txtM_fat.Text);
+                mem.height = double.Parse(txtM_height.Text);
+                mem.weight = double.Parse(txtM_weight.Text);
+                mem.email = txtM_email.Text;
+                mem.photo = photo_memt1;
+                mem.paymentPlan = cmbM_paymentPlan.SelectedItem.ToString();
+                mem.fatLevel = double.Parse(txtM_fat.Text);
 
                 //**********************************************
+               
 
                
 
+
                 Buisness_Logic.gymMemberRepository gr = new Buisness_Logic.gymMemberRepository();
-                if (gr.save(t1Addmem))
+
+
+                if (gr.save(mem))
                 {
-                    MessageBox.Show("Success","Data Insertion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Success", "Data Insertion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtM_memID.Text = mem.MemberID.ToString();
+                    txtM_bmiratio.Text = mem.BMIratio.ToString();
                 }
-
-
-
 
 
 
 
             }
 
-            catch(Exception exm1)
+            catch (Exception exm1)
             {
                 MessageBox.Show(exm1.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -177,6 +181,22 @@ namespace GymMSystem.Interfaces
 
         private void btnM3_clear_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnM3_Search_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+
+            }
+            catch (Exception expo)
+            {
+
+                throw;
+            }
 
         }
 

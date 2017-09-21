@@ -19,21 +19,24 @@ namespace GymMSystem.Buisness_Logic
             DataLayer.dbConnect newdbcon = new DataLayer.dbConnect();
             newdbcon.openConnection();
 
-            SqlTransaction trans = newdbcon.getConnection().BeginTransaction(IsolationLevel.ReadCommitted);
+         SqlTransaction trans = newdbcon.getConnection().BeginTransaction();
 
             bool status = false ;
             try
             {
                 
               
-
+                
                 SqlCommand cmdt = null;
 
 
                 // query 1
                 string query1 = "INSERT INTO tbl_member (name, dob, address,nic,gender, phone) VALUES (@name,@dob,@address,@nic,@gender,@phone)";
-                //////////
-                cmdt = new SqlCommand(query1, newdbcon.getConnection(),trans);
+               
+                //initialize sqlCommand
+                cmdt = new SqlCommand(query1, newdbcon.getConnection());
+
+                // add values to command using parameters
                 cmdt.Parameters.AddWithValue("@name", mem.name);
                 cmdt.Parameters.AddWithValue("@dob", mem.dob);
                 cmdt.Parameters.AddWithValue("@address", mem.addresss);
@@ -41,36 +44,31 @@ namespace GymMSystem.Buisness_Logic
                 cmdt.Parameters.AddWithValue("@phone", mem.phone);
                 cmdt.Parameters.AddWithValue("@nic", mem.nic);
 
+                cmdt.Transaction = trans;
                 cmdt.ExecuteNonQuery();
-                trans.Commit();
-                cmdt.Dispose();
+               
 
 
 
-                //newdbcon.addParameters("@name", mem.name);
-                //newdbcon.addParameters("@dob", mem.dob);
-                //newdbcon.addParameters("@address", mem.addresss);
-                //newdbcon.addParameters("@gender", mem.gender);
-                //newdbcon.addParameters("@phone", mem.phone);
-                //newdbcon.addParameters("@nic", mem.nic);
-                //newdbcon.ExecuteQueries(query1);
-
-                string query2 = "SELECT regNo from tbl_member where name=@memName";
+                string query2 = "SELECT regNo from tbl_member where name=@memName and nic=@nic";
                 SqlCommand cmdt1 = new SqlCommand(query2, newdbcon.getConnection());
                 
                 
                 
-                //newdbcon.addParameters("@memName", mem.name);
+              
                 cmdt1.Parameters.AddWithValue("@memName", mem.name);
+                cmdt1.Parameters.AddWithValue("@nic", mem.nic);
+                cmdt1.Transaction = trans;
                 SqlDataReader dr = cmdt1.ExecuteReader();
 
-                //var dr = newdbcon.dataReader(query2);
+             
 
                 while (dr.Read())
                 {
                     mem.MemberID = (int)dr["regNo"];
                 }
 
+                dr.Close();
                 string query3 = "INSERT INTO tbl_gymMember values (@regno,@email,@joinedDate,@bmi,@height,@weight,@payplan,@photo,@fatLevel)";
                 SqlCommand cmdt2 = new SqlCommand(query3, newdbcon.getConnection());
 
@@ -85,33 +83,22 @@ namespace GymMSystem.Buisness_Logic
                 cmdt2.Parameters.AddWithValue("@payplan", mem.paymentPlan);
                 cmdt2.Parameters.AddWithValue("@photo", mem.photo);
                 cmdt2.Parameters.AddWithValue("@fatLevel", mem.fatLevel);
+                cmdt2.Transaction = trans;
                 cmdt2.ExecuteNonQuery();
-                //trans.Commit();
-                //cmdt.Dispose();
-
-                //newdbcon.addParameters("@regno", mem.MemberID);
-                // newdbcon.addParameters("@email", mem.email);
-                // newdbcon.addParameters("@joinedDate", mem.joinedDate);
-                //newdbcon.addParameters("@bmi", mem.BMIratio);
-                //newdbcon.addParameters("@height", mem.height);
-                //newdbcon.addParameters("@weight", mem.weight);
-                //newdbcon.addParameters("@payplan", mem.paymentPlan);
-                //newdbcon.addParameters("@photo", mem.photo);
-                //newdbcon.addParameters("@fatLevel", mem.fatLevel);
-
-                //newdbcon.ExecuteQueries(query3);
-
-
+                trans.Commit();
 
                 status = true;
+               
+
+
+
 
             }
 
             catch(Exception ep)
             {
-                trans.Rollback();
-                Console.WriteLine(ep.Message);
-                Console.ReadLine();
+             trans.Rollback();
+              
             }
 
 

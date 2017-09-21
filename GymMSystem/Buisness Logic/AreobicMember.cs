@@ -8,5 +8,22 @@ namespace GymMSystem.Buisness_Logic
 {
     class AreobicMember : member
     {
+        private string stype;
+
+        public string service_type
+        {
+            get
+            {
+                return stype;
+            }
+            set
+            {
+                stype = value;
+            }
+        }
+
+       
+
+
     }
 }

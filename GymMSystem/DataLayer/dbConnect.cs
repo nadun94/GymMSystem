@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data;
+    
 
 namespace GymMSystem.DataLayer
 {
@@ -30,22 +31,15 @@ namespace GymMSystem.DataLayer
         {
             return con;
         }
-        public SqlCommand getCommand (){
-            return cmd;
-        }
         public void closeConnection()
         {
             con.Close();
         }
-        public void addParameters(string parameter, object objValue)
-        {
-            cmd.Parameters.AddWithValue(parameter, objValue);
-        }
-        public void clearParameters()
-        {
-            cmd.Parameters.Clear();
-        }
 
+        public void addSqlParameter(string key, object valor)
+        {
+            this.cmd.Parameters.AddWithValue(key, valor);
+        }
         public void ExecuteQueries(string query)
         {
              cmd = new SqlCommand(query, con);
@@ -59,7 +53,8 @@ namespace GymMSystem.DataLayer
 
         public SqlDataReader dataReader(string query)
         {
-            SqlCommand cmd = new SqlCommand(query, con);
+              //  cmd = new SqlCommand(query, con);
+            this.cmd.CommandText = query;
             SqlDataReader dr = cmd.ExecuteReader();
 
             return dr;

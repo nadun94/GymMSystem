@@ -27,7 +27,7 @@ namespace GymMSystem.Buisness_Logic
                 return BMI_ratio;
 
             }
-            set
+           private set
             {
                 //if (!string.IsNullOrWhiteSpace(height.ToString()) && string.IsNullOrWhiteSpace(weight.ToString()))
                 
@@ -58,10 +58,13 @@ namespace GymMSystem.Buisness_Logic
 
     }
 
-
-
-
-
-
     
+
+
+
+
+
+
+
+
 }
