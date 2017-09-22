@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.msmMember = new MetroFramework.Components.MetroStyleManager(this.components);
             this.mem = new MetroFramework.Controls.MetroTabControl();
             this.memadd = new MetroFramework.Controls.MetroTabPage();
@@ -98,7 +98,7 @@
             this.txtM3_name = new MetroFramework.Controls.MetroTextBox();
             this.btnM3_clear = new MetroFramework.Controls.MetroTile();
             this.btnM3_browse = new MetroFramework.Controls.MetroTile();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxM3 = new System.Windows.Forms.PictureBox();
             this.Datepickerm3 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.cmbM3_paymentpaln = new MetroFramework.Controls.MetroComboBox();
             this.cmbM3_gender = new MetroFramework.Controls.MetroComboBox();
@@ -114,7 +114,6 @@
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.mem_payemtPending = new MetroFramework.Controls.MetroTabPage();
             this.btnMem4_clear = new MetroFramework.Controls.MetroTile();
             this.bntMem4_checkPp = new MetroFramework.Controls.MetroTile();
@@ -128,8 +127,7 @@
             this.memfee.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.metroTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3)).BeginInit();
             this.mem_payemtPending.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPayementPending)).BeginInit();
             this.SuspendLayout();
@@ -146,8 +144,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mem.Controls.Add(this.memadd);
-            this.mem.Controls.Add(this.memfee);
             this.mem.Controls.Add(this.metroTabPage1);
+            this.mem.Controls.Add(this.memfee);
             this.mem.Controls.Add(this.metroTabPage2);
             this.mem.Controls.Add(this.mem_payemtPending);
             this.mem.FontSize = MetroFramework.MetroTabControlSize.Tall;
@@ -157,7 +155,7 @@
             this.mem.Margin = new System.Windows.Forms.Padding(4, 12, 4, 4);
             this.mem.Multiline = true;
             this.mem.Name = "mem";
-            this.mem.SelectedIndex = 2;
+            this.mem.SelectedIndex = 3;
             this.mem.ShowToolTips = true;
             this.mem.Size = new System.Drawing.Size(1359, 702);
             this.mem.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -947,7 +945,7 @@
             this.metroTabPage1.Controls.Add(this.txtM3_name);
             this.metroTabPage1.Controls.Add(this.btnM3_clear);
             this.metroTabPage1.Controls.Add(this.btnM3_browse);
-            this.metroTabPage1.Controls.Add(this.pictureBox1);
+            this.metroTabPage1.Controls.Add(this.pictureBoxM3);
             this.metroTabPage1.Controls.Add(this.Datepickerm3);
             this.metroTabPage1.Controls.Add(this.cmbM3_paymentpaln);
             this.metroTabPage1.Controls.Add(this.cmbM3_gender);
@@ -977,20 +975,20 @@
             // 
             // dataGridMem3
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridMem3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridMem3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridMem3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridMem3.BackgroundColor = System.Drawing.Color.Gray;
             this.dataGridMem3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridMem3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridMem3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridMem3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridMem3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridMem3.DoubleBuffered = true;
             this.dataGridMem3.EnableHeadersVisualStyles = false;
@@ -1168,16 +1166,16 @@
             this.btnM3_browse.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btnM3_browse.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             // 
-            // pictureBox1
+            // pictureBoxM3
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.pictureBox1.Location = new System.Drawing.Point(975, 98);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 167);
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxM3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBoxM3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
+            this.pictureBoxM3.Location = new System.Drawing.Point(975, 98);
+            this.pictureBoxM3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxM3.Name = "pictureBoxM3";
+            this.pictureBoxM3.Size = new System.Drawing.Size(146, 167);
+            this.pictureBoxM3.TabIndex = 37;
+            this.pictureBoxM3.TabStop = false;
             // 
             // Datepickerm3
             // 
@@ -1400,7 +1398,6 @@
             // 
             // metroTabPage2
             // 
-            this.metroTabPage2.Controls.Add(this.reportViewer1);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarSize = 8;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 74);
@@ -1412,14 +1409,6 @@
             this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarSize = 8;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Location = new System.Drawing.Point(2, 19);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1221, 342);
-            this.reportViewer1.TabIndex = 2;
             // 
             // mem_payemtPending
             // 
@@ -1468,20 +1457,20 @@
             // 
             // dataGridPayementPending
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridPayementPending.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridPayementPending.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridPayementPending.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridPayementPending.BackgroundColor = System.Drawing.Color.Gray;
             this.dataGridPayementPending.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridPayementPending.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridPayementPending.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridPayementPending.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridPayementPending.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridPayementPending.DoubleBuffered = true;
             this.dataGridPayementPending.EnableHeadersVisualStyles = false;
@@ -1542,8 +1531,7 @@
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.metroTabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3)).EndInit();
             this.mem_payemtPending.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPayementPending)).EndInit();
             this.ResumeLayout(false);
@@ -1601,7 +1589,7 @@
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTile btnM3_clear;
         private MetroFramework.Controls.MetroTile btnM3_browse;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxM3;
         private Bunifu.Framework.UI.BunifuDatepicker Datepickerm3;
         private MetroFramework.Controls.MetroComboBox cmbM3_paymentpaln;
         private MetroFramework.Controls.MetroComboBox cmbM3_gender;
@@ -1632,7 +1620,6 @@
         private MetroFramework.Controls.MetroTile bntMem4_checkPp;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridPayementPending;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private MetroFramework.Controls.MetroTextBox txtM_address;
         private MetroFramework.Controls.MetroLabel metroLabel26;
         private MetroFramework.Controls.MetroTextBox txtM_email;

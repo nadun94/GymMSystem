@@ -133,11 +133,12 @@
             this.dataGrid1_ibunni.EnableHeadersVisualStyles = false;
             this.dataGrid1_ibunni.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.dataGrid1_ibunni.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dataGrid1_ibunni.Location = new System.Drawing.Point(233, 354);
+            this.dataGrid1_ibunni.Location = new System.Drawing.Point(175, 288);
+            this.dataGrid1_ibunni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGrid1_ibunni.Name = "dataGrid1_ibunni";
             this.dataGrid1_ibunni.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGrid1_ibunni.RowTemplate.Height = 24;
-            this.dataGrid1_ibunni.Size = new System.Drawing.Size(986, 245);
+            this.dataGrid1_ibunni.Size = new System.Drawing.Size(740, 199);
             this.dataGrid1_ibunni.TabIndex = 9;
             // 
             // txtI1_itotal
@@ -146,9 +147,10 @@
             this.txtI1_itotal.CustomForeColor = true;
             this.txtI1_itotal.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_itotal.ForeColor = System.Drawing.Color.White;
-            this.txtI1_itotal.Location = new System.Drawing.Point(816, 234);
+            this.txtI1_itotal.Location = new System.Drawing.Point(612, 190);
+            this.txtI1_itotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_itotal.Name = "txtI1_itotal";
-            this.txtI1_itotal.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_itotal.Size = new System.Drawing.Size(192, 23);
             this.txtI1_itotal.TabIndex = 6;
             this.txtI1_itotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtI1_itotal.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -156,9 +158,10 @@
             // btnsave_i7
             // 
             this.btnsave_i7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnsave_i7.Location = new System.Drawing.Point(1262, 245);
+            this.btnsave_i7.Location = new System.Drawing.Point(946, 199);
+            this.btnsave_i7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnsave_i7.Name = "btnsave_i7";
-            this.btnsave_i7.Size = new System.Drawing.Size(103, 38);
+            this.btnsave_i7.Size = new System.Drawing.Size(77, 31);
             this.btnsave_i7.Style = MetroFramework.MetroColorStyle.Teal;
             this.btnsave_i7.TabIndex = 10;
             this.btnsave_i7.Text = "Save";
@@ -169,9 +172,10 @@
             // btnupdate_i6
             // 
             this.btnupdate_i6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnupdate_i6.Location = new System.Drawing.Point(1262, 163);
+            this.btnupdate_i6.Location = new System.Drawing.Point(946, 132);
+            this.btnupdate_i6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnupdate_i6.Name = "btnupdate_i6";
-            this.btnupdate_i6.Size = new System.Drawing.Size(103, 38);
+            this.btnupdate_i6.Size = new System.Drawing.Size(77, 31);
             this.btnupdate_i6.Style = MetroFramework.MetroColorStyle.Teal;
             this.btnupdate_i6.TabIndex = 9;
             this.btnupdate_i6.Text = "Update";
@@ -182,9 +186,10 @@
             // btnsearch_i5
             // 
             this.btnsearch_i5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnsearch_i5.Location = new System.Drawing.Point(1262, 70);
+            this.btnsearch_i5.Location = new System.Drawing.Point(946, 57);
+            this.btnsearch_i5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnsearch_i5.Name = "btnsearch_i5";
-            this.btnsearch_i5.Size = new System.Drawing.Size(103, 38);
+            this.btnsearch_i5.Size = new System.Drawing.Size(77, 31);
             this.btnsearch_i5.Style = MetroFramework.MetroColorStyle.Teal;
             this.btnsearch_i5.TabIndex = 8;
             this.btnsearch_i5.Text = "Search";
@@ -199,9 +204,10 @@
             this.txtI1_icod.CustomForeColor = true;
             this.txtI1_icod.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_icod.ForeColor = System.Drawing.Color.White;
-            this.txtI1_icod.Location = new System.Drawing.Point(920, 90);
+            this.txtI1_icod.Location = new System.Drawing.Point(690, 73);
+            this.txtI1_icod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_icod.Name = "txtI1_icod";
-            this.txtI1_icod.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_icod.Size = new System.Drawing.Size(192, 23);
             this.txtI1_icod.TabIndex = 7;
             this.txtI1_icod.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -211,9 +217,10 @@
             this.metroLabel12.AutoSize = true;
             this.metroLabel12.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel12.Location = new System.Drawing.Point(682, 93);
+            this.metroLabel12.Location = new System.Drawing.Point(512, 76);
+            this.metroLabel12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(131, 25);
+            this.metroLabel12.Size = new System.Drawing.Size(122, 25);
             this.metroLabel12.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel12.TabIndex = 6;
             this.metroLabel12.Text = "Machine code";
@@ -225,9 +232,10 @@
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel10.Location = new System.Drawing.Point(614, 234);
+            this.metroLabel10.Location = new System.Drawing.Point(460, 190);
+            this.metroLabel10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(52, 25);
+            this.metroLabel10.Size = new System.Drawing.Size(49, 25);
             this.metroLabel10.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel10.TabIndex = 5;
             this.metroLabel10.Text = "Total";
@@ -241,9 +249,10 @@
             this.metroTextBox8.CustomForeColor = true;
             this.metroTextBox8.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox8.ForeColor = System.Drawing.Color.White;
-            this.metroTextBox8.Location = new System.Drawing.Point(920, 206);
+            this.metroTextBox8.Location = new System.Drawing.Point(690, 167);
+            this.metroTextBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroTextBox8.Name = "metroTextBox8";
-            this.metroTextBox8.Size = new System.Drawing.Size(256, 28);
+            this.metroTextBox8.Size = new System.Drawing.Size(192, 23);
             this.metroTextBox8.TabIndex = 7;
             this.metroTextBox8.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -254,9 +263,10 @@
             this.txtI1_istart.CustomForeColor = true;
             this.txtI1_istart.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_istart.ForeColor = System.Drawing.Color.White;
-            this.txtI1_istart.Location = new System.Drawing.Point(920, 151);
+            this.txtI1_istart.Location = new System.Drawing.Point(690, 123);
+            this.txtI1_istart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_istart.Name = "txtI1_istart";
-            this.txtI1_istart.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_istart.Size = new System.Drawing.Size(192, 23);
             this.txtI1_istart.TabIndex = 7;
             this.txtI1_istart.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -267,9 +277,10 @@
             this.txtI1_icost.CustomForeColor = true;
             this.txtI1_icost.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_icost.ForeColor = System.Drawing.Color.White;
-            this.txtI1_icost.Location = new System.Drawing.Point(280, 265);
+            this.txtI1_icost.Location = new System.Drawing.Point(210, 215);
+            this.txtI1_icost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_icost.Name = "txtI1_icost";
-            this.txtI1_icost.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_icost.Size = new System.Drawing.Size(192, 23);
             this.txtI1_icost.TabIndex = 7;
             this.txtI1_icost.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -280,9 +291,10 @@
             this.txtI1_istatus.CustomForeColor = true;
             this.txtI1_istatus.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_istatus.ForeColor = System.Drawing.Color.White;
-            this.txtI1_istatus.Location = new System.Drawing.Point(280, 206);
+            this.txtI1_istatus.Location = new System.Drawing.Point(210, 167);
+            this.txtI1_istatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_istatus.Name = "txtI1_istatus";
-            this.txtI1_istatus.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_istatus.Size = new System.Drawing.Size(192, 23);
             this.txtI1_istatus.TabIndex = 7;
             this.txtI1_istatus.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -292,9 +304,10 @@
             this.metroLabel20.AutoSize = true;
             this.metroLabel20.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel20.Location = new System.Drawing.Point(682, 146);
+            this.metroLabel20.Location = new System.Drawing.Point(512, 119);
+            this.metroLabel20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(92, 25);
+            this.metroLabel20.Size = new System.Drawing.Size(88, 25);
             this.metroLabel20.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel20.TabIndex = 6;
             this.metroLabel20.Text = "Start date";
@@ -303,9 +316,10 @@
             // 
             // btncle_i5
             // 
-            this.btncle_i5.Location = new System.Drawing.Point(1232, 217);
+            this.btncle_i5.Location = new System.Drawing.Point(924, 176);
+            this.btncle_i5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btncle_i5.Name = "btncle_i5";
-            this.btncle_i5.Size = new System.Drawing.Size(154, 38);
+            this.btncle_i5.Size = new System.Drawing.Size(116, 31);
             this.btncle_i5.Style = MetroFramework.MetroColorStyle.Teal;
             this.btncle_i5.TabIndex = 8;
             this.btncle_i5.Text = "Clear";
@@ -315,9 +329,10 @@
             // 
             // btnsearch_i4
             // 
-            this.btnsearch_i4.Location = new System.Drawing.Point(1232, 125);
+            this.btnsearch_i4.Location = new System.Drawing.Point(924, 102);
+            this.btnsearch_i4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnsearch_i4.Name = "btnsearch_i4";
-            this.btnsearch_i4.Size = new System.Drawing.Size(154, 38);
+            this.btnsearch_i4.Size = new System.Drawing.Size(116, 31);
             this.btnsearch_i4.Style = MetroFramework.MetroColorStyle.Teal;
             this.btnsearch_i4.TabIndex = 8;
             this.btnsearch_i4.Text = "Search Product";
@@ -332,9 +347,10 @@
             this.txtI1_idescription.CustomForeColor = true;
             this.txtI1_idescription.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_idescription.ForeColor = System.Drawing.Color.White;
-            this.txtI1_idescription.Location = new System.Drawing.Point(920, 277);
+            this.txtI1_idescription.Location = new System.Drawing.Point(690, 225);
+            this.txtI1_idescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_idescription.Name = "txtI1_idescription";
-            this.txtI1_idescription.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_idescription.Size = new System.Drawing.Size(192, 23);
             this.txtI1_idescription.TabIndex = 7;
             this.txtI1_idescription.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -356,16 +372,13 @@
             this.txtI1_iorders.Controls.Add(this.txtI1_iproduct);
             this.txtI1_iorders.Controls.Add(this.metroLabel5);
             this.txtI1_iorders.HorizontalScrollbarBarColor = true;
-            this.txtI1_iorders.HorizontalScrollbarSize = 12;
             this.txtI1_iorders.Location = new System.Drawing.Point(4, 74);
-            this.txtI1_iorders.Margin = new System.Windows.Forms.Padding(4);
             this.txtI1_iorders.Name = "txtI1_iorders";
-            this.txtI1_iorders.Size = new System.Drawing.Size(1444, 605);
+            this.txtI1_iorders.Size = new System.Drawing.Size(1081, 477);
             this.txtI1_iorders.TabIndex = 1;
             this.txtI1_iorders.Text = "Orders";
             this.txtI1_iorders.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtI1_iorders.VerticalScrollbarBarColor = true;
-            this.txtI1_iorders.VerticalScrollbarSize = 13;
             // 
             // txtI1_isub
             // 
@@ -373,9 +386,10 @@
             this.txtI1_isub.CustomForeColor = true;
             this.txtI1_isub.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_isub.ForeColor = System.Drawing.Color.White;
-            this.txtI1_isub.Location = new System.Drawing.Point(816, 177);
+            this.txtI1_isub.Location = new System.Drawing.Point(612, 144);
+            this.txtI1_isub.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_isub.Name = "txtI1_isub";
-            this.txtI1_isub.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_isub.Size = new System.Drawing.Size(192, 23);
             this.txtI1_isub.TabIndex = 6;
             this.txtI1_isub.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtI1_isub.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -385,9 +399,10 @@
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel9.Location = new System.Drawing.Point(612, 177);
+            this.metroLabel9.Location = new System.Drawing.Point(459, 144);
+            this.metroLabel9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(87, 25);
+            this.metroLabel9.Size = new System.Drawing.Size(84, 25);
             this.metroLabel9.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel9.TabIndex = 5;
             this.metroLabel9.Text = "Sub total";
@@ -400,9 +415,10 @@
             this.txtI1_iquantity.CustomForeColor = true;
             this.txtI1_iquantity.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_iquantity.ForeColor = System.Drawing.Color.White;
-            this.txtI1_iquantity.Location = new System.Drawing.Point(816, 122);
+            this.txtI1_iquantity.Location = new System.Drawing.Point(612, 99);
+            this.txtI1_iquantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_iquantity.Name = "txtI1_iquantity";
-            this.txtI1_iquantity.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_iquantity.Size = new System.Drawing.Size(192, 23);
             this.txtI1_iquantity.TabIndex = 6;
             this.txtI1_iquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtI1_iquantity.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -412,9 +428,10 @@
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel8.Location = new System.Drawing.Point(612, 125);
+            this.metroLabel8.Location = new System.Drawing.Point(459, 102);
+            this.metroLabel8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(84, 25);
+            this.metroLabel8.Size = new System.Drawing.Size(80, 25);
             this.metroLabel8.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel8.TabIndex = 5;
             this.metroLabel8.Text = "Quantity";
@@ -427,9 +444,10 @@
             this.txtI1_ipri.CustomForeColor = true;
             this.txtI1_ipri.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_ipri.ForeColor = System.Drawing.Color.White;
-            this.txtI1_ipri.Location = new System.Drawing.Point(273, 234);
+            this.txtI1_ipri.Location = new System.Drawing.Point(205, 190);
+            this.txtI1_ipri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_ipri.Name = "txtI1_ipri";
-            this.txtI1_ipri.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_ipri.Size = new System.Drawing.Size(192, 23);
             this.txtI1_ipri.TabIndex = 6;
             this.txtI1_ipri.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtI1_ipri.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -439,9 +457,10 @@
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.Location = new System.Drawing.Point(69, 237);
+            this.metroLabel7.Location = new System.Drawing.Point(52, 193);
+            this.metroLabel7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(54, 25);
+            this.metroLabel7.Size = new System.Drawing.Size(49, 25);
             this.metroLabel7.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel7.TabIndex = 5;
             this.metroLabel7.Text = "Price";
@@ -454,9 +473,10 @@
             this.txtI1_iid.CustomForeColor = true;
             this.txtI1_iid.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_iid.ForeColor = System.Drawing.Color.White;
-            this.txtI1_iid.Location = new System.Drawing.Point(273, 177);
+            this.txtI1_iid.Location = new System.Drawing.Point(205, 144);
+            this.txtI1_iid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_iid.Name = "txtI1_iid";
-            this.txtI1_iid.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_iid.Size = new System.Drawing.Size(192, 23);
             this.txtI1_iid.TabIndex = 6;
             this.txtI1_iid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtI1_iid.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -466,9 +486,10 @@
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel6.Location = new System.Drawing.Point(69, 180);
+            this.metroLabel6.Location = new System.Drawing.Point(52, 146);
+            this.metroLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(101, 25);
+            this.metroLabel6.Size = new System.Drawing.Size(97, 25);
             this.metroLabel6.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel6.TabIndex = 5;
             this.metroLabel6.Text = "Product ID";
@@ -481,9 +502,10 @@
             this.txtI1_iproduct.CustomForeColor = true;
             this.txtI1_iproduct.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_iproduct.ForeColor = System.Drawing.Color.White;
-            this.txtI1_iproduct.Location = new System.Drawing.Point(273, 119);
+            this.txtI1_iproduct.Location = new System.Drawing.Point(205, 97);
+            this.txtI1_iproduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_iproduct.Name = "txtI1_iproduct";
-            this.txtI1_iproduct.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_iproduct.Size = new System.Drawing.Size(192, 23);
             this.txtI1_iproduct.TabIndex = 6;
             this.txtI1_iproduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtI1_iproduct.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -493,9 +515,10 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.Location = new System.Drawing.Point(69, 119);
+            this.metroLabel5.Location = new System.Drawing.Point(52, 97);
+            this.metroLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(133, 25);
+            this.metroLabel5.Size = new System.Drawing.Size(126, 25);
             this.metroLabel5.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel5.TabIndex = 5;
             this.metroLabel5.Text = "Product Name";
@@ -510,19 +533,23 @@
             this.txtI1_iother.Controls.Add(this.metroLabel15);
             this.txtI1_iother.Controls.Add(this.metroComboBox1);
             this.txtI1_iother.HorizontalScrollbarBarColor = true;
+            this.txtI1_iother.HorizontalScrollbarSize = 8;
             this.txtI1_iother.Location = new System.Drawing.Point(4, 74);
+            this.txtI1_iother.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_iother.Name = "txtI1_iother";
-            this.txtI1_iother.Size = new System.Drawing.Size(1444, 605);
+            this.txtI1_iother.Size = new System.Drawing.Size(1081, 477);
             this.txtI1_iother.TabIndex = 3;
             this.txtI1_iother.Text = "Other Branches";
             this.txtI1_iother.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtI1_iother.VerticalScrollbarBarColor = true;
+            this.txtI1_iother.VerticalScrollbarSize = 8;
             // 
             // btnclea_i7
             // 
-            this.btnclea_i7.Location = new System.Drawing.Point(1259, 426);
+            this.btnclea_i7.Location = new System.Drawing.Point(944, 346);
+            this.btnclea_i7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnclea_i7.Name = "btnclea_i7";
-            this.btnclea_i7.Size = new System.Drawing.Size(83, 38);
+            this.btnclea_i7.Size = new System.Drawing.Size(62, 31);
             this.btnclea_i7.Style = MetroFramework.MetroColorStyle.Teal;
             this.btnclea_i7.TabIndex = 11;
             this.btnclea_i7.Text = "clear";
@@ -533,9 +560,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.pictureBox1.Location = new System.Drawing.Point(1190, 126);
+            this.pictureBox1.Location = new System.Drawing.Point(892, 102);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 248);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 202);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -559,11 +587,12 @@
             this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(22, 239);
+            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(16, 194);
+            this.bunifuCustomDataGrid1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.bunifuCustomDataGrid1.RowTemplate.Height = 24;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(1038, 384);
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(778, 312);
             this.bunifuCustomDataGrid1.TabIndex = 8;
             // 
             // metroLabel15
@@ -571,9 +600,10 @@
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel15.Location = new System.Drawing.Point(90, 94);
+            this.metroLabel15.Location = new System.Drawing.Point(68, 76);
+            this.metroLabel15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(151, 25);
+            this.metroLabel15.Size = new System.Drawing.Size(140, 25);
             this.metroLabel15.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel15.TabIndex = 7;
             this.metroLabel15.Text = "Search branches";
@@ -588,21 +618,25 @@
             "Kaduwela",
             "Maharagama",
             "Nugegoda"});
-            this.metroComboBox1.Location = new System.Drawing.Point(284, 89);
+            this.metroComboBox1.Location = new System.Drawing.Point(213, 72);
+            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(254, 30);
+            this.metroComboBox1.Size = new System.Drawing.Size(192, 30);
             this.metroComboBox1.TabIndex = 2;
             // 
             // txtI1_isupp
             // 
             this.txtI1_isupp.HorizontalScrollbarBarColor = true;
+            this.txtI1_isupp.HorizontalScrollbarSize = 8;
             this.txtI1_isupp.Location = new System.Drawing.Point(4, 74);
+            this.txtI1_isupp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_isupp.Name = "txtI1_isupp";
-            this.txtI1_isupp.Size = new System.Drawing.Size(1444, 605);
+            this.txtI1_isupp.Size = new System.Drawing.Size(1081, 477);
             this.txtI1_isupp.TabIndex = 4;
             this.txtI1_isupp.Text = "Suppliers";
             this.txtI1_isupp.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtI1_isupp.VerticalScrollbarBarColor = true;
+            this.txtI1_isupp.VerticalScrollbarSize = 8;
             // 
             // txtI1_irepair
             // 
@@ -611,9 +645,10 @@
             this.txtI1_irepair.CustomForeColor = true;
             this.txtI1_irepair.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_irepair.ForeColor = System.Drawing.Color.White;
-            this.txtI1_irepair.Location = new System.Drawing.Point(280, 149);
+            this.txtI1_irepair.Location = new System.Drawing.Point(210, 121);
+            this.txtI1_irepair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_irepair.Name = "txtI1_irepair";
-            this.txtI1_irepair.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_irepair.Size = new System.Drawing.Size(192, 23);
             this.txtI1_irepair.TabIndex = 7;
             this.txtI1_irepair.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -630,13 +665,13 @@
             this.txtI1_isuppliers.FontSize = MetroFramework.MetroTabControlSize.Tall;
             this.txtI1_isuppliers.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.txtI1_isuppliers.ItemSize = new System.Drawing.Size(200, 70);
-            this.txtI1_isuppliers.Location = new System.Drawing.Point(25, 123);
-            this.txtI1_isuppliers.Margin = new System.Windows.Forms.Padding(5);
+            this.txtI1_isuppliers.Location = new System.Drawing.Point(19, 100);
+            this.txtI1_isuppliers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtI1_isuppliers.Multiline = true;
             this.txtI1_isuppliers.Name = "txtI1_isuppliers";
             this.txtI1_isuppliers.SelectedIndex = 0;
             this.txtI1_isuppliers.ShowToolTips = true;
-            this.txtI1_isuppliers.Size = new System.Drawing.Size(1452, 683);
+            this.txtI1_isuppliers.Size = new System.Drawing.Size(1089, 555);
             this.txtI1_isuppliers.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.txtI1_isuppliers.Style = MetroFramework.MetroColorStyle.Magenta;
             this.txtI1_isuppliers.TabIndex = 3;
@@ -667,25 +702,23 @@
             this.txtI1_igym.Controls.Add(this.txtI1_iname);
             this.txtI1_igym.Controls.Add(this.metroLabel1);
             this.txtI1_igym.HorizontalScrollbarBarColor = true;
-            this.txtI1_igym.HorizontalScrollbarSize = 12;
             this.txtI1_igym.Location = new System.Drawing.Point(4, 74);
-            this.txtI1_igym.Margin = new System.Windows.Forms.Padding(4);
             this.txtI1_igym.Name = "txtI1_igym";
-            this.txtI1_igym.Size = new System.Drawing.Size(1444, 605);
+            this.txtI1_igym.Size = new System.Drawing.Size(1081, 477);
             this.txtI1_igym.TabIndex = 0;
             this.txtI1_igym.Text = "Gym Equipments";
             this.txtI1_igym.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtI1_igym.VerticalScrollbarBarColor = true;
-            this.txtI1_igym.VerticalScrollbarSize = 13;
             // 
             // radio_nonRep
             // 
             this.radio_nonRep.AutoSize = true;
             this.radio_nonRep.FontSize = MetroFramework.MetroLinkSize.Tall;
             this.radio_nonRep.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.radio_nonRep.Location = new System.Drawing.Point(651, 76);
+            this.radio_nonRep.Location = new System.Drawing.Point(488, 62);
+            this.radio_nonRep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radio_nonRep.Name = "radio_nonRep";
-            this.radio_nonRep.Size = new System.Drawing.Size(177, 25);
+            this.radio_nonRep.Size = new System.Drawing.Size(170, 25);
             this.radio_nonRep.TabIndex = 10;
             this.radio_nonRep.TabStop = true;
             this.radio_nonRep.Text = "Non repair items";
@@ -698,9 +731,10 @@
             this.radio_repItems.AutoSize = true;
             this.radio_repItems.FontSize = MetroFramework.MetroLinkSize.Tall;
             this.radio_repItems.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.radio_repItems.Location = new System.Drawing.Point(345, 76);
+            this.radio_repItems.Location = new System.Drawing.Point(259, 62);
+            this.radio_repItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radio_repItems.Name = "radio_repItems";
-            this.radio_repItems.Size = new System.Drawing.Size(138, 25);
+            this.radio_repItems.Size = new System.Drawing.Size(135, 25);
             this.radio_repItems.TabIndex = 9;
             this.radio_repItems.TabStop = true;
             this.radio_repItems.Text = "Repair Items";
@@ -710,9 +744,10 @@
             // 
             // btnBrowse_i1
             // 
-            this.btnBrowse_i1.Location = new System.Drawing.Point(1094, 462);
+            this.btnBrowse_i1.Location = new System.Drawing.Point(820, 375);
+            this.btnBrowse_i1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBrowse_i1.Name = "btnBrowse_i1";
-            this.btnBrowse_i1.Size = new System.Drawing.Size(158, 38);
+            this.btnBrowse_i1.Size = new System.Drawing.Size(118, 31);
             this.btnBrowse_i1.Style = MetroFramework.MetroColorStyle.Teal;
             this.btnBrowse_i1.TabIndex = 8;
             this.btnBrowse_i1.Text = "Browse";
@@ -723,17 +758,19 @@
             // pictureBox_i1
             // 
             this.pictureBox_i1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(50)))), ((int)(((byte)(55)))));
-            this.pictureBox_i1.Location = new System.Drawing.Point(1064, 167);
+            this.pictureBox_i1.Location = new System.Drawing.Point(798, 136);
+            this.pictureBox_i1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox_i1.Name = "pictureBox_i1";
-            this.pictureBox_i1.Size = new System.Drawing.Size(215, 246);
+            this.pictureBox_i1.Size = new System.Drawing.Size(161, 200);
             this.pictureBox_i1.TabIndex = 7;
             this.pictureBox_i1.TabStop = false;
             // 
             // btnclear_i3
             // 
-            this.btnclear_i3.Location = new System.Drawing.Point(1334, 332);
+            this.btnclear_i3.Location = new System.Drawing.Point(1000, 270);
+            this.btnclear_i3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnclear_i3.Name = "btnclear_i3";
-            this.btnclear_i3.Size = new System.Drawing.Size(95, 38);
+            this.btnclear_i3.Size = new System.Drawing.Size(71, 31);
             this.btnclear_i3.Style = MetroFramework.MetroColorStyle.Teal;
             this.btnclear_i3.TabIndex = 6;
             this.btnclear_i3.Text = "Clear";
@@ -743,9 +780,10 @@
             // 
             // btnsave_i2
             // 
-            this.btnsave_i2.Location = new System.Drawing.Point(1334, 223);
+            this.btnsave_i2.Location = new System.Drawing.Point(1000, 181);
+            this.btnsave_i2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnsave_i2.Name = "btnsave_i2";
-            this.btnsave_i2.Size = new System.Drawing.Size(95, 38);
+            this.btnsave_i2.Size = new System.Drawing.Size(71, 31);
             this.btnsave_i2.Style = MetroFramework.MetroColorStyle.Teal;
             this.btnsave_i2.TabIndex = 6;
             this.btnsave_i2.Text = "Save";
@@ -760,9 +798,10 @@
             this.txtI1_iprice.CustomForeColor = true;
             this.txtI1_iprice.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_iprice.ForeColor = System.Drawing.Color.White;
-            this.txtI1_iprice.Location = new System.Drawing.Point(784, 278);
+            this.txtI1_iprice.Location = new System.Drawing.Point(588, 226);
+            this.txtI1_iprice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_iprice.Name = "txtI1_iprice";
-            this.txtI1_iprice.Size = new System.Drawing.Size(221, 28);
+            this.txtI1_iprice.Size = new System.Drawing.Size(166, 23);
             this.txtI1_iprice.TabIndex = 5;
             this.txtI1_iprice.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -772,9 +811,10 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(584, 278);
+            this.metroLabel3.Location = new System.Drawing.Point(438, 226);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(54, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(49, 25);
             this.metroLabel3.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel3.TabIndex = 4;
             this.metroLabel3.Text = "Price";
@@ -788,9 +828,10 @@
             this.txtI1_imodel.CustomForeColor = true;
             this.txtI1_imodel.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_imodel.ForeColor = System.Drawing.Color.White;
-            this.txtI1_imodel.Location = new System.Drawing.Point(784, 202);
+            this.txtI1_imodel.Location = new System.Drawing.Point(588, 164);
+            this.txtI1_imodel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_imodel.Name = "txtI1_imodel";
-            this.txtI1_imodel.Size = new System.Drawing.Size(221, 28);
+            this.txtI1_imodel.Size = new System.Drawing.Size(166, 23);
             this.txtI1_imodel.TabIndex = 5;
             this.txtI1_imodel.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -800,9 +841,10 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(580, 202);
+            this.metroLabel4.Location = new System.Drawing.Point(435, 164);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(66, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(63, 25);
             this.metroLabel4.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel4.TabIndex = 4;
             this.metroLabel4.Text = "Model";
@@ -816,9 +858,10 @@
             this.txtI1_imake.CustomForeColor = true;
             this.txtI1_imake.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_imake.ForeColor = System.Drawing.Color.White;
-            this.txtI1_imake.Location = new System.Drawing.Point(277, 353);
+            this.txtI1_imake.Location = new System.Drawing.Point(208, 287);
+            this.txtI1_imake.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_imake.Name = "txtI1_imake";
-            this.txtI1_imake.Size = new System.Drawing.Size(221, 28);
+            this.txtI1_imake.Size = new System.Drawing.Size(166, 23);
             this.txtI1_imake.TabIndex = 5;
             this.txtI1_imake.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -828,9 +871,10 @@
             this.lblWeight.AutoSize = true;
             this.lblWeight.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblWeight.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblWeight.Location = new System.Drawing.Point(73, 442);
+            this.lblWeight.Location = new System.Drawing.Point(55, 359);
+            this.lblWeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(72, 25);
+            this.lblWeight.Size = new System.Drawing.Size(68, 25);
             this.lblWeight.Style = MetroFramework.MetroColorStyle.Black;
             this.lblWeight.TabIndex = 4;
             this.lblWeight.Text = "Weight";
@@ -843,9 +887,10 @@
             this.lblQty.AutoSize = true;
             this.lblQty.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblQty.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblQty.Location = new System.Drawing.Point(584, 353);
+            this.lblQty.Location = new System.Drawing.Point(438, 287);
+            this.lblQty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQty.Name = "lblQty";
-            this.lblQty.Size = new System.Drawing.Size(84, 25);
+            this.lblQty.Size = new System.Drawing.Size(80, 25);
             this.lblQty.Style = MetroFramework.MetroColorStyle.Black;
             this.lblQty.TabIndex = 4;
             this.lblQty.Text = "Quantity";
@@ -859,9 +904,10 @@
             this.txtInv1Weight.CustomForeColor = true;
             this.txtInv1Weight.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtInv1Weight.ForeColor = System.Drawing.Color.White;
-            this.txtInv1Weight.Location = new System.Drawing.Point(277, 439);
+            this.txtInv1Weight.Location = new System.Drawing.Point(208, 357);
+            this.txtInv1Weight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtInv1Weight.Name = "txtInv1Weight";
-            this.txtInv1Weight.Size = new System.Drawing.Size(221, 28);
+            this.txtInv1Weight.Size = new System.Drawing.Size(166, 23);
             this.txtInv1Weight.TabIndex = 5;
             this.txtInv1Weight.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -871,9 +917,10 @@
             this.Make.AutoSize = true;
             this.Make.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.Make.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.Make.Location = new System.Drawing.Point(73, 353);
+            this.Make.Location = new System.Drawing.Point(55, 287);
+            this.Make.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Make.Name = "Make";
-            this.Make.Size = new System.Drawing.Size(58, 25);
+            this.Make.Size = new System.Drawing.Size(55, 25);
             this.Make.Style = MetroFramework.MetroColorStyle.Black;
             this.Make.TabIndex = 4;
             this.Make.Text = "Make";
@@ -887,9 +934,10 @@
             this.txtInv_1qty.CustomForeColor = true;
             this.txtInv_1qty.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtInv_1qty.ForeColor = System.Drawing.Color.White;
-            this.txtInv_1qty.Location = new System.Drawing.Point(784, 350);
+            this.txtInv_1qty.Location = new System.Drawing.Point(588, 284);
+            this.txtInv_1qty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtInv_1qty.Name = "txtInv_1qty";
-            this.txtInv_1qty.Size = new System.Drawing.Size(221, 28);
+            this.txtInv_1qty.Size = new System.Drawing.Size(166, 23);
             this.txtInv_1qty.TabIndex = 5;
             this.txtInv_1qty.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -900,9 +948,10 @@
             this.txtI1_icode.CustomForeColor = true;
             this.txtI1_icode.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_icode.ForeColor = System.Drawing.Color.White;
-            this.txtI1_icode.Location = new System.Drawing.Point(277, 274);
+            this.txtI1_icode.Location = new System.Drawing.Point(208, 223);
+            this.txtI1_icode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_icode.Name = "txtI1_icode";
-            this.txtI1_icode.Size = new System.Drawing.Size(221, 28);
+            this.txtI1_icode.Size = new System.Drawing.Size(166, 23);
             this.txtI1_icode.TabIndex = 5;
             this.txtI1_icode.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -912,9 +961,10 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(73, 274);
+            this.metroLabel2.Location = new System.Drawing.Point(55, 223);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(127, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(121, 25);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel2.TabIndex = 4;
             this.metroLabel2.Text = "Product Code";
@@ -928,9 +978,10 @@
             this.txtI1_iname.CustomForeColor = true;
             this.txtI1_iname.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_iname.ForeColor = System.Drawing.Color.White;
-            this.txtI1_iname.Location = new System.Drawing.Point(277, 202);
+            this.txtI1_iname.Location = new System.Drawing.Point(208, 164);
+            this.txtI1_iname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_iname.Name = "txtI1_iname";
-            this.txtI1_iname.Size = new System.Drawing.Size(221, 28);
+            this.txtI1_iname.Size = new System.Drawing.Size(166, 23);
             this.txtI1_iname.TabIndex = 5;
             this.txtI1_iname.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -940,9 +991,10 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(73, 202);
+            this.metroLabel1.Location = new System.Drawing.Point(55, 164);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(133, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(126, 25);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel1.TabIndex = 4;
             this.metroLabel1.Text = "Product Name";
@@ -972,20 +1024,24 @@
             this.txtI1_irepairs.Controls.Add(this.txtI1_imachine);
             this.txtI1_irepairs.Controls.Add(this.metroLabel11);
             this.txtI1_irepairs.HorizontalScrollbarBarColor = true;
+            this.txtI1_irepairs.HorizontalScrollbarSize = 8;
             this.txtI1_irepairs.Location = new System.Drawing.Point(4, 74);
+            this.txtI1_irepairs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_irepairs.Name = "txtI1_irepairs";
-            this.txtI1_irepairs.Size = new System.Drawing.Size(1444, 605);
+            this.txtI1_irepairs.Size = new System.Drawing.Size(1081, 477);
             this.txtI1_irepairs.TabIndex = 2;
             this.txtI1_irepairs.Text = "Repairs";
             this.txtI1_irepairs.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.txtI1_irepairs.VerticalScrollbarBarColor = true;
+            this.txtI1_irepairs.VerticalScrollbarSize = 8;
             // 
             // metroTile1
             // 
             this.metroTile1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTile1.Location = new System.Drawing.Point(1262, 335);
+            this.metroTile1.Location = new System.Drawing.Point(946, 272);
+            this.metroTile1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(103, 38);
+            this.metroTile1.Size = new System.Drawing.Size(77, 31);
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile1.TabIndex = 11;
             this.metroTile1.Text = "Clear";
@@ -999,9 +1055,10 @@
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel17.Location = new System.Drawing.Point(682, 268);
+            this.metroLabel17.Location = new System.Drawing.Point(512, 218);
+            this.metroLabel17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(108, 25);
+            this.metroLabel17.Size = new System.Drawing.Size(102, 25);
             this.metroLabel17.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel17.TabIndex = 6;
             this.metroLabel17.Text = "Description";
@@ -1014,9 +1071,10 @@
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel19.Location = new System.Drawing.Point(682, 209);
+            this.metroLabel19.Location = new System.Drawing.Point(512, 170);
+            this.metroLabel19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(124, 25);
+            this.metroLabel19.Size = new System.Drawing.Size(117, 25);
             this.metroLabel19.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel19.TabIndex = 6;
             this.metroLabel19.Text = "Finished date";
@@ -1029,9 +1087,10 @@
             this.metroLabel16.AutoSize = true;
             this.metroLabel16.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel16.Location = new System.Drawing.Point(69, 268);
+            this.metroLabel16.Location = new System.Drawing.Point(52, 218);
+            this.metroLabel16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(49, 25);
+            this.metroLabel16.Size = new System.Drawing.Size(48, 25);
             this.metroLabel16.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel16.TabIndex = 6;
             this.metroLabel16.Text = "Cost";
@@ -1044,9 +1103,10 @@
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel14.Location = new System.Drawing.Point(69, 209);
+            this.metroLabel14.Location = new System.Drawing.Point(52, 170);
+            this.metroLabel14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(62, 25);
+            this.metroLabel14.Size = new System.Drawing.Size(60, 25);
             this.metroLabel14.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel14.TabIndex = 6;
             this.metroLabel14.Text = "Status";
@@ -1059,9 +1119,10 @@
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel13.Location = new System.Drawing.Point(69, 149);
+            this.metroLabel13.Location = new System.Drawing.Point(52, 121);
+            this.metroLabel13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(88, 25);
+            this.metroLabel13.Size = new System.Drawing.Size(84, 25);
             this.metroLabel13.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel13.TabIndex = 6;
             this.metroLabel13.Text = "Repair ID";
@@ -1075,9 +1136,10 @@
             this.txtI1_imachine.CustomForeColor = true;
             this.txtI1_imachine.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtI1_imachine.ForeColor = System.Drawing.Color.White;
-            this.txtI1_imachine.Location = new System.Drawing.Point(280, 93);
+            this.txtI1_imachine.Location = new System.Drawing.Point(210, 76);
+            this.txtI1_imachine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtI1_imachine.Name = "txtI1_imachine";
-            this.txtI1_imachine.Size = new System.Drawing.Size(256, 28);
+            this.txtI1_imachine.Size = new System.Drawing.Size(192, 23);
             this.txtI1_imachine.TabIndex = 7;
             this.txtI1_imachine.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -1087,9 +1149,10 @@
             this.metroLabel11.AutoSize = true;
             this.metroLabel11.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel11.Location = new System.Drawing.Point(69, 96);
+            this.metroLabel11.Location = new System.Drawing.Point(52, 78);
+            this.metroLabel11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(140, 25);
+            this.metroLabel11.Size = new System.Drawing.Size(130, 25);
             this.metroLabel11.Style = MetroFramework.MetroColorStyle.Black;
             this.metroLabel11.TabIndex = 6;
             this.metroLabel11.Text = "Machine Name";
@@ -1104,24 +1167,28 @@
             // btnInvHome
             // 
             this.btnInvHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInvHome.Location = new System.Drawing.Point(1230, 50);
+            this.btnInvHome.Location = new System.Drawing.Point(922, 41);
+            this.btnInvHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInvHome.Name = "btnInvHome";
-            this.btnInvHome.Size = new System.Drawing.Size(134, 44);
+            this.btnInvHome.Size = new System.Drawing.Size(100, 36);
             this.btnInvHome.Style = MetroFramework.MetroColorStyle.Yellow;
             this.btnInvHome.TabIndex = 44;
             this.btnInvHome.Text = "Home";
             this.btnInvHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnInvHome.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btnInvHome.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btnInvHome.Click += new System.EventHandler(this.btnInvHome_Click);
             // 
             // inventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1502, 854);
+            this.ClientSize = new System.Drawing.Size(1126, 694);
             this.Controls.Add(this.btnInvHome);
             this.Controls.Add(this.txtI1_isuppliers);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "inventory";
+            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.inventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1_ibunni)).EndInit();

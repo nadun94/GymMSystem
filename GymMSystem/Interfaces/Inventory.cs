@@ -63,5 +63,12 @@ namespace GymMSystem.Interfaces
             lblWeight.Refresh();
             lblQty.Refresh();
         }
+
+        private void btnInvHome_Click(object sender, EventArgs e)
+        {
+            Main tt = new Main();
+            this.Hide();
+            tt.Show();
+        }
     }
 }

@@ -53,6 +53,9 @@ namespace GymMSystem.Buisness_Logic
 
         }
 
+  
+
+
 
         public byte[] photo { get; set; }
 
