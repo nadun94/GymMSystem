@@ -8,7 +8,7 @@ namespace GymMSystem.Buisness_Logic
 {
     class fee
     {
-        private DateTime paymentDate;
+        private string paymentDate;
         private int memberID;
         public int feeId { get; set; }
         private string memberType;
@@ -16,8 +16,8 @@ namespace GymMSystem.Buisness_Logic
         private double packageFee;
         public double amount { get; set; }
         public string service { get; set; }
-        public DateTime validDate { get; set; }
-        public DateTime paidDate { get; set; }
+        public string validDate { get; set; }
+        public string paidDate { get; set; }
 
 
         public List<gymMember> gymMemberList { get; set; }
@@ -42,17 +42,18 @@ namespace GymMSystem.Buisness_Logic
                 return amount;
 
         }
-        public DateTime lastValidPaymentDate
+        public string lastValidPaymentDate
         {
 
             get
             {
+                paymentDate = DateTime.Today.ToShortTimeString();
                 return paymentDate;
             }
 
             set
             {
-                paymentDate = DateTime.Today;
+                
             }
         }
 

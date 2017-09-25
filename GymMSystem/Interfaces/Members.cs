@@ -323,7 +323,9 @@ namespace GymMSystem.Interfaces
 
             Buisness_Logic.fee fee1 = new Buisness_Logic.fee();
 
-            fee1.feeId  = 
+            fee1.service = cmbFEE_service.SelectedItem.ToString();
+            fee1.amount = double.Parse(txtMF_amount.Text);
+            fee1.validDate = 
         }
 
 
