@@ -34,7 +34,7 @@ namespace GymMSystem.Buisness_Logic
 
             if (string.IsNullOrWhiteSpace(email))
             {
-                MessageBox.Show("Email is not inserte!", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                MessageBox.Show("Email is not inserted!", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return true;
             }
             else if (Regex.IsMatch(email, MatchEmailPattern) && email!=null)
@@ -87,21 +87,30 @@ namespace GymMSystem.Buisness_Logic
 
            
         }
-       
+
+        public bool IsWord(string word)
+        {
+
+            return word.All(char.IsLetter);
+
+            //Regex.Match(word, @"\w * ").Success;
+        }
+
 
         public bool IsName(string name)
         {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                MessageBox.Show("Name can not be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            else if (Regex.Match(name, @"^[A-Za-z]+[\s][A-Za-z]+[.][A-Za-z]+$").Success)
+            //if (string.IsNullOrWhiteSpace(name))
+            //{
+            //    MessageBox.Show("Name can not be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return false;
+            //}
+            //else
+            if (IsWord(name))
                 return true;
 
             else
             {
-                MessageBox.Show("Name number is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Name  is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -149,11 +158,6 @@ namespace GymMSystem.Buisness_Logic
             }
         }
 
-        public bool IsWord(string word)
-        {
-
-            return Regex.Match(word, @"\w * ").Success;
-        }
        
         
         public bool IsHeight(string height)

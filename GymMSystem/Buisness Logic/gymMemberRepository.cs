@@ -45,75 +45,99 @@ namespace GymMSystem.Buisness_Logic
 
          SqlTransaction trans = newdbcon.getConnection().BeginTransaction();
 
-            bool status = false ;
+            bool status = false ,temp= true;
             try
             {
-                
-              
-                
-                SqlCommand cmdt = null;
+                string qt1 = "select * from tbl_member where name=@name and nic=@nic";
 
+                SqlCommand qt = new SqlCommand(qt1, newdbcon.getConnection());
 
-                // query 1
-                string query1 = "INSERT INTO tbl_member (name, dob, address,nic,gender, phone) VALUES (@name,@dob,@address,@nic,@gender,@phone)";
-               
-                //initialize sqlCommand
-                cmdt = new SqlCommand(query1, newdbcon.getConnection());
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(qt);
 
-                // add values to command using parameters
-                cmdt.Parameters.AddWithValue("@name", mem.name);
-                cmdt.Parameters.AddWithValue("@dob", mem.dob);
-                cmdt.Parameters.AddWithValue("@address", mem.addresss);
-                cmdt.Parameters.AddWithValue("@gender", mem.gender);
-                cmdt.Parameters.AddWithValue("@phone", mem.phone);
-                cmdt.Parameters.AddWithValue("@nic", mem.nic);
+                qt.Parameters.AddWithValue("@name", mem.name);
+                qt.Parameters.AddWithValue("@nic", mem.nic);
 
-                cmdt.Transaction = trans;
-                cmdt.ExecuteNonQuery();
-               
+                qt.Transaction = trans;
+                da.Fill(dt);
 
-
-
-                string query2 = "SELECT regNo from tbl_member where name=@memName and nic=@nic";
-                SqlCommand cmdt1 = new SqlCommand(query2, newdbcon.getConnection());
-                
-                
-                
-              
-                cmdt1.Parameters.AddWithValue("@memName", mem.name);
-                cmdt1.Parameters.AddWithValue("@nic", mem.nic);
-                cmdt1.Transaction = trans;
-                SqlDataReader dr = cmdt1.ExecuteReader();
-
-             
-
-                while (dr.Read())
+                if (dt.Rows.Count > 0 )
                 {
-                    mem.MemberID = (int)dr["regNo"];
+                    temp = false;
                 }
-
-                dr.Close();
-                string query3 = "INSERT INTO tbl_gymMember values (@regno,@email,@joinedDate,@bmi,@height,@weight,@payplan,@photo,@fatLevel)";
-                SqlCommand cmdt2 = new SqlCommand(query3, newdbcon.getConnection());
-
                 
-              
-                cmdt2.Parameters.AddWithValue("@regno", mem.MemberID);
-                cmdt2.Parameters.AddWithValue("@email", mem.email);
-                cmdt2.Parameters.AddWithValue("@joinedDate", mem.joinedDate);
-                cmdt2.Parameters.AddWithValue("@bmi", mem.BMIratio);
-                cmdt2.Parameters.AddWithValue("@height", mem.height);
-                cmdt2.Parameters.AddWithValue("@weight", mem.weight);
-                cmdt2.Parameters.AddWithValue("@payplan", mem.paymentPlan);
-                cmdt2.Parameters.AddWithValue("@photo", mem.photo);
-                cmdt2.Parameters.AddWithValue("@fatLevel", mem.fatLevel);
-                cmdt2.Transaction = trans;
-                cmdt2.ExecuteNonQuery();
-                trans.Commit();
-                newdbcon.closeConnection();
+                if(temp == true)
+                {
+                    SqlCommand cmdt = null;
+                    
 
-                status = true;
-               
+                    // query 1
+                    string query1 = "INSERT INTO tbl_member (name, dob, address,nic,gender, phone) VALUES (@name,@dob,@address,@nic,@gender,@phone)";
+
+                    //initialize sqlCommand
+                    cmdt = new SqlCommand(query1, newdbcon.getConnection());
+
+                    // add values to command using parameters
+                    cmdt.Parameters.AddWithValue("@name", mem.name);
+                    cmdt.Parameters.AddWithValue("@dob", mem.dob);
+                    cmdt.Parameters.AddWithValue("@address", mem.addresss);
+                    cmdt.Parameters.AddWithValue("@gender", mem.gender);
+                    cmdt.Parameters.AddWithValue("@phone", mem.phone);
+                    cmdt.Parameters.AddWithValue("@nic", mem.nic);
+
+                    cmdt.Transaction = trans;
+                    
+                        cmdt.ExecuteNonQuery();
+
+
+
+
+                    string query2 = "SELECT regNo from tbl_member where name=@memName and nic=@nic";
+                    SqlCommand cmdt1 = new SqlCommand(query2, newdbcon.getConnection());
+
+
+
+
+                    cmdt1.Parameters.AddWithValue("@memName", mem.name);
+                    cmdt1.Parameters.AddWithValue("@nic", mem.nic);
+                    cmdt1.Transaction = trans;
+                    SqlDataReader dr = cmdt1.ExecuteReader();
+
+
+
+                    while (dr.Read())
+                    {
+                        mem.MemberID = (int)dr["regNo"];
+                    }
+
+                    dr.Close();
+                    string query3 = "INSERT INTO tbl_gymMember values (@regno,@email,@joinedDate,@bmi,@height,@weight,@payplan,@photo,@fatLevel)";
+                    SqlCommand cmdt2 = new SqlCommand(query3, newdbcon.getConnection());
+
+
+
+                    cmdt2.Parameters.AddWithValue("@regno", mem.MemberID);
+                    cmdt2.Parameters.AddWithValue("@email", mem.email);
+                    cmdt2.Parameters.AddWithValue("@joinedDate", mem.joinedDate);
+                    cmdt2.Parameters.AddWithValue("@bmi", mem.BMIratio);
+                    cmdt2.Parameters.AddWithValue("@height", mem.height);
+                    cmdt2.Parameters.AddWithValue("@weight", mem.weight);
+                    cmdt2.Parameters.AddWithValue("@payplan", mem.paymentPlan);
+                    cmdt2.Parameters.AddWithValue("@photo", mem.photo);
+                    cmdt2.Parameters.AddWithValue("@fatLevel", mem.fatLevel);
+                    cmdt2.Transaction = trans;
+                    cmdt2.ExecuteNonQuery();
+                    trans.Commit();
+                    newdbcon.closeConnection();
+
+                    status = true;
+
+
+                }
+                else
+                    MessageBox.Show("This member already exists.", "Infromation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
 
 
 
@@ -155,16 +179,46 @@ namespace GymMSystem.Buisness_Logic
             while (dr1.Read())
             {
                 gm.MemberID = (int)dr1["regNo"];
-                gm.name = (string) dr1["name"];
-                gm.nic = (string)dr1["nic"];
-                gm.gender = (string)dr1["gender"];
-                gm.addresss = (string)dr1["address"];
+                gm.name =  dr1["name"].ToString();
+                gm.nic = dr1["nic"].ToString();
+                gm.dob = dr1["dob"].ToString();
+                gm.gender = dr1["gender"].ToString();
+                gm.addresss = dr1["address"].ToString();
                 gm.phone = (int)dr1["phone"];
-                gm.dob = (string)dr1["dob"];
+              
              
 
 
             }
+
+            dr1.Close();
+
+            string query2 = "SELECT * FROM tbl_gymMember WHERE  memberID=@id";
+
+
+            SqlCommand cmd2 = new SqlCommand(query2, dbmem_seach.getConnection());
+
+            cmd2.Parameters.AddWithValue("@id", gm.MemberID);
+
+            SqlDataReader dr2 = cmd2.ExecuteReader();
+
+            while (dr2.Read())
+            {
+                gm.email = dr2["email"].ToString();
+                gm.paymentPlan = dr2["payment_plan"].ToString();
+                gm.joinedDate = dr2["joined_date"].ToString();
+                gm.height = (double)dr2["height"];
+                gm.weight = (double)dr2["weight"];
+                gm.BMIratio = (double)dr2["BMI"];
+                gm.fatLevel = (double)dr2["fat_level"];
+                gm.photo = (byte[])dr2["photo"];
+
+
+
+            }
+
+            dr1.Close();
+            dbmem_seach.closeConnection();
 
             return gm;
 

@@ -23,16 +23,16 @@ namespace GymMSystem.Buisness_Logic
             get
             {
 
-                BMI_ratio = (height * height) / weight;
+                BMI_ratio = Math.Round((height * height) / weight,3);
                 return BMI_ratio;
 
             }
-           private set
+            set
             {
                 //if (!string.IsNullOrWhiteSpace(height.ToString()) && string.IsNullOrWhiteSpace(weight.ToString()))
                 
 
-                    BMI_ratio = (height * height) / weight;
+                 //   BMI_ratio = (height * height) / weight;
                 
             }
            

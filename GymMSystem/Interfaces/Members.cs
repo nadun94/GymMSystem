@@ -11,6 +11,7 @@ using MetroFramework.Forms;
 using System.IO;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 
 
@@ -84,6 +85,8 @@ namespace GymMSystem.Interfaces
             txtM_nic.Text = "";
             txtM_phone.Text = "";
             txtM_weight.Text = "";
+            txtM_email.Text = "";
+            txtM_bmiratio.Text = "";
             cmbM_gender.SelectedItem = null;
             cmbM_paymentPlan.SelectedItem = null;
             picuturebox_member.Image = null;
@@ -215,32 +218,112 @@ namespace GymMSystem.Interfaces
         {
 
         }
+        private bool validate_search()
+        {
+
+            if (txtM3_memID.Text.Trim().Length == 0 && txtM3_name.Text.Trim().Length == 0 && txtM3_nic.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Please enter Name or MemberID or NIC to search Member.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+
+            }
+            else {
+                
+                if ((!Regex.Match(txtM3_name.Text, "^[a-zA-Z][a-zA-Z\\s]+$").Success) && ((txtM3_memID.Text.Trim().Length == 0) && (txtM3_nic.Text.Trim().Length == 0)))
+                {
+                    MessageBox.Show("Please enter Name in correct format.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                   return false;
+
+                }
+                else if (!txtM3_nic.Text.ToString().All(char.IsLetterOrDigit) && (txtM3_memID.Text.Trim().Length == 0) && txtM3_memID.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Please enter NIC in correct format.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                else return true;
+            }
+
+            }
+           
+        
 
         private void btnM3_Search_Click(object sender, EventArgs e)
         {
 
+            
             try
             {
-                Buisness_Logic.gymMemberRepository gr_search = new Buisness_Logic.gymMemberRepository();
+               // Buisness_Logic.validation val3 = new Buisness_Logic.validation();
 
-                var gm = gr_search.search(int.Parse(txtM3_memID.Text), txtM3_name.Text, txtM3_nic.Text);
-
-                txtM3_memID.Text = gm.MemberID.ToString();
-                txtM3_memID.Text = gm.name;
-                txtM3_nic.Text = gm.nic;
-                txtM3_phone.Text = gm.phone.ToString();
                 
+                if (validate_search()){
 
-                    
-                
+                    Buisness_Logic.gymMemberRepository gr_search = new Buisness_Logic.gymMemberRepository();
+
+                    var gm = gr_search.search((string.IsNullOrEmpty(txtM3_memID.Text) ? 0 : int.Parse(txtM3_memID.Text)), txtM3_name.Text.ToString(), txtM3_nic.Text.ToString());
+
+                    txtM3_memID.Text = gm.MemberID.ToString();
+                    txtM3_name.Text = gm.name;
+                    txtM3_nic.Text = gm.nic;
+                    txtM3_phone.Text = gm.phone.ToString();
+                    //  txt.Text = gm.joinedDate;
+                    txtM3_fatLevel.Text = gm.fatLevel.ToString();
+                    MemoryStream ms = new MemoryStream(gm.photo);
+                    pictureBoxM3.Image = Image.FromStream(ms);
+                    cmbM3_gender.SelectedItem = gm.gender;
+                    cmbM3_paymentpaln.SelectedItem = gm.paymentPlan;
+                    txtm3_dob.Text = gm.dob;
+                    txtM3_height.Text = gm.height.ToString();
+                    txtM3_weight.Text = gm.weight.ToString();
+                    txtM3_bmi.Text = gm.BMIratio.ToString();
+
+                    pictureBoxM3.SizeMode = PictureBoxSizeMode.Zoom;
+                    MemoryStream ms1 = new MemoryStream(gm.photo);
+                    pictureBoxM3.Image = Image.FromStream(ms1);
+
+                }
+
+
+
+
+
+
 
             }
             catch (Exception expo)
             {
                 MessageBox.Show(expo.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
+               // throw;
             }
 
+        }
+
+        private void btnM3_clear_Click_1(object sender, EventArgs e)
+        {
+            txtMF_amount.Text = "";
+            txtM3_bmi.Text = "";
+            txtm3_dob.Text = "";
+            txtM3_fatLevel.Text = "";
+            txtM3_height.Text = "";
+            txtM3_memID.Text = "";
+            txtM3_name.Text = "";
+            txtM3_nic.Text = "";
+            txtM3_phone.Text = "";
+            txtM3_weight.Text = "";
+            cmbM3_gender.SelectedItem = null;
+            cmbM3_paymentpaln.SelectedItem = null;
+            pictureBoxM3.Image = null;
+            cmbM3_paymentpaln.Refresh();
+            cmbM_gender.Refresh();
+            
+        }
+
+        private void btnMF_addfee_Click(object sender, EventArgs e)
+        {
+
+            Buisness_Logic.fee fee1 = new Buisness_Logic.fee();
+
+            fee1.feeId  = 
         }
 
 
