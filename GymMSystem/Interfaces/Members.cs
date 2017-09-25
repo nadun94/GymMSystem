@@ -323,7 +323,7 @@ namespace GymMSystem.Interfaces
 
             Buisness_Logic.fee fee1 = new Buisness_Logic.fee();
 
-            fee1.feeId  = 
+            //fee1.feeId  = 
         }
 
 

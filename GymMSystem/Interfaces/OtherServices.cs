@@ -193,6 +193,16 @@ namespace GymMSystem.Interfaces
             am.service_type = cmbOS2_serviceType.SelectedItem.ToString();
 
 
+            Buisness_Logic.otherServiceRepository rep1 = new Buisness_Logic.otherServiceRepository();
+
+          if(rep1.addOtherMembers(am))
+            {
+                MessageBox.Show("Successful", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+
+
         }
 
         private void btnOS_home_Click(object sender, EventArgs e)
