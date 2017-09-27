@@ -17,12 +17,14 @@ namespace GymMSystem.Buisness_Logic
         public int qty { get; set; }
 
         public double price { get; set; }
+        public string model { get; set; }
 
         public byte[] photo { get; set; }
+        public string  productType { get; set; }
 
 
 
-        
+
 
 
     }

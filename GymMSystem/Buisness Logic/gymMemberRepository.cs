@@ -162,67 +162,120 @@ namespace GymMSystem.Buisness_Logic
 
         public gymMember search(int reNo, string name, string nic)
         {
-            DataLayer.dbConnect dbmem_seach = new DataLayer.dbConnect();
-            dbmem_seach.openConnection();
 
-            string query1 = "SELECT * FROM tbl_member WHERE regNo=@reg OR name=@name OR nic=@nic";
 
-            SqlCommand cmd1 = new SqlCommand(query1, dbmem_seach.getConnection());
-
-            cmd1.Parameters.AddWithValue("@reg", reNo);
-            cmd1.Parameters.AddWithValue("@name", name);
-            cmd1.Parameters.AddWithValue("@nic", nic);
-
-            SqlDataReader dr1 = cmd1.ExecuteReader();
-
-            gymMember gm = new gymMember();
-            while (dr1.Read())
+            try
             {
-                gm.MemberID = (int)dr1["regNo"];
-                gm.name =  dr1["name"].ToString();
-                gm.nic = dr1["nic"].ToString();
-                gm.dob = dr1["dob"].ToString();
-                gm.gender = dr1["gender"].ToString();
-                gm.addresss = dr1["address"].ToString();
-                gm.phone = (int)dr1["phone"];
-              
-             
+                DataLayer.dbConnect dbmem_seach = new DataLayer.dbConnect();
+                dbmem_seach.openConnection();
+                bool temp = false;
+                string query1 = "SELECT * FROM tbl_member WHERE regNo=@reg OR name=@name OR nic=@nic";
 
+                SqlCommand cmd1 = new SqlCommand(query1, dbmem_seach.getConnection());
+
+                cmd1.Parameters.AddWithValue("@reg", reNo);
+                cmd1.Parameters.AddWithValue("@name", name);
+                cmd1.Parameters.AddWithValue("@nic", nic);
+
+                //  SqlDataReader dr1 = cmd1.ExecuteReader();
+                DataTable dtq = new DataTable();
+                SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
+                gymMember gm = new gymMember();
+                da1.Fill(dtq);
+                //while (dr1.Read())
+                //{
+                //    gm.MemberID = (int)dr1["regNo"];
+                //    gm.name =  dr1["name"].ToString();
+                //    gm.nic = dr1["nic"].ToString();
+                //    gm.dob = dr1["dob"].ToString();
+                //    gm.gender = dr1["gender"].ToString();
+                //    gm.addresss = dr1["address"].ToString();
+                //    gm.phone = (int)dr1["phone"];
+
+
+
+
+                //}
+                if (dtq.Rows.Count > 0)
+                {
+
+                    gm.MemberID = int.Parse(dtq.Rows[0]["regNo"].ToString());
+                    gm.name = dtq.Rows[0]["name"].ToString();
+                    gm.nic = dtq.Rows[0]["nic"].ToString();
+                    gm.dob = dtq.Rows[0]["dob"].ToString();
+                    gm.gender = dtq.Rows[0]["gender"].ToString();
+                    gm.addresss = dtq.Rows[0]["address"].ToString();
+                    gm.phone = int.Parse(dtq.Rows[0]["phone"].ToString());
+
+                    temp = true;
+                }
+                //  dr1.Close();
+
+                string query2 = "SELECT * FROM tbl_gymMember WHERE  memberID=@id";
+
+
+                SqlCommand cmd2 = new SqlCommand(query2, dbmem_seach.getConnection());
+                SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+                DataTable dt2 = new DataTable();
+
+
+                cmd2.Parameters.AddWithValue("@id", gm.MemberID);
+                da2.Fill(dt2);
+                bool temp1 = false;
+                // SqlDataReader dr2 = cmd2.ExecuteReader();
+
+                //while (dr2.Read())
+                //{
+                //    gm.email = dr2["email"].ToString();
+                //    gm.paymentPlan = dr2["payment_plan"].ToString();
+                //    gm.joinedDate = dr2["joined_date"].ToString();
+                //    gm.height = (double)dr2["height"];
+                //    gm.weight = (double)dr2["weight"];
+                //    gm.BMIratio = (double)dr2["BMI"];
+                //    gm.fatLevel = (double)dr2["fat_level"];
+                //    gm.photo = (byte[])dr2["photo"];
+
+                if (dt2.Rows.Count > 0)
+                {
+                    // gm.MemberID = int.Parse(dt2.Rows[0]["regNo"].ToString());
+                    gm.email = dt2.Rows[0]["email"].ToString();
+                    gm.paymentPlan = dt2.Rows[0]["payment_plan"].ToString();
+                    gm.joinedDate = dt2.Rows[0]["joined_date"].ToString();
+                    gm.height = double.Parse(dt2.Rows[0]["height"].ToString());
+                    gm.weight = double.Parse(dt2.Rows[0]["weight"].ToString());
+                    gm.BMIratio = double.Parse(dt2.Rows[0]["BMI"].ToString());
+                    gm.fatLevel = double.Parse(dt2.Rows[0]["fat_level"].ToString());
+                    gm.photo = (byte[])dt2.Rows[0]["photo"];
+
+                    temp1 = true;
+                }
+
+
+
+
+                //dr1.Close();
+           //     dbmem_seach.closeConnection();
+
+                if (temp == true && temp1 == true)
+                {
+                    MessageBox.Show("Record found", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                }
+                else
+                {
+                    MessageBox.Show("No record found.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+                return gm;
 
             }
-
-            dr1.Close();
-
-            string query2 = "SELECT * FROM tbl_gymMember WHERE  memberID=@id";
-
-
-            SqlCommand cmd2 = new SqlCommand(query2, dbmem_seach.getConnection());
-
-            cmd2.Parameters.AddWithValue("@id", gm.MemberID);
-
-            SqlDataReader dr2 = cmd2.ExecuteReader();
-
-            while (dr2.Read())
+            catch (Exception er)
             {
-                gm.email = dr2["email"].ToString();
-                gm.paymentPlan = dr2["payment_plan"].ToString();
-                gm.joinedDate = dr2["joined_date"].ToString();
-                gm.height = (double)dr2["height"];
-                gm.weight = (double)dr2["weight"];
-                gm.BMIratio = (double)dr2["BMI"];
-                gm.fatLevel = (double)dr2["fat_level"];
-                gm.photo = (byte[])dr2["photo"];
 
-
-
+                throw;
             }
-
-            dr1.Close();
-            dbmem_seach.closeConnection();
-
-            return gm;
-
-
+            
             //gm.joinedDate = (string)dr1["joined_date"];
         }
 

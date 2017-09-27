@@ -26,7 +26,7 @@ namespace GymMSystem.Buisness_Logic
             cmd1.Parameters.AddWithValue("@name", ar.name);
             
 
-
+            return true;
 
 
         }

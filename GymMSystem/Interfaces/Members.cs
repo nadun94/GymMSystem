@@ -101,29 +101,37 @@ namespace GymMSystem.Interfaces
             Buisness_Logic.validation val = new Buisness_Logic.validation();
             // bool status = false;
 
+              if (val.IsName(txtM_name.Text)) return true;
+            else if (val.IsEmail(txtM_email.Text) || String.IsNullOrWhiteSpace(txtM_email.Text)) return true;
 
-            if (val.IsEmail(txtM_email.Text)) return true;
+            else if (val.IsAddress(txtM_address.Text) || String.IsNullOrWhiteSpace(txtM_address.Text)) return true;
 
-            else if (val.IsAddress(txtM_address.Text)) return true;
+           
 
-            else if (val.IsName(txtM_name.Text)) return true;
-
-            else if (val.IsPhone(txtM_phone.Text)) return true;
+            else if (val.IsPhone(txtM_phone.Text) ) return true;
 
             else if (val.IsHeight(txtM_height.Text)) return true;
 
             else if (val.IsWeight(txtM_weight.Text)) return true;
+            else if (string.IsNullOrWhiteSpace(txtM_name.Text))
+            {
+                MessageBox.Show("Name field is empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
 
             else
                 return false;
 
         }
 
+       
         private void btnM_save_Click(object sender, EventArgs e)
         {
            
             try
             {
+              
                 if (validateMemeber())
                 {
 
@@ -244,61 +252,9 @@ namespace GymMSystem.Interfaces
             }
 
             }
-           
-        
-
-        private void btnM3_Search_Click(object sender, EventArgs e)
-        {
-
-            
-            try
-            {
-               // Buisness_Logic.validation val3 = new Buisness_Logic.validation();
-
-                
-                if (validate_search()){
-
-                    Buisness_Logic.gymMemberRepository gr_search = new Buisness_Logic.gymMemberRepository();
-
-                    var gm = gr_search.search((string.IsNullOrEmpty(txtM3_memID.Text) ? 0 : int.Parse(txtM3_memID.Text)), txtM3_name.Text.ToString(), txtM3_nic.Text.ToString());
-
-                    txtM3_memID.Text = gm.MemberID.ToString();
-                    txtM3_name.Text = gm.name;
-                    txtM3_nic.Text = gm.nic;
-                    txtM3_phone.Text = gm.phone.ToString();
-                    //  txt.Text = gm.joinedDate;
-                    txtM3_fatLevel.Text = gm.fatLevel.ToString();
-                    MemoryStream ms = new MemoryStream(gm.photo);
-                    pictureBoxM3.Image = Image.FromStream(ms);
-                    cmbM3_gender.SelectedItem = gm.gender;
-                    cmbM3_paymentpaln.SelectedItem = gm.paymentPlan;
-                    txtm3_dob.Text = gm.dob;
-                    txtM3_height.Text = gm.height.ToString();
-                    txtM3_weight.Text = gm.weight.ToString();
-                    txtM3_bmi.Text = gm.BMIratio.ToString();
-
-                    pictureBoxM3.SizeMode = PictureBoxSizeMode.Zoom;
-                    MemoryStream ms1 = new MemoryStream(gm.photo);
-                    pictureBoxM3.Image = Image.FromStream(ms1);
-
-                }
 
 
-
-
-
-
-
-            }
-            catch (Exception expo)
-            {
-                MessageBox.Show(expo.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               // throw;
-            }
-
-        }
-
-        private void btnM3_clear_Click_1(object sender, EventArgs e)
+        private void clearMSearch()
         {
             txtMF_amount.Text = "";
             txtM3_bmi.Text = "";
@@ -315,6 +271,77 @@ namespace GymMSystem.Interfaces
             pictureBoxM3.Image = null;
             cmbM3_paymentpaln.Refresh();
             cmbM_gender.Refresh();
+
+
+        }
+        private void btnM3_Search_Click(object sender, EventArgs e)
+        {
+
+            
+            try
+            {
+               // Buisness_Logic.validation val3 = new Buisness_Logic.validation();
+
+                
+                if (validate_search()){
+
+                    Buisness_Logic.gymMemberRepository gr_search = new Buisness_Logic.gymMemberRepository();
+
+                    var gm = gr_search.search((string.IsNullOrEmpty(txtM3_memID.Text) ? 0 : int.Parse(txtM3_memID.Text)), txtM3_name.Text.ToString(), txtM3_nic.Text.ToString());
+
+
+                    if (gm.MemberID == 0)
+                    {
+                        clearMSearch();
+                    }
+                    else
+                    {
+                        txtM3_memID.Text = gm.MemberID.ToString();
+                        txtM3_name.Text = gm.name;
+                        txtM3_nic.Text = gm.nic;
+                        txtM3_phone.Text = gm.phone.ToString();
+                        //  txt.Text = gm.joinedDate;
+                        txtM3_fatLevel.Text = gm.fatLevel.ToString();
+                        //MemoryStream ms = new MemoryStream(gm.photo);
+                        //pictureBoxM3.Image = Image.FromStream(ms);
+                        cmbM3_gender.SelectedItem = gm.gender;
+                        cmbM3_paymentpaln.SelectedItem = gm.paymentPlan;
+                        txtm3_dob.Text = gm.dob;
+                        txtM3_height.Text = gm.height.ToString();
+                        txtM3_weight.Text = gm.weight.ToString();
+                        txtM3_bmi.Text = gm.BMIratio.ToString();
+
+                        pictureBoxM3.SizeMode = PictureBoxSizeMode.Zoom;
+
+                        MemoryStream ms1 = new MemoryStream(gm.photo);
+                        // ms1.ToArray();
+                        ms1.Position = 0;
+
+                        ms1.Read(gm.photo, 0, gm.photo.Length);
+                        pictureBoxM3.Image = Image.FromStream(ms1);
+                    }
+                    
+
+                }
+
+
+
+
+
+
+
+            }
+            catch (Exception expo)
+            {
+               // MessageBox.Show(expo.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               // throw;
+            }
+
+        }
+       
+        private void btnM3_clear_Click_1(object sender, EventArgs e)
+        {
+            clearMSearch();
             
         }
 
@@ -323,7 +350,25 @@ namespace GymMSystem.Interfaces
 
             Buisness_Logic.fee fee1 = new Buisness_Logic.fee();
 
-            //fee1.feeId  = 
+            fee1.paymentPlan = txtMF_payPlan.Text;
+            fee1.amount = double.Parse(txtMF_amount.Text);
+            fee1.service = "Gym";
+            fee1.lastVPaymentDate = txtMF_lastValidDate.Text;
+            fee1.memberID = int.Parse(txtMF_memID.Text);
+           
+            
+
+
+            Buisness_Logic.feeRepository fr = new Buisness_Logic.feeRepository();
+            if (fr.addFee(fee1))
+            {
+               
+            }
+        }
+
+        private void btnMFee_clear1_Click(object sender, EventArgs e)
+        {
+
         }
 
 

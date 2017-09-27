@@ -34,7 +34,7 @@ namespace GymMSystem.Buisness_Logic
 
             if (string.IsNullOrWhiteSpace(email))
             {
-                MessageBox.Show("Email is not inserted!", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                MessageBox.Show("Email feild is empty!", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return true;
             }
             else if (Regex.IsMatch(email, MatchEmailPattern) && email!=null)
