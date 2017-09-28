@@ -123,19 +123,26 @@ namespace GymMSystem.Buisness_Logic
                 && nic.EndsWith("X", StringComparison.OrdinalIgnoreCase) 
                 || nic.EndsWith("V", StringComparison.OrdinalIgnoreCase) 
                 && (nic[2] !='4' && nic[2] != '9' ));
-            if (string.IsNullOrWhiteSpace(nic))
-            {
-                MessageBox.Show("NIC is not inserted!", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                return true;
-            }
-            else if (condition)
-                return true;
 
+            if (!string.IsNullOrWhiteSpace(nic))
+            {
+               
+                if (condition)
+                    return true;
+
+                else
+                {
+                   // MessageBox.Show("NIC  is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                
+            }
             else
             {
-                MessageBox.Show("NIC  is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+               // MessageBox.Show("NIC is not inserted!", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                return true;
             }
+
 
 
         }
