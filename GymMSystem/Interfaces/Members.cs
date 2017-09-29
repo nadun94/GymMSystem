@@ -216,9 +216,135 @@ namespace GymMSystem.Interfaces
         {
 
         }
+        private bool validateFeedatils()
+        {
+            Buisness_Logic.validation vf = new Buisness_Logic.validation();
+            if (string.IsNullOrWhiteSpace(txtMF_memID.Text) && string.IsNullOrWhiteSpace(txtmfNIC.Text) && (string.IsNullOrWhiteSpace(txtMFee_name.Text)))
+            {
 
+                MessageBox.Show("Enter Member ID or Name or NIC to find fee payment details.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+            {
+                if (!txtMF_memID.Text.All(char.IsDigit) && string.IsNullOrWhiteSpace(txtmfNIC.Text) && (string.IsNullOrWhiteSpace(txtMFee_name.Text)))
+                {
+                    MessageBox.Show("Member Id should include digits.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                //  else return true;
+                else if ((!txtMFee_name.Text.All(char.IsLetter)) && string.IsNullOrWhiteSpace(txtmfNIC.Text) && string.IsNullOrWhiteSpace(txtMF_memID.Text))
+                {
+                    MessageBox.Show("Enter name in correct format.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                else if ((!vf.IsNIC(txtmfNIC.Text) ) && string.IsNullOrWhiteSpace(txtMF_memID.Text) && (string.IsNullOrWhiteSpace(txtMFee_name.Text)))
+                {
+                    MessageBox.Show("NIC  is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+               // else return true;
+
+             
+                else return true;
+
+
+            }
+        }
+
+        private Buisness_Logic.gymMember checKFeeUI()
+        {
+            Buisness_Logic.gymMember gmf = new Buisness_Logic.gymMember();
+            try
+            {
+                if (validateFeedatils())
+                {
+
+                   
+                    Buisness_Logic.feeRepository frfee = new Buisness_Logic.feeRepository();
+                    gmf.MemberID = (string.IsNullOrEmpty(txtMF_memID.Text) ? 0 : int.Parse(txtMF_memID.Text));
+                    gmf.nic = txtmfNIC.Text.ToString();
+                    gmf.name = txtMFee_name.Text.ToString();
+
+
+                    bool req1 = frfee.searchMemberDerailsFor_fee(gmf);
+
+
+
+
+                    Buisness_Logic.fee ft = new Buisness_Logic.fee();
+
+                    ft.memberID = gmf.MemberID;
+                    //gmf.MemberID = int.Parse(txtMF_memID.Text);
+                    //gmf.nic = txtmfNIC.Text;
+                    //gmf.name = txtMFee_name.Text;
+
+
+
+
+
+                    bool req2 = frfee.checkPaymentDetails(ft);
+                    if (gmf.MemberID == 0)
+                    {
+                        clearFee();
+                    }
+                    else
+                    {
+                        txtMF_memID.Text = gmf.MemberID.ToString();
+                        txtMFee_name.Text = gmf.name;
+                        txtmfNIC.Text = gmf.nic;
+                        txtMF_payPlan.Text = gmf.paymentPlan;
+
+                    }
+                    txtMF_lastValidDate.Text = ft.lastVPaymentDate;
+                    txtlstPaidDate.Text = ft.lastPaidDate;
+                    txtLastpaidtime.Text = ft.lastPaidTime;
+                    txtMF_amount.Text = ft.LastPaid_amount.ToString();
+                    txtfservice.Text = ft.service;
+                    if (req1 == true && req2 == true)
+                    {
+                        MessageBox.Show("payment record found.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else if (req1 == true && req2 == false)
+                    {
+
+                        txtMF_amount.Text = "";
+                        txtMF_lastValidDate.Text = "";
+                        txtfservice.Text = "";
+                        txtlstPaidDate.Text = "";
+                        txtLastpaidtime.Text = "";
+                        MessageBox.Show("Member information found. But no payment record found.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No memeber information found by that Member ID", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        clearFee();
+
+                    }
+
+                }
+
+
+
+
+
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            return gmf;
+        }
+
+        private Buisness_Logic.gymMember transporter = null;
         private void btnM3_check_Click(object sender, EventArgs e)
         {
+
+            transporter=checKFeeUI();
 
         }
 
@@ -264,6 +390,7 @@ namespace GymMSystem.Interfaces
             txtM3_memID.Text = "";
             txtM3_name.Text = "";
             txtM3_nic.Text = "";
+            txtmsemail.Text = "";
             txtM3_phone.Text = "";
             txtM3_weight.Text = "";
             cmbM3_gender.SelectedItem = null;
@@ -310,6 +437,7 @@ namespace GymMSystem.Interfaces
                         txtM3_height.Text = gm.height.ToString();
                         txtM3_weight.Text = gm.weight.ToString();
                         txtM3_bmi.Text = gm.BMIratio.ToString();
+                        txtmsemail.Text = gm.email;
 
                         pictureBoxM3.SizeMode = PictureBoxSizeMode.Zoom;
 
@@ -347,26 +475,178 @@ namespace GymMSystem.Interfaces
 
         private void btnMF_addfee_Click(object sender, EventArgs e)
         {
-
-            Buisness_Logic.fee fee1 = new Buisness_Logic.fee();
-
-            fee1.paymentPlan = txtMF_payPlan.Text;
-            fee1.amount = double.Parse(txtMF_amount.Text);
-            fee1.service = "Gym";
-            fee1.lastVPaymentDate = txtMF_lastValidDate.Text;
-            fee1.memberID = int.Parse(txtMF_memID.Text);
-           
-            
-
-
-            Buisness_Logic.feeRepository fr = new Buisness_Logic.feeRepository();
-            if (fr.addFee(fee1))
+            if (string.IsNullOrWhiteSpace(txtMF_memID.Text))
             {
-               
+                MessageBox.Show("Please search payment details of a member first.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Buisness_Logic.fee fee1 = new Buisness_Logic.fee();
+
+                fee1.paymentPlan = txtMF_payPlan.Text;
+                // fee1.LastPaid_amount = double.Parse(txtMFnewpayemnt.Text);
+                fee1.service = "Gym";
+                fee1.lastVPaymentDate = txtMF_lastValidDate.Text;
+                fee1.memberID = int.Parse(txtMF_memID.Text);
+
+
+
+
+
+                Buisness_Logic.feeRepository fr = new Buisness_Logic.feeRepository();
+                if (fr.addFee(fee1, transporter))
+                {
+                    txtMFnewpayemnt.Text = fee1.newAmount.ToString();
+                    txtPaidDate.Text = fee1.paidDate;
+                    txtPaidTIme.Text = fee1.paidTime;
+                    txtPaymentValidfor.Text = fee1.PaymentvalidDate;
+
+
+
+                    MessageBox.Show("Payment Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
+        private void clearFee()
+        {
+            txtMFee_name.Text = "";
+            txtmfNIC.Text = "";
+            txtMF_amount.Text = "";
+            txtMF_lastValidDate.Text = "";
+            txtfservice.Text = "";
+            txtMF_memID.Text = "";
+            txtMF_payPlan.Text = "";
+            
+            txtlstPaidDate.Text = "";
+            txtLastpaidtime.Text = "";
+            txtMF_memID.Focus(); 
+
+
+        }
         private void btnMFee_clear1_Click(object sender, EventArgs e)
+        {
+            clearFee();
+        }
+
+        private void bntMem4_checkPp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Buisness_Logic.fee freport = new Buisness_Logic.fee();
+
+               
+
+                
+               
+            }
+            catch (Exception ert)
+            {
+
+                throw;
+            }
+        }
+
+        private void btnmfCalcPayment_Click(object sender, EventArgs e)
+        {       
+
+            if(string.IsNullOrWhiteSpace(txtMF_memID.Text) || string.IsNullOrWhiteSpace(txtMF_payPlan.Text))
+            {
+                MessageBox.Show("Please search payment details of a member first.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Buisness_Logic.fee fee2 = new Buisness_Logic.fee();
+
+                fee2.service = "Gym";
+                fee2.lastVPaymentDate = txtMF_lastValidDate.Text;
+                fee2.memberID = int.Parse(txtMF_memID.Text);
+                fee2.paymentPlan = txtMF_payPlan.Text;
+                Buisness_Logic.feeRepository fr = new Buisness_Logic.feeRepository();
+                fr.paymentCalculation(fee2, transporter);
+
+
+                txtMFnewpayemnt.Text = fee2.newAmount.ToString();
+                txtPaymentValidfor.Text = fee2.PaymentvalidDate;
+            }
+
+        }
+
+        private void btnFee_clear_Click(object sender, EventArgs e)
+        {
+            txtPaymentValidfor.Text = "";
+            txtPaidDate.Text = "";
+            txtPaidTIme.Text = "";
+            txtMFnewpayemnt.Text = "";
+        }
+
+        private void btnM3_update_Click(object sender, EventArgs e)
+        {
+
+            Buisness_Logic.gymMember gm = new Buisness_Logic.gymMember();
+
+            MemoryStream memt1p2 = new MemoryStream();
+            pictureBoxM3.Image.Save(memt1p2, System.Drawing.Imaging.ImageFormat.Jpeg);
+            byte[] photo_memt2 = memt1p2.ToArray();
+
+                   gm.MemberID = int.Parse(txtM3_memID.Text);
+                   gm.name = txtM3_name.Text;
+                   gm.nic = txtM3_nic.Text;
+                   gm.phone = int.Parse(txtM3_phone.Text);
+
+                   gm.fatLevel = double.Parse(txtM3_fatLevel.Text);
+                   gm.addresss = txtmsearch_address.Text;
+
+                   gm.gender = cmbM3_gender.SelectedItem.ToString();
+                   gm.paymentPlan =  cmbM3_paymentpaln.SelectedItem.ToString();
+                   gm.dob = txtm3_dob.Text ;
+                   gm.height = double.Parse(txtM3_height.Text);
+                   gm.weight = double.Parse(txtM3_weight.Text);
+                    gm.photo = photo_memt2;
+                     gm.email = txtmsemail.Text;
+
+            Buisness_Logic.gymMemberRepository grup = new Buisness_Logic.gymMemberRepository();
+
+            if (grup.updateGymMember(gm))
+            {
+                MessageBox.Show("Member detail updated.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            
+        }
+
+        private void btnM3_browse_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                openFIleDialog_mem.Filter = "Image files | *.jpg; *.PNG; *.gif; *.BMP";
+                DialogResult drMem1 = openFIleDialog_mem.ShowDialog();
+
+                if (drMem1 == DialogResult.OK)
+                {
+                    pictureBoxM3.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBoxM3.Image = Image.FromFile(openFIleDialog_mem.FileName);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void metroLabel20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbM3_gender_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
