@@ -111,10 +111,14 @@
     <Compile Include="Buisness Logic\gymMember.cs" />
     <Compile Include="Buisness Logic\gymMemberRepository.cs" />
     <Compile Include="Buisness Logic\inventory.cs" />
+    <Compile Include="Buisness Logic\inventoryRepository.cs" />
     <Compile Include="Buisness Logic\member.cs" />
+    <Compile Include="Buisness Logic\nonRepairableItem_repository.cs" />
+    <Compile Include="Buisness Logic\nonRepairable_Item.cs" />
     <Compile Include="Buisness Logic\otherServiceRepository.cs" />
     <Compile Include="Buisness Logic\product.cs" />
     <Compile Include="Buisness Logic\productRepository.cs" />
+    <Compile Include="Buisness Logic\repairablerable_Items.cs" />
     <Compile Include="Buisness Logic\validation.cs" />
     <Compile Include="Common controls\ILoggable.cs" />
     <Compile Include="Common controls\repository.cs" />
