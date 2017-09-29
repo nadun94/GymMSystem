@@ -22,5 +22,10 @@ namespace GymMSystem.Interfaces
         {
 
         }
+
+        private void metroTabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

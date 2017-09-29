@@ -189,7 +189,7 @@
             this.txtW5_sets.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtW5_sets.ForeColor = System.Drawing.Color.White;
             this.txtW5_sets.Location = new System.Drawing.Point(834, 469);
-            this.txtW5_sets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtW5_sets.Margin = new System.Windows.Forms.Padding(2);
             this.txtW5_sets.Name = "txtW5_sets";
             this.txtW5_sets.Size = new System.Drawing.Size(268, 23);
             this.txtW5_sets.TabIndex = 62;
@@ -203,7 +203,7 @@
             this.txtW4_fat.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtW4_fat.ForeColor = System.Drawing.Color.White;
             this.txtW4_fat.Location = new System.Drawing.Point(834, 398);
-            this.txtW4_fat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtW4_fat.Margin = new System.Windows.Forms.Padding(2);
             this.txtW4_fat.Name = "txtW4_fat";
             this.txtW4_fat.Size = new System.Drawing.Size(268, 23);
             this.txtW4_fat.TabIndex = 61;
@@ -217,7 +217,7 @@
             this.txtW3_schedule.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtW3_schedule.ForeColor = System.Drawing.Color.White;
             this.txtW3_schedule.Location = new System.Drawing.Point(389, 469);
-            this.txtW3_schedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtW3_schedule.Margin = new System.Windows.Forms.Padding(2);
             this.txtW3_schedule.Name = "txtW3_schedule";
             this.txtW3_schedule.Size = new System.Drawing.Size(268, 23);
             this.txtW3_schedule.TabIndex = 59;
@@ -231,7 +231,7 @@
             this.txtW2_bmi.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtW2_bmi.ForeColor = System.Drawing.Color.White;
             this.txtW2_bmi.Location = new System.Drawing.Point(388, 398);
-            this.txtW2_bmi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtW2_bmi.Margin = new System.Windows.Forms.Padding(2);
             this.txtW2_bmi.Name = "txtW2_bmi";
             this.txtW2_bmi.Size = new System.Drawing.Size(268, 23);
             this.txtW2_bmi.TabIndex = 58;
@@ -332,6 +332,7 @@
             this.btnexercise_save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnexercise_save.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btnexercise_save.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btnexercise_save.Click += new System.EventHandler(this.btnexercise_save_Click);
             // 
             // bunifuSeparator1
             // 
@@ -340,7 +341,7 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(-152, 228);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(1710, 35);
             this.bunifuSeparator1.TabIndex = 49;
@@ -369,7 +370,7 @@
             this.txtEx2_description.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtEx2_description.ForeColor = System.Drawing.Color.White;
             this.txtEx2_description.Location = new System.Drawing.Point(403, 90);
-            this.txtEx2_description.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEx2_description.Margin = new System.Windows.Forms.Padding(2);
             this.txtEx2_description.Multiline = true;
             this.txtEx2_description.Name = "txtEx2_description";
             this.txtEx2_description.Size = new System.Drawing.Size(268, 94);
@@ -384,7 +385,7 @@
             this.txtEx1_name.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtEx1_name.ForeColor = System.Drawing.Color.White;
             this.txtEx1_name.Location = new System.Drawing.Point(403, 45);
-            this.txtEx1_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEx1_name.Margin = new System.Windows.Forms.Padding(2);
             this.txtEx1_name.Name = "txtEx1_name";
             this.txtEx1_name.Size = new System.Drawing.Size(268, 23);
             this.txtEx1_name.TabIndex = 47;
@@ -447,7 +448,7 @@
             this.metroTextBox9.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox9.ForeColor = System.Drawing.Color.White;
             this.metroTextBox9.Location = new System.Drawing.Point(834, 333);
-            this.metroTextBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox9.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox9.Name = "metroTextBox9";
             this.metroTextBox9.Size = new System.Drawing.Size(268, 23);
             this.metroTextBox9.TabIndex = 61;
@@ -478,7 +479,7 @@
             this.workout.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.workout.ItemSize = new System.Drawing.Size(200, 70);
             this.workout.Location = new System.Drawing.Point(19, 95);
-            this.workout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.workout.Margin = new System.Windows.Forms.Padding(4);
             this.workout.Multiline = true;
             this.workout.Name = "workout";
             this.workout.SelectedIndex = 0;
@@ -544,7 +545,7 @@
             this.dataGridPayementPending.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.dataGridPayementPending.HeaderForeColor = System.Drawing.Color.SeaGreen;
             this.dataGridPayementPending.Location = new System.Drawing.Point(22, 393);
-            this.dataGridPayementPending.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridPayementPending.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridPayementPending.Name = "dataGridPayementPending";
             this.dataGridPayementPending.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridPayementPending.RowTemplate.Height = 24;
@@ -598,7 +599,7 @@
             this.metroTextBox8.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox8.ForeColor = System.Drawing.Color.White;
             this.metroTextBox8.Location = new System.Drawing.Point(235, 336);
-            this.metroTextBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox8.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox8.Name = "metroTextBox8";
             this.metroTextBox8.Size = new System.Drawing.Size(268, 23);
             this.metroTextBox8.TabIndex = 72;
@@ -612,7 +613,7 @@
             this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox1.ForeColor = System.Drawing.Color.White;
             this.metroTextBox1.Location = new System.Drawing.Point(712, 336);
-            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.Size = new System.Drawing.Size(268, 23);
             this.metroTextBox1.TabIndex = 72;
@@ -626,7 +627,7 @@
             this.metroTextBox2.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox2.ForeColor = System.Drawing.Color.White;
             this.metroTextBox2.Location = new System.Drawing.Point(712, 173);
-            this.metroTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.Size = new System.Drawing.Size(268, 23);
             this.metroTextBox2.TabIndex = 71;
@@ -640,7 +641,7 @@
             this.metroTextBox3.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox3.ForeColor = System.Drawing.Color.White;
             this.metroTextBox3.Location = new System.Drawing.Point(233, 171);
-            this.metroTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox3.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.Size = new System.Drawing.Size(268, 23);
             this.metroTextBox3.TabIndex = 70;
@@ -654,7 +655,7 @@
             this.metroTextBox6.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox6.ForeColor = System.Drawing.Color.White;
             this.metroTextBox6.Location = new System.Drawing.Point(233, 80);
-            this.metroTextBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox6.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox6.Name = "metroTextBox6";
             this.metroTextBox6.Size = new System.Drawing.Size(268, 23);
             this.metroTextBox6.TabIndex = 69;
@@ -668,7 +669,7 @@
             this.metroTextBox5.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox5.ForeColor = System.Drawing.Color.White;
             this.metroTextBox5.Location = new System.Drawing.Point(712, 80);
-            this.metroTextBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox5.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox5.Name = "metroTextBox5";
             this.metroTextBox5.Size = new System.Drawing.Size(268, 23);
             this.metroTextBox5.TabIndex = 69;
@@ -682,7 +683,7 @@
             this.metroTextBox7.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox7.ForeColor = System.Drawing.Color.White;
             this.metroTextBox7.Location = new System.Drawing.Point(233, 255);
-            this.metroTextBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox7.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox7.Name = "metroTextBox7";
             this.metroTextBox7.Size = new System.Drawing.Size(268, 23);
             this.metroTextBox7.TabIndex = 69;
@@ -696,7 +697,7 @@
             this.metroTextBox4.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox4.ForeColor = System.Drawing.Color.White;
             this.metroTextBox4.Location = new System.Drawing.Point(712, 255);
-            this.metroTextBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTextBox4.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.Size = new System.Drawing.Size(268, 23);
             this.metroTextBox4.TabIndex = 69;
@@ -818,7 +819,7 @@
             // 
             this.btnWorvHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnWorvHome.Location = new System.Drawing.Point(1084, 78);
-            this.btnWorvHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnWorvHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnWorvHome.Name = "btnWorvHome";
             this.btnWorvHome.Size = new System.Drawing.Size(100, 36);
             this.btnWorvHome.Style = MetroFramework.MetroColorStyle.Yellow;
@@ -837,9 +838,9 @@
             this.Controls.Add(this.btnWorvHome);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.workout);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "workouts";
-            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Text = "workouts";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.workouts_Load);
