@@ -14,11 +14,11 @@ namespace GymMSystem.DataLayer
     {
         private static string conString;
         SqlConnection con;
-        private SqlCommand cmd;
+        private SqlCommand cmd; 
 
        public dbConnect()
         {
-            conString = @"Data Source=DESKTOP-E80690E;Initial Catalog=dbGym;Integrated Security=True";
+            conString = @"Data Source=DESKTOP-HCHF8AM\NADUN;Initial Catalog=dbGym;Integrated Security=True";
         }
 
         public void openConnection()

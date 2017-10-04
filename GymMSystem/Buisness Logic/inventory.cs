@@ -13,6 +13,7 @@ namespace GymMSystem.Buisness_Logic
         public string  make { get; set; }
         public string model { get; set; }
         public double price { get; set; }
+        public byte[] photo { get; set; }
 
     }
 }

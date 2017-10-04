@@ -105,6 +105,8 @@
   <ItemGroup>
     <Compile Include="Buisness Logic\AreobicMember.cs" />
     <Compile Include="Buisness Logic\Attendence.cs" />
+    <Compile Include="Buisness Logic\employee.cs" />
+    <Compile Include="Buisness Logic\EmployeeRepository.cs" />
     <Compile Include="Buisness Logic\EntityBase.cs" />
     <Compile Include="Buisness Logic\fee.cs" />
     <Compile Include="Buisness Logic\feeRepository.cs" />
@@ -118,6 +120,7 @@
     <Compile Include="Buisness Logic\otherServiceRepository.cs" />
     <Compile Include="Buisness Logic\product.cs" />
     <Compile Include="Buisness Logic\productRepository.cs" />
+    <Compile Include="Buisness Logic\repairableItem_repository.cs" />
     <Compile Include="Buisness Logic\repairablerable_Items.cs" />
     <Compile Include="Buisness Logic\validation.cs" />
     <Compile Include="Common controls\ILoggable.cs" />

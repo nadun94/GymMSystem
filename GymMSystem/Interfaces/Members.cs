@@ -101,27 +101,42 @@ namespace GymMSystem.Interfaces
             Buisness_Logic.validation val = new Buisness_Logic.validation();
             // bool status = false;
 
-              if (val.IsName(txtM_name.Text)) return true;
-            else if (val.IsEmail(txtM_email.Text) || String.IsNullOrWhiteSpace(txtM_email.Text)) return true;
+            if (val.IsWord(txtM_name.Text, "Name")) {
 
-            else if (val.IsAddress(txtM_address.Text) || String.IsNullOrWhiteSpace(txtM_address.Text)) return true;
 
-           
 
-            else if (val.IsPhone(txtM_phone.Text) ) return true;
+                if (val.IsAddress(txtM_address.Text) || String.IsNullOrWhiteSpace(txtM_address.Text))
+                {
 
-            else if (val.IsHeight(txtM_height.Text)) return true;
+                    if (val.IsPhone(txtM_phone.Text)) return true;
+                    else return false;
 
-            else if (val.IsWeight(txtM_weight.Text)) return true;
-            else if (string.IsNullOrWhiteSpace(txtM_name.Text))
-            {
-                MessageBox.Show("Name field is empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                    if (val.IsEmail1(txtM_email.Text)) return true;
+                    else return false;
+
+
+                    if (val.IsHeight(txtM_height.Text)) return true;
+
+                    else if (val.IsWeight(txtM_weight.Text)) return true;
+                    else if (picuturebox_member.Image != null) return true;
+                    else return false;
+
+
+
+                   
+                }
+
+                else return false;
+
+
+            
+
+               
             }
 
+            else return false;
 
-            else
-                return false;
+       
 
         }
 

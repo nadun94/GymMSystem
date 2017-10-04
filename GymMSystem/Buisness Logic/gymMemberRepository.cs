@@ -137,11 +137,6 @@ namespace GymMSystem.Buisness_Logic
                 else
                     MessageBox.Show("This member already exists.", "Infromation", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
-
-
-
-
             }
 
             catch(Exception ep)

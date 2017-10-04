@@ -97,7 +97,6 @@
             this.metroTile29 = new MetroFramework.Controls.MetroTile();
             this.metroTile30 = new MetroFramework.Controls.MetroTile();
             this.metroTile31 = new MetroFramework.Controls.MetroTile();
-            this.txtAddp_model = new MetroFramework.Controls.MetroTextBox();
             this.txtAddp_ID = new MetroFramework.Controls.MetroTextBox();
             this.txtAddp_name = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
@@ -138,6 +137,8 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.danceTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.txtadd_qty = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.otherServieces = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
@@ -147,9 +148,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.msmSales = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.txtadd_qty = new MetroFramework.Controls.MetroTextBox();
             this.openfileprod1 = new System.Windows.Forms.OpenFileDialog();
+            this.cmb_addproduct_type = new MetroFramework.Controls.MetroComboBox();
             this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6_supliment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5_supliment)).BeginInit();
@@ -768,7 +768,7 @@
             // mtrtil3splmnt_brows
             // 
             this.mtrtil3splmnt_brows.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.mtrtil3splmnt_brows.Location = new System.Drawing.Point(531, 217);
+            this.mtrtil3splmnt_brows.Location = new System.Drawing.Point(940, 224);
             this.mtrtil3splmnt_brows.Name = "mtrtil3splmnt_brows";
             this.mtrtil3splmnt_brows.Size = new System.Drawing.Size(108, 28);
             this.mtrtil3splmnt_brows.Style = MetroFramework.MetroColorStyle.Teal;
@@ -782,7 +782,7 @@
             // mtrtil2splmnt_clear
             // 
             this.mtrtil2splmnt_clear.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.mtrtil2splmnt_clear.Location = new System.Drawing.Point(728, 131);
+            this.mtrtil2splmnt_clear.Location = new System.Drawing.Point(1137, 138);
             this.mtrtil2splmnt_clear.Name = "mtrtil2splmnt_clear";
             this.mtrtil2splmnt_clear.Size = new System.Drawing.Size(105, 47);
             this.mtrtil2splmnt_clear.Style = MetroFramework.MetroColorStyle.Teal;
@@ -792,11 +792,12 @@
             this.mtrtil2splmnt_clear.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtrtil2splmnt_clear.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtrtil2splmnt_clear.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.mtrtil2splmnt_clear.Click += new System.EventHandler(this.mtrtil2splmnt_clear_Click);
             // 
             // mtrtil1splmnt_save
             // 
             this.mtrtil1splmnt_save.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.mtrtil1splmnt_save.Location = new System.Drawing.Point(728, 37);
+            this.mtrtil1splmnt_save.Location = new System.Drawing.Point(1137, 44);
             this.mtrtil1splmnt_save.Name = "mtrtil1splmnt_save";
             this.mtrtil1splmnt_save.Size = new System.Drawing.Size(105, 44);
             this.mtrtil1splmnt_save.Style = MetroFramework.MetroColorStyle.Teal;
@@ -812,7 +813,7 @@
             // 
             this.picBox1_addproduct.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.picBox1_addproduct.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.picBox1_addproduct.Location = new System.Drawing.Point(502, 15);
+            this.picBox1_addproduct.Location = new System.Drawing.Point(911, 22);
             this.picBox1_addproduct.Name = "picBox1_addproduct";
             this.picBox1_addproduct.Size = new System.Drawing.Size(163, 181);
             this.picBox1_addproduct.TabIndex = 4;
@@ -821,7 +822,8 @@
             // txtAddp_price
             // 
             this.txtAddp_price.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAddp_price.Location = new System.Drawing.Point(194, 223);
+            this.txtAddp_price.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtAddp_price.Location = new System.Drawing.Point(194, 162);
             this.txtAddp_price.Name = "txtAddp_price";
             this.txtAddp_price.Size = new System.Drawing.Size(223, 23);
             this.txtAddp_price.TabIndex = 3;
@@ -830,7 +832,8 @@
             // txtAddp_make
             // 
             this.txtAddp_make.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAddp_make.Location = new System.Drawing.Point(194, 174);
+            this.txtAddp_make.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtAddp_make.Location = new System.Drawing.Point(194, 98);
             this.txtAddp_make.Name = "txtAddp_make";
             this.txtAddp_make.Size = new System.Drawing.Size(223, 23);
             this.txtAddp_make.TabIndex = 3;
@@ -860,19 +863,11 @@
             this.metroTile31.TabIndex = 56;
             this.metroTile31.Text = "metroTile31";
             // 
-            // txtAddp_model
-            // 
-            this.txtAddp_model.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAddp_model.Location = new System.Drawing.Point(194, 127);
-            this.txtAddp_model.Name = "txtAddp_model";
-            this.txtAddp_model.Size = new System.Drawing.Size(223, 23);
-            this.txtAddp_model.TabIndex = 3;
-            this.txtAddp_model.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
             // txtAddp_ID
             // 
             this.txtAddp_ID.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAddp_ID.Location = new System.Drawing.Point(194, 78);
+            this.txtAddp_ID.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtAddp_ID.Location = new System.Drawing.Point(652, 37);
             this.txtAddp_ID.Name = "txtAddp_ID";
             this.txtAddp_ID.Size = new System.Drawing.Size(223, 23);
             this.txtAddp_ID.TabIndex = 3;
@@ -881,6 +876,7 @@
             // txtAddp_name
             // 
             this.txtAddp_name.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAddp_name.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtAddp_name.Location = new System.Drawing.Point(194, 41);
             this.txtAddp_name.Name = "txtAddp_name";
             this.txtAddp_name.Size = new System.Drawing.Size(223, 23);
@@ -891,9 +887,11 @@
             // 
             this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(42, 227);
+            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel5.Location = new System.Drawing.Point(42, 166);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(38, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(49, 25);
             this.metroLabel5.TabIndex = 2;
             this.metroLabel5.Text = "Price";
             this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -926,9 +924,11 @@
             // 
             this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(42, 178);
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel4.Location = new System.Drawing.Point(42, 102);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(55, 25);
             this.metroLabel4.TabIndex = 2;
             this.metroLabel4.Text = "Make";
             this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1218,20 +1218,24 @@
             // 
             this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(42, 131);
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel3.Location = new System.Drawing.Point(495, 102);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(47, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(116, 25);
             this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "Model";
+            this.metroLabel3.Text = "Product Type";
             this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroLabel2
             // 
             this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(42, 82);
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel2.Location = new System.Drawing.Point(495, 35);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(71, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(97, 25);
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Product ID";
             this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1240,15 +1244,18 @@
             // 
             this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.Location = new System.Drawing.Point(42, 41);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(92, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(123, 25);
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Product name";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // danceTabPage
             // 
+            this.danceTabPage.Controls.Add(this.cmb_addproduct_type);
             this.danceTabPage.Controls.Add(this.mtrtil3splmnt_brows);
             this.danceTabPage.Controls.Add(this.mtrtil2splmnt_clear);
             this.danceTabPage.Controls.Add(this.mtrtil1splmnt_save);
@@ -1256,7 +1263,6 @@
             this.danceTabPage.Controls.Add(this.txtadd_qty);
             this.danceTabPage.Controls.Add(this.txtAddp_price);
             this.danceTabPage.Controls.Add(this.txtAddp_make);
-            this.danceTabPage.Controls.Add(this.txtAddp_model);
             this.danceTabPage.Controls.Add(this.txtAddp_ID);
             this.danceTabPage.Controls.Add(this.metroLabel6);
             this.danceTabPage.Controls.Add(this.txtAddp_name);
@@ -1274,6 +1280,29 @@
             this.danceTabPage.Text = "Add product";
             this.danceTabPage.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.danceTabPage.VerticalScrollbarBarColor = true;
+            // 
+            // txtadd_qty
+            // 
+            this.txtadd_qty.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtadd_qty.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtadd_qty.Location = new System.Drawing.Point(194, 229);
+            this.txtadd_qty.Name = "txtadd_qty";
+            this.txtadd_qty.Size = new System.Drawing.Size(223, 23);
+            this.txtadd_qty.TabIndex = 3;
+            this.txtadd_qty.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel6.Location = new System.Drawing.Point(42, 233);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(80, 25);
+            this.metroLabel6.TabIndex = 2;
+            this.metroLabel6.Text = "Quantity";
+            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // otherServieces
             // 
@@ -1299,7 +1328,7 @@
             this.otherServieces.ShowToolTips = true;
             this.otherServieces.Size = new System.Drawing.Size(1326, 613);
             this.otherServieces.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.otherServieces.Style = MetroFramework.MetroColorStyle.Teal;
+            this.otherServieces.Style = MetroFramework.MetroColorStyle.Magenta;
             this.otherServieces.TabIndex = 6;
             this.otherServieces.TabStop = false;
             this.otherServieces.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1391,29 +1420,27 @@
             this.msmSales.Owner = this;
             this.msmSales.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroLabel6
-            // 
-            this.metroLabel6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(42, 270);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(58, 19);
-            this.metroLabel6.TabIndex = 2;
-            this.metroLabel6.Text = "Quantity";
-            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtadd_qty
-            // 
-            this.txtadd_qty.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtadd_qty.Location = new System.Drawing.Point(194, 266);
-            this.txtadd_qty.Name = "txtadd_qty";
-            this.txtadd_qty.Size = new System.Drawing.Size(223, 23);
-            this.txtadd_qty.TabIndex = 3;
-            this.txtadd_qty.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
             // openfileprod1
             // 
             this.openfileprod1.FileName = "openfile11";
+            // 
+            // cmb_addproduct_type
+            // 
+            this.cmb_addproduct_type.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_addproduct_type.FormattingEnabled = true;
+            this.cmb_addproduct_type.ItemHeight = 23;
+            this.cmb_addproduct_type.Items.AddRange(new object[] {
+            "Apparel",
+            "Equipment",
+            "Shpliment",
+            "Beverage"});
+            this.cmb_addproduct_type.Location = new System.Drawing.Point(652, 102);
+            this.cmb_addproduct_type.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_addproduct_type.Name = "cmb_addproduct_type";
+            this.cmb_addproduct_type.Size = new System.Drawing.Size(223, 29);
+            this.cmb_addproduct_type.Style = MetroFramework.MetroColorStyle.Teal;
+            this.cmb_addproduct_type.TabIndex = 8;
+            this.cmb_addproduct_type.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // salesManagement
             // 
@@ -1543,7 +1570,6 @@
         private MetroFramework.Controls.MetroTile metroTile29;
         private MetroFramework.Controls.MetroTile metroTile30;
         private MetroFramework.Controls.MetroTile metroTile31;
-        private MetroFramework.Controls.MetroTextBox txtAddp_model;
         private MetroFramework.Controls.MetroTextBox txtAddp_ID;
         private MetroFramework.Controls.MetroTextBox txtAddp_name;
         private MetroFramework.Controls.MetroLabel metroLabel5;
@@ -1596,5 +1622,6 @@
         private MetroFramework.Controls.MetroTextBox txtadd_qty;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.OpenFileDialog openfileprod1;
+        private MetroFramework.Controls.MetroComboBox cmb_addproduct_type;
     }
 }
