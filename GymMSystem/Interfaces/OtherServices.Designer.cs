@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.otherServieces = new MetroFramework.Controls.MetroTabControl();
             this.servicesTabPage = new MetroFramework.Controls.MetroTabPage();
             this.btnOS1_delete = new MetroFramework.Controls.MetroTile();
@@ -57,6 +57,15 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtOS1_name = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.tab_OS3serviMem = new MetroFramework.Controls.MetroTabPage();
+            this.chkOS3_Boxing = new MetroFramework.Controls.MetroCheckBox();
+            this.chkOS3_Yoga = new MetroFramework.Controls.MetroCheckBox();
+            this.chkOS3_dance = new MetroFramework.Controls.MetroCheckBox();
+            this.btnOS3_delete = new MetroFramework.Controls.MetroTile();
+            this.btnOS2_Save = new MetroFramework.Controls.MetroTile();
+            this.btnOS3_update = new MetroFramework.Controls.MetroTile();
+            this.btnOS3_searchMem = new MetroFramework.Controls.MetroTile();
+            this.dataGridOS3_mem = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.tabOS4_fee = new MetroFramework.Controls.MetroTabPage();
             this.btnOS4Fe_cleari = new MetroFramework.Controls.MetroTile();
             this.btnOS4_addPay = new MetroFramework.Controls.MetroTile();
@@ -80,7 +89,6 @@
             this.btnOS2_update = new MetroFramework.Controls.MetroTile();
             this.btnOS2_searchMember = new MetroFramework.Controls.MetroTile();
             this.dataGrid_OSMemEdit = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btnOS2_Save = new MetroFramework.Controls.MetroTile();
             this.cmbOS2_gender = new MetroFramework.Controls.MetroComboBox();
             this.cmbOS2_serviceType = new MetroFramework.Controls.MetroComboBox();
             this.dateTime_OS2Mem = new Bunifu.Framework.UI.BunifuDatepicker();
@@ -99,24 +107,19 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.txtOS2_memName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.tab_OS3serviMem = new MetroFramework.Controls.MetroTabPage();
-            this.chkOS3_Boxing = new MetroFramework.Controls.MetroCheckBox();
-            this.chkOS3_Yoga = new MetroFramework.Controls.MetroCheckBox();
-            this.chkOS3_dance = new MetroFramework.Controls.MetroCheckBox();
-            this.btnOS3_delete = new MetroFramework.Controls.MetroTile();
-            this.btnOS3_update = new MetroFramework.Controls.MetroTile();
-            this.btnOS3_searchMem = new MetroFramework.Controls.MetroTile();
-            this.dataGridOS3_mem = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.msm_OS = new MetroFramework.Components.MetroStyleManager(this.components);
             this.btnOS_home = new MetroFramework.Controls.MetroTile();
+            this.btnAddMember = new MetroFramework.Controls.MetroTile();
+            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
+            this.txtaddress = new MetroFramework.Controls.MetroTextBox();
             this.otherServieces.SuspendLayout();
             this.servicesTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGriddServices)).BeginInit();
+            this.tab_OS3serviMem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOS3_mem)).BeginInit();
             this.tabOS4_fee.SuspendLayout();
             this.tab_addMemOS2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_OSMemEdit)).BeginInit();
-            this.tab_OS3serviMem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridOS3_mem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msm_OS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,9 +128,9 @@
             this.otherServieces.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.otherServieces.Controls.Add(this.servicesTabPage);
+            this.otherServieces.Controls.Add(this.tab_addMemOS2);
             this.otherServieces.Controls.Add(this.tab_OS3serviMem);
             this.otherServieces.Controls.Add(this.tabOS4_fee);
-            this.otherServieces.Controls.Add(this.tab_addMemOS2);
             this.otherServieces.FontSize = MetroFramework.MetroTabControlSize.Tall;
             this.otherServieces.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.otherServieces.ItemSize = new System.Drawing.Size(200, 70);
@@ -208,20 +211,20 @@
             // 
             // dataGriddServices
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGriddServices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGriddServices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGriddServices.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGriddServices.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGriddServices.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGriddServices.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGriddServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriddServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGriddServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGriddServices.DoubleBuffered = true;
             this.dataGriddServices.EnableHeadersVisualStyles = false;
@@ -464,6 +467,151 @@
             this.metroLabel8.Text = "Service Name";
             this.metroLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // tab_OS3serviMem
+            // 
+            this.tab_OS3serviMem.Controls.Add(this.chkOS3_Boxing);
+            this.tab_OS3serviMem.Controls.Add(this.chkOS3_Yoga);
+            this.tab_OS3serviMem.Controls.Add(this.chkOS3_dance);
+            this.tab_OS3serviMem.Controls.Add(this.btnOS3_delete);
+            this.tab_OS3serviMem.Controls.Add(this.btnOS2_Save);
+            this.tab_OS3serviMem.Controls.Add(this.btnOS3_update);
+            this.tab_OS3serviMem.Controls.Add(this.btnOS3_searchMem);
+            this.tab_OS3serviMem.Controls.Add(this.dataGridOS3_mem);
+            this.tab_OS3serviMem.HorizontalScrollbarBarColor = true;
+            this.tab_OS3serviMem.HorizontalScrollbarSize = 8;
+            this.tab_OS3serviMem.Location = new System.Drawing.Point(4, 74);
+            this.tab_OS3serviMem.Margin = new System.Windows.Forms.Padding(2);
+            this.tab_OS3serviMem.Name = "tab_OS3serviMem";
+            this.tab_OS3serviMem.Size = new System.Drawing.Size(1364, 463);
+            this.tab_OS3serviMem.TabIndex = 2;
+            this.tab_OS3serviMem.Text = "Members";
+            this.tab_OS3serviMem.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tab_OS3serviMem.VerticalScrollbarBarColor = true;
+            this.tab_OS3serviMem.VerticalScrollbarSize = 8;
+            // 
+            // chkOS3_Boxing
+            // 
+            this.chkOS3_Boxing.AutoSize = true;
+            this.chkOS3_Boxing.FontSize = MetroFramework.MetroLinkSize.Tall;
+            this.chkOS3_Boxing.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.chkOS3_Boxing.Location = new System.Drawing.Point(329, 50);
+            this.chkOS3_Boxing.Margin = new System.Windows.Forms.Padding(2);
+            this.chkOS3_Boxing.Name = "chkOS3_Boxing";
+            this.chkOS3_Boxing.Size = new System.Drawing.Size(88, 25);
+            this.chkOS3_Boxing.TabIndex = 31;
+            this.chkOS3_Boxing.Text = "Boxing";
+            this.chkOS3_Boxing.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.chkOS3_Boxing.UseVisualStyleBackColor = true;
+            // 
+            // chkOS3_Yoga
+            // 
+            this.chkOS3_Yoga.AutoSize = true;
+            this.chkOS3_Yoga.FontSize = MetroFramework.MetroLinkSize.Tall;
+            this.chkOS3_Yoga.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.chkOS3_Yoga.Location = new System.Drawing.Point(231, 50);
+            this.chkOS3_Yoga.Margin = new System.Windows.Forms.Padding(2);
+            this.chkOS3_Yoga.Name = "chkOS3_Yoga";
+            this.chkOS3_Yoga.Size = new System.Drawing.Size(69, 25);
+            this.chkOS3_Yoga.TabIndex = 31;
+            this.chkOS3_Yoga.Text = "Yoga";
+            this.chkOS3_Yoga.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.chkOS3_Yoga.UseVisualStyleBackColor = true;
+            // 
+            // chkOS3_dance
+            // 
+            this.chkOS3_dance.AutoSize = true;
+            this.chkOS3_dance.FontSize = MetroFramework.MetroLinkSize.Tall;
+            this.chkOS3_dance.FontWeight = MetroFramework.MetroLinkWeight.Bold;
+            this.chkOS3_dance.Location = new System.Drawing.Point(130, 50);
+            this.chkOS3_dance.Margin = new System.Windows.Forms.Padding(2);
+            this.chkOS3_dance.Name = "chkOS3_dance";
+            this.chkOS3_dance.Size = new System.Drawing.Size(98, 25);
+            this.chkOS3_dance.TabIndex = 31;
+            this.chkOS3_dance.Text = "Dancing";
+            this.chkOS3_dance.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.chkOS3_dance.UseVisualStyleBackColor = true;
+            // 
+            // btnOS3_delete
+            // 
+            this.btnOS3_delete.Location = new System.Drawing.Point(1036, 275);
+            this.btnOS3_delete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOS3_delete.Name = "btnOS3_delete";
+            this.btnOS3_delete.Size = new System.Drawing.Size(94, 40);
+            this.btnOS3_delete.Style = MetroFramework.MetroColorStyle.Teal;
+            this.btnOS3_delete.TabIndex = 30;
+            this.btnOS3_delete.Text = "Delete";
+            this.btnOS3_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnOS3_delete.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnOS3_delete.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            // 
+            // btnOS2_Save
+            // 
+            this.btnOS2_Save.Location = new System.Drawing.Point(1036, 143);
+            this.btnOS2_Save.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOS2_Save.Name = "btnOS2_Save";
+            this.btnOS2_Save.Size = new System.Drawing.Size(94, 40);
+            this.btnOS2_Save.Style = MetroFramework.MetroColorStyle.Teal;
+            this.btnOS2_Save.TabIndex = 22;
+            this.btnOS2_Save.Text = "Save";
+            this.btnOS2_Save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnOS2_Save.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnOS2_Save.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btnOS2_Save.Click += new System.EventHandler(this.btnOS2_Save_Click);
+            // 
+            // btnOS3_update
+            // 
+            this.btnOS3_update.Location = new System.Drawing.Point(1036, 197);
+            this.btnOS3_update.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOS3_update.Name = "btnOS3_update";
+            this.btnOS3_update.Size = new System.Drawing.Size(94, 40);
+            this.btnOS3_update.Style = MetroFramework.MetroColorStyle.Teal;
+            this.btnOS3_update.TabIndex = 29;
+            this.btnOS3_update.Text = "Update";
+            this.btnOS3_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnOS3_update.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnOS3_update.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            // 
+            // btnOS3_searchMem
+            // 
+            this.btnOS3_searchMem.Location = new System.Drawing.Point(1036, 99);
+            this.btnOS3_searchMem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOS3_searchMem.Name = "btnOS3_searchMem";
+            this.btnOS3_searchMem.Size = new System.Drawing.Size(94, 40);
+            this.btnOS3_searchMem.Style = MetroFramework.MetroColorStyle.Teal;
+            this.btnOS3_searchMem.TabIndex = 28;
+            this.btnOS3_searchMem.Text = "Search";
+            this.btnOS3_searchMem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnOS3_searchMem.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnOS3_searchMem.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            // 
+            // dataGridOS3_mem
+            // 
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridOS3_mem.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridOS3_mem.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridOS3_mem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridOS3_mem.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridOS3_mem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridOS3_mem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridOS3_mem.DoubleBuffered = true;
+            this.dataGridOS3_mem.EnableHeadersVisualStyles = false;
+            this.dataGridOS3_mem.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dataGridOS3_mem.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dataGridOS3_mem.Location = new System.Drawing.Point(114, 136);
+            this.dataGridOS3_mem.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridOS3_mem.Name = "dataGridOS3_mem";
+            this.dataGridOS3_mem.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridOS3_mem.RowTemplate.Height = 24;
+            this.dataGridOS3_mem.Size = new System.Drawing.Size(848, 294);
+            this.dataGridOS3_mem.TabIndex = 27;
             // 
             // tabOS4_fee
             // 
@@ -734,6 +882,7 @@
             // 
             // tab_addMemOS2
             // 
+            this.tab_addMemOS2.Controls.Add(this.btnAddMember);
             this.tab_addMemOS2.Controls.Add(this.btnOS2_delete);
             this.tab_addMemOS2.Controls.Add(this.btnOS2_update);
             this.tab_addMemOS2.Controls.Add(this.btnOS2_searchMember);
@@ -741,8 +890,10 @@
             this.tab_addMemOS2.Controls.Add(this.cmbOS2_gender);
             this.tab_addMemOS2.Controls.Add(this.cmbOS2_serviceType);
             this.tab_addMemOS2.Controls.Add(this.dateTime_OS2Mem);
+            this.tab_addMemOS2.Controls.Add(this.txtaddress);
             this.tab_addMemOS2.Controls.Add(this.txtOS2_nic);
             this.tab_addMemOS2.Controls.Add(this.txtOS2_phone);
+            this.tab_addMemOS2.Controls.Add(this.metroLabel20);
             this.tab_addMemOS2.Controls.Add(this.metroLabel10);
             this.tab_addMemOS2.Controls.Add(this.metroLabel12);
             this.tab_addMemOS2.Controls.Add(this.checkOS2Mem);
@@ -804,22 +955,23 @@
             this.btnOS2_searchMember.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnOS2_searchMember.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btnOS2_searchMember.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btnOS2_searchMember.Click += new System.EventHandler(this.btnOS2_searchMember_Click);
             // 
             // dataGrid_OSMemEdit
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGrid_OSMemEdit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGrid_OSMemEdit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGrid_OSMemEdit.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGrid_OSMemEdit.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid_OSMemEdit.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid_OSMemEdit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_OSMemEdit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGrid_OSMemEdit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid_OSMemEdit.DoubleBuffered = true;
             this.dataGrid_OSMemEdit.EnableHeadersVisualStyles = false;
@@ -833,31 +985,17 @@
             this.dataGrid_OSMemEdit.Size = new System.Drawing.Size(775, 154);
             this.dataGrid_OSMemEdit.TabIndex = 23;
             // 
-            // btnOS2_Save
-            // 
-            this.btnOS2_Save.Location = new System.Drawing.Point(1036, 143);
-            this.btnOS2_Save.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOS2_Save.Name = "btnOS2_Save";
-            this.btnOS2_Save.Size = new System.Drawing.Size(94, 40);
-            this.btnOS2_Save.Style = MetroFramework.MetroColorStyle.Teal;
-            this.btnOS2_Save.TabIndex = 22;
-            this.btnOS2_Save.Text = "Save";
-            this.btnOS2_Save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnOS2_Save.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnOS2_Save.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.btnOS2_Save.Click += new System.EventHandler(this.btnOS2_Save_Click);
-            // 
             // cmbOS2_gender
             // 
             this.cmbOS2_gender.FormattingEnabled = true;
-            this.cmbOS2_gender.ItemHeight = 24;
+            this.cmbOS2_gender.ItemHeight = 23;
             this.cmbOS2_gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
             this.cmbOS2_gender.Location = new System.Drawing.Point(170, 266);
             this.cmbOS2_gender.Margin = new System.Windows.Forms.Padding(2);
             this.cmbOS2_gender.Name = "cmbOS2_gender";
-            this.cmbOS2_gender.Size = new System.Drawing.Size(132, 30);
+            this.cmbOS2_gender.Size = new System.Drawing.Size(132, 29);
             this.cmbOS2_gender.Style = MetroFramework.MetroColorStyle.Teal;
             this.cmbOS2_gender.TabIndex = 21;
             this.cmbOS2_gender.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -865,7 +1003,7 @@
             // cmbOS2_serviceType
             // 
             this.cmbOS2_serviceType.FormattingEnabled = true;
-            this.cmbOS2_serviceType.ItemHeight = 24;
+            this.cmbOS2_serviceType.ItemHeight = 23;
             this.cmbOS2_serviceType.Items.AddRange(new object[] {
             "Dancing",
             "Yoga",
@@ -874,7 +1012,7 @@
             this.cmbOS2_serviceType.Location = new System.Drawing.Point(691, 205);
             this.cmbOS2_serviceType.Margin = new System.Windows.Forms.Padding(2);
             this.cmbOS2_serviceType.Name = "cmbOS2_serviceType";
-            this.cmbOS2_serviceType.Size = new System.Drawing.Size(152, 30);
+            this.cmbOS2_serviceType.Size = new System.Drawing.Size(152, 29);
             this.cmbOS2_serviceType.Style = MetroFramework.MetroColorStyle.Teal;
             this.cmbOS2_serviceType.TabIndex = 20;
             this.cmbOS2_serviceType.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1098,137 +1236,6 @@
             this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // tab_OS3serviMem
-            // 
-            this.tab_OS3serviMem.Controls.Add(this.chkOS3_Boxing);
-            this.tab_OS3serviMem.Controls.Add(this.chkOS3_Yoga);
-            this.tab_OS3serviMem.Controls.Add(this.chkOS3_dance);
-            this.tab_OS3serviMem.Controls.Add(this.btnOS3_delete);
-            this.tab_OS3serviMem.Controls.Add(this.btnOS2_Save);
-            this.tab_OS3serviMem.Controls.Add(this.btnOS3_update);
-            this.tab_OS3serviMem.Controls.Add(this.btnOS3_searchMem);
-            this.tab_OS3serviMem.Controls.Add(this.dataGridOS3_mem);
-            this.tab_OS3serviMem.HorizontalScrollbarBarColor = true;
-            this.tab_OS3serviMem.HorizontalScrollbarSize = 8;
-            this.tab_OS3serviMem.Location = new System.Drawing.Point(4, 74);
-            this.tab_OS3serviMem.Margin = new System.Windows.Forms.Padding(2);
-            this.tab_OS3serviMem.Name = "tab_OS3serviMem";
-            this.tab_OS3serviMem.Size = new System.Drawing.Size(1364, 463);
-            this.tab_OS3serviMem.TabIndex = 2;
-            this.tab_OS3serviMem.Text = "Members";
-            this.tab_OS3serviMem.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tab_OS3serviMem.VerticalScrollbarBarColor = true;
-            this.tab_OS3serviMem.VerticalScrollbarSize = 8;
-            // 
-            // chkOS3_Boxing
-            // 
-            this.chkOS3_Boxing.AutoSize = true;
-            this.chkOS3_Boxing.FontSize = MetroFramework.MetroLinkSize.Tall;
-            this.chkOS3_Boxing.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.chkOS3_Boxing.Location = new System.Drawing.Point(329, 50);
-            this.chkOS3_Boxing.Margin = new System.Windows.Forms.Padding(2);
-            this.chkOS3_Boxing.Name = "chkOS3_Boxing";
-            this.chkOS3_Boxing.Size = new System.Drawing.Size(88, 25);
-            this.chkOS3_Boxing.TabIndex = 31;
-            this.chkOS3_Boxing.Text = "Boxing";
-            this.chkOS3_Boxing.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.chkOS3_Boxing.UseVisualStyleBackColor = true;
-            // 
-            // chkOS3_Yoga
-            // 
-            this.chkOS3_Yoga.AutoSize = true;
-            this.chkOS3_Yoga.FontSize = MetroFramework.MetroLinkSize.Tall;
-            this.chkOS3_Yoga.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.chkOS3_Yoga.Location = new System.Drawing.Point(231, 50);
-            this.chkOS3_Yoga.Margin = new System.Windows.Forms.Padding(2);
-            this.chkOS3_Yoga.Name = "chkOS3_Yoga";
-            this.chkOS3_Yoga.Size = new System.Drawing.Size(69, 25);
-            this.chkOS3_Yoga.TabIndex = 31;
-            this.chkOS3_Yoga.Text = "Yoga";
-            this.chkOS3_Yoga.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.chkOS3_Yoga.UseVisualStyleBackColor = true;
-            // 
-            // chkOS3_dance
-            // 
-            this.chkOS3_dance.AutoSize = true;
-            this.chkOS3_dance.FontSize = MetroFramework.MetroLinkSize.Tall;
-            this.chkOS3_dance.FontWeight = MetroFramework.MetroLinkWeight.Bold;
-            this.chkOS3_dance.Location = new System.Drawing.Point(130, 50);
-            this.chkOS3_dance.Margin = new System.Windows.Forms.Padding(2);
-            this.chkOS3_dance.Name = "chkOS3_dance";
-            this.chkOS3_dance.Size = new System.Drawing.Size(98, 25);
-            this.chkOS3_dance.TabIndex = 31;
-            this.chkOS3_dance.Text = "Dancing";
-            this.chkOS3_dance.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.chkOS3_dance.UseVisualStyleBackColor = true;
-            // 
-            // btnOS3_delete
-            // 
-            this.btnOS3_delete.Location = new System.Drawing.Point(1036, 275);
-            this.btnOS3_delete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOS3_delete.Name = "btnOS3_delete";
-            this.btnOS3_delete.Size = new System.Drawing.Size(94, 40);
-            this.btnOS3_delete.Style = MetroFramework.MetroColorStyle.Teal;
-            this.btnOS3_delete.TabIndex = 30;
-            this.btnOS3_delete.Text = "Delete";
-            this.btnOS3_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnOS3_delete.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnOS3_delete.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            // 
-            // btnOS3_update
-            // 
-            this.btnOS3_update.Location = new System.Drawing.Point(1036, 197);
-            this.btnOS3_update.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOS3_update.Name = "btnOS3_update";
-            this.btnOS3_update.Size = new System.Drawing.Size(94, 40);
-            this.btnOS3_update.Style = MetroFramework.MetroColorStyle.Teal;
-            this.btnOS3_update.TabIndex = 29;
-            this.btnOS3_update.Text = "Update";
-            this.btnOS3_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnOS3_update.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnOS3_update.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            // 
-            // btnOS3_searchMem
-            // 
-            this.btnOS3_searchMem.Location = new System.Drawing.Point(1036, 99);
-            this.btnOS3_searchMem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOS3_searchMem.Name = "btnOS3_searchMem";
-            this.btnOS3_searchMem.Size = new System.Drawing.Size(94, 40);
-            this.btnOS3_searchMem.Style = MetroFramework.MetroColorStyle.Teal;
-            this.btnOS3_searchMem.TabIndex = 28;
-            this.btnOS3_searchMem.Text = "Search";
-            this.btnOS3_searchMem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnOS3_searchMem.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnOS3_searchMem.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            // 
-            // dataGridOS3_mem
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridOS3_mem.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridOS3_mem.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dataGridOS3_mem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridOS3_mem.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridOS3_mem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridOS3_mem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridOS3_mem.DoubleBuffered = true;
-            this.dataGridOS3_mem.EnableHeadersVisualStyles = false;
-            this.dataGridOS3_mem.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dataGridOS3_mem.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dataGridOS3_mem.Location = new System.Drawing.Point(114, 136);
-            this.dataGridOS3_mem.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridOS3_mem.Name = "dataGridOS3_mem";
-            this.dataGridOS3_mem.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridOS3_mem.RowTemplate.Height = 24;
-            this.dataGridOS3_mem.Size = new System.Drawing.Size(848, 294);
-            this.dataGridOS3_mem.TabIndex = 27;
-            // 
             // msm_OS
             // 
             this.msm_OS.Owner = this;
@@ -1249,6 +1256,46 @@
             this.btnOS_home.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnOS_home.Click += new System.EventHandler(this.btnOS_home_Click);
             // 
+            // btnAddMember
+            // 
+            this.btnAddMember.Location = new System.Drawing.Point(959, 168);
+            this.btnAddMember.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddMember.Name = "btnAddMember";
+            this.btnAddMember.Size = new System.Drawing.Size(94, 40);
+            this.btnAddMember.Style = MetroFramework.MetroColorStyle.Teal;
+            this.btnAddMember.TabIndex = 28;
+            this.btnAddMember.Text = "Add";
+            this.btnAddMember.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddMember.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnAddMember.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
+            // 
+            // metroLabel20
+            // 
+            this.metroLabel20.AutoSize = true;
+            this.metroLabel20.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel20.Location = new System.Drawing.Point(539, 266);
+            this.metroLabel20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel20.Name = "metroLabel20";
+            this.metroLabel20.Size = new System.Drawing.Size(77, 25);
+            this.metroLabel20.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroLabel20.TabIndex = 13;
+            this.metroLabel20.Text = "Address";
+            this.metroLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel20.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtaddress
+            // 
+            this.txtaddress.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtaddress.Location = new System.Drawing.Point(691, 264);
+            this.txtaddress.Margin = new System.Windows.Forms.Padding(2);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.Size = new System.Drawing.Size(196, 23);
+            this.txtaddress.TabIndex = 16;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtaddress.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // OtherServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1267,14 +1314,14 @@
             this.servicesTabPage.ResumeLayout(false);
             this.servicesTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGriddServices)).EndInit();
+            this.tab_OS3serviMem.ResumeLayout(false);
+            this.tab_OS3serviMem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOS3_mem)).EndInit();
             this.tabOS4_fee.ResumeLayout(false);
             this.tabOS4_fee.PerformLayout();
             this.tab_addMemOS2.ResumeLayout(false);
             this.tab_addMemOS2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_OSMemEdit)).EndInit();
-            this.tab_OS3serviMem.ResumeLayout(false);
-            this.tab_OS3serviMem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridOS3_mem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.msm_OS)).EndInit();
             this.ResumeLayout(false);
 
@@ -1356,5 +1403,8 @@
         private MetroFramework.Controls.MetroTextBox txtOS4_feeAmount;
         private MetroFramework.Controls.MetroLabel metroLabel18;
         private MetroFramework.Controls.MetroLabel metroLabel19;
+        private MetroFramework.Controls.MetroTile btnAddMember;
+        private MetroFramework.Controls.MetroTextBox txtaddress;
+        private MetroFramework.Controls.MetroLabel metroLabel20;
     }
 }

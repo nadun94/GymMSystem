@@ -140,7 +140,7 @@ namespace GymMSystem.Buisness_Logic
             DataLayer.dbConnect fpay = new DataLayer.dbConnect();
             fpay.openConnection();
             
-            string qf = "select * from tbl_fee where memberID=@id";
+            string qf = "select * from tbl_fee where memberID=@id ";
 
             SqlCommand cmdf = new SqlCommand(qf, fpay.getConnection());
             cmdf.Parameters.AddWithValue("@id", f.memberID);

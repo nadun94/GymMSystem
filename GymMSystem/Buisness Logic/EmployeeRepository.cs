@@ -55,5 +55,59 @@ namespace GymMSystem.Buisness_Logic
 
 
         }
+
+
+        public bool searchEMP(Buisness_Logic.employee emp)
+        {
+
+            try
+            {
+                DataLayer.dbConnect dbemp_seach = new DataLayer.dbConnect();
+                dbemp_seach.openConnection();
+                bool temp = false;
+                string query1 = "SELECT * FROM tbl_employee WHERE empID=@reg OR name=@name OR nic=@nic";
+
+                SqlCommand cmd1 = new SqlCommand(query1, dbemp_seach.getConnection());
+
+                cmd1.Parameters.AddWithValue("@reg", emp.empID);
+                cmd1.Parameters.AddWithValue("@name", emp.name);
+                cmd1.Parameters.AddWithValue("@nic", emp.nic);
+
+          
+                DataTable dtq = new DataTable();
+                SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
+   
+                da1.Fill(dtq);
+
+                if (dtq.Rows.Count > 0)
+                {
+
+                   emp.empID = int.Parse(dtq.Rows[0]["empID"].ToString());
+                    emp.name = dtq.Rows[0]["name"].ToString();
+                    emp.nic = dtq.Rows[0]["nic"].ToString();
+                    emp.dob = dtq.Rows[0]["dob"].ToString();
+                    emp.gender = dtq.Rows[0]["gender"].ToString();
+                    emp.address = dtq.Rows[0]["address"].ToString();
+                    emp.phone = int.Parse(dtq.Rows[0]["phone"].ToString());
+                    emp.email = dtq.Rows[0]["email"].ToString();
+                    emp.position = dtq.Rows[0]["position"].ToString();
+                    emp.profile = dtq.Rows[0]["profile"].ToString();
+                    emp.photo = (byte[])dtq.Rows[0]["photo"];
+                    emp.joinedDate = dtq.Rows[0]["joinedDate"].ToString();
+
+
+                    temp = true;
+                }
+
+
+                if (temp == true) return true;
+                else return false;
+            }
+            catch (Exception ert)
+            {
+
+                throw;
+            }
+        }
     }
 }
