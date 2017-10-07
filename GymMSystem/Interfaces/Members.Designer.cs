@@ -66,6 +66,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.txtmsearch_address = new MetroFramework.Controls.MetroTextBox();
             this.dataGridMem3 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -141,7 +142,6 @@
             this.btnMem4_clear = new MetroFramework.Controls.MetroTile();
             this.bntMem4_checkPp = new MetroFramework.Controls.MetroTile();
             this.dataGridPayementPending = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.openFIleDialog_mem = new System.Windows.Forms.OpenFileDialog();
             this.btnMemHme = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.msmMember)).BeginInit();
@@ -168,10 +168,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mem.Controls.Add(this.memadd);
-            this.mem.Controls.Add(this.metroTabPage2);
             this.mem.Controls.Add(this.metroTabPage1);
             this.mem.Controls.Add(this.memfee);
             this.mem.Controls.Add(this.mem_payemtPending);
+            this.mem.Controls.Add(this.metroTabPage2);
             this.mem.FontSize = MetroFramework.MetroTabControlSize.Tall;
             this.mem.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.mem.ItemSize = new System.Drawing.Size(200, 70);
@@ -179,7 +179,7 @@
             this.mem.Margin = new System.Windows.Forms.Padding(4, 12, 4, 4);
             this.mem.Multiline = true;
             this.mem.Name = "mem";
-            this.mem.SelectedIndex = 0;
+            this.mem.SelectedIndex = 3;
             this.mem.ShowToolTips = true;
             this.mem.Size = new System.Drawing.Size(1359, 702);
             this.mem.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -692,6 +692,20 @@
             this.metroLabel1.Text = "Name";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarSize = 8;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 74);
+            this.metroTabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(1351, 624);
+            this.metroTabPage2.TabIndex = 4;
+            this.metroTabPage2.Text = "Workout Card";
+            this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarSize = 8;
             // 
             // metroTabPage1
             // 
@@ -1852,20 +1866,6 @@
             this.dataGridPayementPending.RowTemplate.Height = 24;
             this.dataGridPayementPending.Size = new System.Drawing.Size(1312, 210);
             this.dataGridPayementPending.TabIndex = 50;
-            // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarSize = 8;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 74);
-            this.metroTabPage2.Margin = new System.Windows.Forms.Padding(2);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(1351, 624);
-            this.metroTabPage2.TabIndex = 4;
-            this.metroTabPage2.Text = "Workout Card";
-            this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarSize = 8;
             // 
             // openFIleDialog_mem
             // 

@@ -104,7 +104,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buisness Logic\AreobicMember.cs" />
-    <Compile Include="Buisness Logic\Attendence.cs" />
+    <Compile Include="Buisness Logic\empAttendence.cs" />
+    <Compile Include="Buisness Logic\empAttendence_repository.cs" />
     <Compile Include="Buisness Logic\employee.cs" />
     <Compile Include="Buisness Logic\EmployeeRepository.cs" />
     <Compile Include="Buisness Logic\EntityBase.cs" />

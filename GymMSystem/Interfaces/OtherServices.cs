@@ -243,5 +243,43 @@ namespace GymMSystem.Interfaces
         {
 
         }
+
+        private void btnAddMember_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Buisness_Logic.AreobicMember am1 = new Buisness_Logic.AreobicMember();
+
+                Buisness_Logic.otherServiceRepository otr = new Buisness_Logic.otherServiceRepository();
+
+                am1.name = txtOS2_memName.Text;
+                am1.dob = dateTime_OS2Mem.Value.ToShortDateString();
+                am1.nic = txtOS2_nic.Text;
+                am1.phone = int.Parse(txtOS2_phone.Text);
+                am1.gender = cmbOS2_gender.SelectedItem.ToString();
+                am1.addresss = txtaddress.Text;
+
+
+
+                if (otr.addOtherMembers(am1))
+                {
+                    MessageBox.Show("Success", "Data Insertion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Fail", "Data Insertion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception eae)
+            {
+
+                throw;
+            }
+        }
+
+        private void btnOS2_searchMember_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

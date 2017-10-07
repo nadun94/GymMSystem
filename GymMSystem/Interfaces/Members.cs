@@ -92,8 +92,10 @@ namespace GymMSystem.Interfaces
             picuturebox_member.Image = null;
             txtM_fat.Text = "";
             txtM_name.Focus();
+            txtmsearch_address.Text = "";
 
-            
+
+
         }
 
         public bool validateMemeber()
@@ -453,8 +455,9 @@ namespace GymMSystem.Interfaces
                         txtM3_weight.Text = gm.weight.ToString();
                         txtM3_bmi.Text = gm.BMIratio.ToString();
                         txtmsemail.Text = gm.email;
+                        txtmsearch_address.Text = gm.addresss;
 
-                        pictureBoxM3.SizeMode = PictureBoxSizeMode.Zoom;
+                        pictureBoxM3.SizeMode = PictureBoxSizeMode.StretchImage;
 
                         MemoryStream ms1 = new MemoryStream(gm.photo);
                         // ms1.ToArray();
