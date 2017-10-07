@@ -133,90 +133,16 @@ namespace GymMSystem.Interfaces
 
         private void btnEMP2_browse_Click(object sender, EventArgs e)
         {
-            try
-            {
-                openFileDialogEmp.Filter = "Image files | *.jpg; *.PNG; *.gif; *.BMP";
-                DialogResult drMem1 = openFileDialogEmp.ShowDialog();
 
-                if (drMem1 == DialogResult.OK)
-                {
-                    pictureBoxEmp2.SizeMode = PictureBoxSizeMode.StretchImage;
-                    pictureBoxEmp2.Image = Image.FromFile(openFileDialogEmp.FileName);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
         }
 
         private void btnEMP2_search_Click(object sender, EventArgs e)
         {
 
-            try
-            {
-                Buisness_Logic.employee emp = new Buisness_Logic.employee();
-
-                emp.empID = (string.IsNullOrEmpty(txtEmp2_empid.Text) ? 0 : int.Parse(txtEmp2_empid.Text));
-                emp.name = txtEmp2_name.Text;
-                emp.nic = txtEmp2_nic.Text;
-
-
-                Buisness_Logic.EmployeeRepository emprt = new Buisness_Logic.EmployeeRepository();
-
-                if (emprt.searchEMP(emp))
-                {
-                    txtEmp2_address.Text = emp.address;
-                    txtEmp2_dob.Text = emp.dob;
-                    txtEmp2_email.Text = emp.email;
-                    txtEmp2_empid.Text = emp.empID.ToString();
-                    txtEmp2_jDate.Text = emp.joinedDate;
-                    txtEmp2_name.Text = emp.name;
-                    txtEmp2_nic.Text = emp.nic;
-                    txtEmp2_phone.Text = emp.phone.ToString();
-                    txtEmp2_profile.Text = emp.profile;
-                    cmbEMP2_gender.SelectedItem = emp.gender;
-                    cmbEMP2_post.SelectedItem = emp.position;
-                    pictureBoxEmp2.SizeMode = PictureBoxSizeMode.Zoom;
-
-                    MemoryStream ms2 = new MemoryStream(emp.photo);
-                    // ms1.ToArray();
-                    ms2.Position = 0;
-
-                    ms2.Read(emp.photo, 0, emp.photo.Length);
-                    pictureBoxEmp2.Image = Image.FromStream(ms2);
-                  
-
-                    MessageBox.Show("Success", "Data Insertion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Failed.", "Data Insertion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception exy)
-            {
-                MessageBox.Show(exy.Message, "Data Insertion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
-            }
         }
 
         private void btnEMP2_clear_Click(object sender, EventArgs e)
         {
-            txtEmp2_address.Text = "";
-            txtEmp2_dob.Text = "";
-            txtEmp2_email.Text = "";
-            txtEmp2_empid.Text = "";
-            txtEmp2_jDate.Text = "";
-            txtEmp2_name.Text = "";
-            txtEmp2_nic.Text = "";
-            txtEmp2_phone.Text = "";
-            txtEmp2_profile.Text = "";
-            cmbEMP2_gender.SelectedItem = null;
-            cmbEMP2_post.SelectedItem = null;
-            pictureBoxEmp2.Image = null;
 
         }
 
@@ -227,7 +153,60 @@ namespace GymMSystem.Interfaces
 
         private void btnAtAdStrtTime_Click(object sender, EventArgs e)
         {
-           
+
+        }
+        private Buisness_Logic.empAttendence transport1  = null;
+        private void btnAtSerchM_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAtAdEndTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCalcHours_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAtSerchM_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Buisness_Logic.empAttendence ea1 = new Buisness_Logic.empAttendence();
+
+                ea1.empID = int.Parse(txtEmpIDatte.Text);
+                ea1.theDay = DateTime.Today.ToShortDateString();
+
+                Buisness_Logic.empAttendence_repository emarep2 = new Buisness_Logic.empAttendence_repository();
+
+                if (emarep2.searchMemAt(ea1))
+                {
+                    MessageBox.Show("Member attendence record found in that employee id", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtStartTime.Text = ea1.startTime;
+                    txtempAT_theday.Text = ea1.theDay;
+
+
+                }
+                else
+                {
+                    MessageBox.Show("No record found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+                transport1 = ea1;
+            }
+            catch (Exception es)
+            {
+
+                throw;
+            }
+        }
+
+        private void btnAtAdStrtTime_Click_1(object sender, EventArgs e)
+        {
 
             try
             {
@@ -266,50 +245,29 @@ namespace GymMSystem.Interfaces
                 throw;
             }
         }
-        private Buisness_Logic.empAttendence transport1  = null;
-        private void btnAtSerchM_Click(object sender, EventArgs e)
+
+        private void btnCalcHours_Click_1(object sender, EventArgs e)
         {
             try
             {
-                Buisness_Logic.empAttendence ea1 = new Buisness_Logic.empAttendence();
 
-                ea1.empID = int.Parse(txtEmpIDatte.Text);
-                ea1.theDay = DateTime.Today.ToShortDateString();
-
-                Buisness_Logic.empAttendence_repository emarep2 = new Buisness_Logic.empAttendence_repository();
-
-                if (emarep2.searchMemAt(ea1))
-                {
-                    MessageBox.Show("Member attendence record found in that employee id", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtStartTime.Text = ea1.startTime;
-                    txtempAT_theday.Text = ea1.theDay;
-
-
-                }
-                else
-                {
-                    MessageBox.Show("No record found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-
-                transport1 = ea1;
             }
-            catch (Exception es)
+            catch (Exception etu)
             {
 
                 throw;
             }
         }
 
-        private void btnAtAdEndTime_Click(object sender, EventArgs e)
+        private void btnAtAdEndTime_Click_1(object sender, EventArgs e)
         {
 
             try
             {
-               
-               
+
+
                 Buisness_Logic.empAttendence em1 = new Buisness_Logic.empAttendence();
-               
+
                 em1.empID = int.Parse(txtEmpIDatte.Text);
                 em1.theDay = txtempAT_theday.Text;
                 em1.startTime = txtStartTime.Text;
@@ -331,7 +289,7 @@ namespace GymMSystem.Interfaces
 
 
 
-             
+
 
 
 
@@ -341,20 +299,73 @@ namespace GymMSystem.Interfaces
 
                 throw;
             }
-            
         }
 
-        private void btnCalcHours_Click(object sender, EventArgs e)
+        private void btnEMP2_search_Click_1(object sender, EventArgs e)
         {
             try
             {
-                
-            }
-            catch (Exception etu)
-            {
+                Buisness_Logic.employee emp = new Buisness_Logic.employee();
 
+                emp.empID = (string.IsNullOrEmpty(txtEmp2_empid.Text) ? 0 : int.Parse(txtEmp2_empid.Text));
+                emp.name = txtEmp2_name.Text;
+                emp.nic = txtEmp2_nic.Text;
+
+
+                Buisness_Logic.EmployeeRepository emprt = new Buisness_Logic.EmployeeRepository();
+
+                if (emprt.searchEMP(emp))
+                {
+                    txtEmp2_address.Text = emp.address;
+                    txtEmp2_dob.Text = emp.dob;
+                    txtEmp2_email.Text = emp.email;
+                    txtEmp2_empid.Text = emp.empID.ToString();
+                    txtEmp2_jDate.Text = emp.joinedDate;
+                    txtEmp2_name.Text = emp.name;
+                    txtEmp2_nic.Text = emp.nic;
+                    txtEmp2_phone.Text = emp.phone.ToString();
+                    txtEmp2_profile.Text = emp.profile;
+                    cmbEMP2_gender.SelectedItem = emp.gender;
+                    cmbEMP2_post.SelectedItem = emp.position;
+                    pictureBoxEmp2.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    MemoryStream ms2 = new MemoryStream(emp.photo);
+                    // ms1.ToArray();
+                    ms2.Position = 0;
+
+                    ms2.Read(emp.photo, 0, emp.photo.Length);
+                    pictureBoxEmp2.Image = Image.FromStream(ms2);
+
+
+                    MessageBox.Show("Success", "Data Insertion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed.", "Data Insertion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception exy)
+            {
+                MessageBox.Show(exy.Message, "Data Insertion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
+        }
+
+        private void btnEMP2_clear_Click_1(object sender, EventArgs e)
+        {
+
+            txtEmp2_address.Text = "";
+            txtEmp2_dob.Text = "";
+            txtEmp2_email.Text = "";
+            txtEmp2_empid.Text = "";
+            txtEmp2_jDate.Text = "";
+            txtEmp2_name.Text = "";
+            txtEmp2_nic.Text = "";
+            txtEmp2_phone.Text = "";
+            txtEmp2_profile.Text = "";
+            cmbEMP2_gender.SelectedItem = null;
+            cmbEMP2_post.SelectedItem = null;
+            pictureBoxEmp2.Image = null;
         }
     }
 }

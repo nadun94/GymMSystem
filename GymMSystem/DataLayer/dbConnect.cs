@@ -18,7 +18,7 @@ namespace GymMSystem.DataLayer
 
        public dbConnect()
         {
-            conString = @"Data Source=NILUSHANA7BFA;Initial Catalog=dbGym;Integrated Security=True";
+            conString = @"Data Source=DESKTOP-HCHF8AM\NADUN;Initial Catalog=dbGym;Integrated Security=True";
         }
 
         public void openConnection()
