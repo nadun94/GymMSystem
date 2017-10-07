@@ -14,7 +14,7 @@ namespace GymMSystem.DataLayer
     {
         private static string conString;
         SqlConnection con;
-        private SqlCommand cmd;
+        private SqlCommand cmd; 
 
        public dbConnect()
         {

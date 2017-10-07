@@ -12,13 +12,23 @@ namespace GymMSystem.Buisness_Logic
     class validation
     {
 
-        public bool IsNumeric(string number)
+        public bool IsNumeric(string number,string no)
         {
-            number.ToString();
-            return Regex.Match(number, @"^([1-9][0-9]*)$").Success;
+           // number.ToString();
+            bool x = Regex.Match(number, @"^([1-9][0-9]*)$").Success;
+
+            if (x) return true;
+            else
+            {
+                MessageBox.Show(no+" is not in correct format.", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                return false;
+            }
+            
+
+            
 
         }
-        public  bool IsEmail(string email)
+        public  bool IsEmail1(string email)
         {
 
             const string MatchEmailPattern =
@@ -35,9 +45,39 @@ namespace GymMSystem.Buisness_Logic
             if (string.IsNullOrWhiteSpace(email))
             {
                 MessageBox.Show("Email feild is empty!", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
                 return true;
             }
-            else if (Regex.IsMatch(email, MatchEmailPattern) && email!=null)
+            else
+            {
+                if (Regex.IsMatch(email, MatchEmailPattern) && email != null)
+                    return true;
+
+
+                else
+                {
+                    MessageBox.Show("Email is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+                   
+                 
+
+        }
+        public bool IsEmail2(string email)
+        {
+
+            const string MatchEmailPattern =
+                                    @"^(([\w-]+\.)+[\w-]+|([a-zA-Z]{1}|[\w-]{2,}))@"
+                                    + @"((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?
+			                	    [0-9]{1,2}|25[0-5]|2[0-4][0-9])\."
+                                    + @"([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?
+				                    [0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
+                                    + @"([a-zA-Z0-9]+[\w-]+\.)+[a-zA-Z]{1}[a-zA-Z0-9-]{1,23})$";
+
+
+
+         if (Regex.IsMatch(email, MatchEmailPattern) && email != null)
                 return true;
 
 
@@ -46,8 +86,8 @@ namespace GymMSystem.Buisness_Logic
                 MessageBox.Show("Email is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-                   
-                 
+
+
 
         }
 
@@ -64,7 +104,7 @@ namespace GymMSystem.Buisness_Logic
                 return true;
             }
 
-            else if (IsNumeric(phone))
+            else if (IsNumeric(phone, "Phone"))
             {
 
                 if (Regex.Match(phone, @"^(\+[0-9]{10})$").Success && phone != null)
@@ -88,33 +128,53 @@ namespace GymMSystem.Buisness_Logic
            
         }
 
-        public bool IsWord(string word)
+        public bool IsWord(string word, string wordName)
         {
 
-            return word.All(char.IsLetter);
+            if(!string.IsNullOrWhiteSpace(word)){
+
+                if (word.All(char.IsLetter))
+                {
+
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show(wordName + " should be letters only.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+
+                }
+
+            }
+            else
+            {
+                
+                MessageBox.Show(wordName +" can not be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
 
             //Regex.Match(word, @"\w * ").Success;
         }
 
 
-        public bool IsName(string name)
-        {
-            //if (string.IsNullOrWhiteSpace(name))
-            //{
-            //    MessageBox.Show("Name can not be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return false;
-            //}
-            //else
-            if (IsWord(name))
-                return true;
+        //public bool IsName(string name)
+        //{
+        //    //if (string.IsNullOrWhiteSpace(name))
+        //    //{
+        //    //    MessageBox.Show("Name can not be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //    //    return false;
+        //    //}
+        //    //else
+        //    if (IsWord(name))
+        //        return true;
 
-            else
-            {
-                MessageBox.Show("Name  is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
+        //    else
+        //    {
+        //        MessageBox.Show("Name  is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return false;
+        //    }
 
-        }
+        //}
 
         public bool IsNIC (string nic)
         {
@@ -123,19 +183,26 @@ namespace GymMSystem.Buisness_Logic
                 && nic.EndsWith("X", StringComparison.OrdinalIgnoreCase) 
                 || nic.EndsWith("V", StringComparison.OrdinalIgnoreCase) 
                 && (nic[2] !='4' && nic[2] != '9' ));
-            if (string.IsNullOrWhiteSpace(nic))
-            {
-                MessageBox.Show("NIC is not inserted!", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                return true;
-            }
-            else if (condition)
-                return true;
 
+            if (!string.IsNullOrWhiteSpace(nic))
+            {
+               
+                if (condition)
+                    return true;
+
+                else
+                {
+                   // MessageBox.Show("NIC  is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                
+            }
             else
             {
-                MessageBox.Show("NIC  is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+               // MessageBox.Show("NIC is not inserted!", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                return true;
             }
+
 
 
         }
@@ -149,12 +216,15 @@ namespace GymMSystem.Buisness_Logic
                 MessageBox.Show("Address can not be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            else if (chkAddress)
-                return true;
             else
             {
-                MessageBox.Show("Address  is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                if (chkAddress)
+                    return true;
+                else
+                {
+                    MessageBox.Show("Address  is invalid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
             }
         }
 
@@ -162,7 +232,7 @@ namespace GymMSystem.Buisness_Logic
         
         public bool IsHeight(string height)
         {
-            if (!IsNumeric(height))
+            if (!height.All(char.IsDigit))
             {
                 MessageBox.Show("Height should be a numeric value!", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return false;
@@ -179,7 +249,7 @@ namespace GymMSystem.Buisness_Logic
 
         public bool IsWeight(string weight)
         {
-            if (!IsNumeric(weight))
+            if (!weight.All(char.IsDigit))
             {
                 MessageBox.Show("Weight should be a numeric value!", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return false;

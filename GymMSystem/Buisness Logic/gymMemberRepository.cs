@@ -137,11 +137,6 @@ namespace GymMSystem.Buisness_Logic
                 else
                     MessageBox.Show("This member already exists.", "Infromation", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
-
-
-
-
             }
 
             catch(Exception ep)
@@ -251,10 +246,10 @@ namespace GymMSystem.Buisness_Logic
                 }
 
 
-
+                dbmem_seach.closeConnection();
 
                 //dr1.Close();
-           //     dbmem_seach.closeConnection();
+                //     dbmem_seach.closeConnection();
 
                 if (temp == true && temp1 == true)
                 {
@@ -281,6 +276,68 @@ namespace GymMSystem.Buisness_Logic
 
 
 
+        public bool updateGymMember(gymMember g)
+        {
+            bool tup = false;
+           
+            try
+            {
+                DataLayer.dbConnect dbu = new DataLayer.dbConnect();
+                //SqlTransaction trnup = dbu.getConnection().BeginTransaction();
+                dbu.openConnection();
+                
+                SqlCommand cmdu = null;
+
+                string qup = "UPDATE tbl_member set name=@name, dob=@dob, address=@address , nic=@nic, gender=@gender, phone=@phone where regNo=@reg ";
+
+                cmdu = new SqlCommand(qup, dbu.getConnection());
+                cmdu.Parameters.AddWithValue("@name", g.name);
+                cmdu.Parameters.AddWithValue("@dob", g.dob);
+                cmdu.Parameters.AddWithValue("@address", g.addresss);
+                cmdu.Parameters.AddWithValue("@nic", g.nic);
+                cmdu.Parameters.AddWithValue("@gender", g.gender);
+                cmdu.Parameters.AddWithValue("@phone", g.phone);
+                cmdu.Parameters.AddWithValue("@reg", g.MemberID);
+
+                //cmdu.Transaction = trnup;
+                cmdu.ExecuteNonQuery();
+
+                string qup2 = "UPDATE tbl_gymMember set  email= @email, BMI=@bmi,height=@h,weight=@w, payment_plan= @pp, photo=@photo, fat_level=@fat WHERE memberID=@mem";
+
+                SqlCommand cmdup2 = new SqlCommand(qup2, dbu.getConnection());
+                cmdup2.Parameters.AddWithValue("@mem", g.MemberID);
+                cmdup2.Parameters.AddWithValue("@email", g.email);
+                cmdup2.Parameters.AddWithValue("@h", g.height);
+                cmdup2.Parameters.AddWithValue("@w", g.weight);
+                cmdup2.Parameters.AddWithValue("@pp", g.paymentPlan);
+                cmdup2.Parameters.AddWithValue("@photo", g.photo);
+                cmdup2.Parameters.AddWithValue("@fat", g.fatLevel);
+                cmdup2.Parameters.AddWithValue("@bmi", g.BMIratio);
+
+               // cmdup2.Transaction = trnup;
+                cmdup2.ExecuteNonQuery();
+
+                //trnup.Commit();
+                tup = true;
+
+
+                return tup;
+
+            }
+            catch (Exception epu)
+            {
+               // trnup.Rollback();
+                MessageBox.Show(epu.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                throw;
+            }
+           
+
+           
+
+
+          
+        }
 
     }
 }

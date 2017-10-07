@@ -34,5 +34,11 @@ namespace GymMSystem.Interfaces
             this.Hide();
             gh.Show();
         }
+
+        private void btnexercise_save_Click(object sender, EventArgs e)
+        {
+
+          
+        }
     }
 }
