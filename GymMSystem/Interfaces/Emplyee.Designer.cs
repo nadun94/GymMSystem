@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.employeeTabCntrl = new MetroFramework.Controls.MetroTabControl();
             this.tabAddEmp = new MetroFramework.Controls.MetroTabPage();
+            this.dateTimePickeremp = new Bunifu.Framework.UI.BunifuDatepicker();
             this.btnEmp1Search = new MetroFramework.Controls.MetroTile();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.btnEmp1Delete = new MetroFramework.Controls.MetroTile();
@@ -70,7 +71,6 @@
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.dateTimePickeremp = new Bunifu.Framework.UI.BunifuDatepicker();
             this.openFileDialogEmp = new System.Windows.Forms.OpenFileDialog();
             this.employeeTabCntrl.SuspendLayout();
             this.tabAddEmp.SuspendLayout();
@@ -147,6 +147,20 @@
             this.tabAddEmp.VerticalScrollbarBarColor = true;
             this.tabAddEmp.VerticalScrollbarSize = 8;
             // 
+            // dateTimePickeremp
+            // 
+            this.dateTimePickeremp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickeremp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.dateTimePickeremp.BorderRadius = 0;
+            this.dateTimePickeremp.ForeColor = System.Drawing.Color.White;
+            this.dateTimePickeremp.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateTimePickeremp.FormatCustom = null;
+            this.dateTimePickeremp.Location = new System.Drawing.Point(166, 159);
+            this.dateTimePickeremp.Name = "dateTimePickeremp";
+            this.dateTimePickeremp.Size = new System.Drawing.Size(268, 26);
+            this.dateTimePickeremp.TabIndex = 27;
+            this.dateTimePickeremp.Value = new System.DateTime(2017, 8, 20, 23, 58, 37, 205);
+            // 
             // btnEmp1Search
             // 
             this.btnEmp1Search.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -160,6 +174,7 @@
             this.btnEmp1Search.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmp1Search.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btnEmp1Search.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btnEmp1Search.Click += new System.EventHandler(this.btnEmp1Search_Click);
             // 
             // bunifuCustomDataGrid1
             // 
@@ -173,7 +188,7 @@
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -737,20 +752,6 @@
             this.metroLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroLabel11.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // dateTimePickeremp
-            // 
-            this.dateTimePickeremp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePickeremp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.dateTimePickeremp.BorderRadius = 0;
-            this.dateTimePickeremp.ForeColor = System.Drawing.Color.White;
-            this.dateTimePickeremp.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimePickeremp.FormatCustom = null;
-            this.dateTimePickeremp.Location = new System.Drawing.Point(166, 159);
-            this.dateTimePickeremp.Name = "dateTimePickeremp";
-            this.dateTimePickeremp.Size = new System.Drawing.Size(268, 26);
-            this.dateTimePickeremp.TabIndex = 27;
-            this.dateTimePickeremp.Value = new System.DateTime(2017, 8, 20, 23, 58, 37, 205);
-            // 
             // openFileDialogEmp
             // 
             this.openFileDialogEmp.FileName = "openFileDialog1";
@@ -759,7 +760,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1285, 720);
+            this.ClientSize = new System.Drawing.Size(1284, 720);
             this.Controls.Add(this.employeeTabCntrl);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Emplyee";

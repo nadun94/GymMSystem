@@ -126,5 +126,10 @@ namespace GymMSystem.Interfaces
 
             }
         }
+
+        private void btnEmp1Search_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

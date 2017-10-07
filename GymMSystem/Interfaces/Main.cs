@@ -70,9 +70,9 @@ namespace GymMSystem
 
         private void panel5_MouseClick(object sender, MouseEventArgs e)
         {
-            Interfaces.salesManagement smg = new Interfaces.salesManagement();
+            Interfaces.workouts wrk = new Interfaces.workouts();
             this.Hide();
-            smg.Show();
+            wrk.Show();
         }
 
         private void panel10_MouseClick(object sender, MouseEventArgs e)

@@ -108,6 +108,7 @@
     <Compile Include="Buisness Logic\employee.cs" />
     <Compile Include="Buisness Logic\EmployeeRepository.cs" />
     <Compile Include="Buisness Logic\EntityBase.cs" />
+    <Compile Include="Buisness Logic\exercise.cs" />
     <Compile Include="Buisness Logic\fee.cs" />
     <Compile Include="Buisness Logic\feeRepository.cs" />
     <Compile Include="Buisness Logic\gymMember.cs" />
@@ -123,6 +124,8 @@
     <Compile Include="Buisness Logic\repairableItem_repository.cs" />
     <Compile Include="Buisness Logic\repairablerable_Items.cs" />
     <Compile Include="Buisness Logic\validation.cs" />
+    <Compile Include="Buisness Logic\workout.cs" />
+    <Compile Include="Buisness Logic\workout_repository.cs" />
     <Compile Include="Common controls\ILoggable.cs" />
     <Compile Include="Common controls\repository.cs" />
     <Compile Include="DataLayer\dbConnect.cs" />
