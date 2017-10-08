@@ -116,46 +116,100 @@ namespace GymMSystem.Interfaces
         {
 
         }
+        private bool validateWorkout()
+        {
+            Buisness_Logic.validation vemp = new Buisness_Logic.validation();
 
+            if (vemp.IsWord(txtW3_Wname.Text, "Workout Name"))
+            {
+                if (vemp.IsNumeric(txtW2_bmi.Text, "BMI Ratio"))
+                {
+                    if (vemp.IsNumeric(txtW4_fat.Text, "Fat Level"))
+                    {
+                        if (vemp.IsWord(txtW3_schedule.Text, "Shedule"))
+                        {
+                            if (vemp.IsWord(txtW6_type.Text, "Type"))
+                            {
+                                if (vemp.IsNumeric(txtW5_sets.Text, "Sets "))
+                                {
+                                    return true;
+
+                                }
+                                else return false;
+
+
+                            }
+                            else return false;
+
+
+                        }
+                        else return false;
+
+
+                    }
+                    else return false;
+
+
+                }
+                else return false;
+            }
+
+            else
+            {
+                return false;
+            }
+
+        }
         private void btnworkout_save_Click(object sender, EventArgs e)
         {
-            try
+
+            if (validateWorkout())
             {
 
-                Buisness_Logic.workout wo = new Buisness_Logic.workout();
-
-                wo.workout_name = txtW3_Wname.Text;
-                wo.type = txtW6_type.Text;
-                wo.exName = comboW1_name.SelectedItem.ToString();
-                wo.BMI_rate = double.Parse(txtW2_bmi.Text);
-                wo.fat_level = double.Parse(txtW4_fat.Text);
-                wo.repeats = int.Parse(txtW5_sets.Text);
-                wo.interval_days = txtW3_schedule.Text;
-
-
-                Buisness_Logic.workout_repository wr = new Buisness_Logic.workout_repository();
-
-
-                if (wr.addWorkouts(wo))
+                try
                 {
-                    MessageBox.Show("Succesfull.", "Data Insertion.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Buisness_Logic.workout wo = new Buisness_Logic.workout();
+
+                    wo.workout_name = txtW3_Wname.Text;
+                    wo.type = txtW6_type.Text;
+                    wo.exName = comboW1_name.SelectedItem.ToString();
+                    wo.BMI_rate = double.Parse(txtW2_bmi.Text);
+                    wo.fat_level = double.Parse(txtW4_fat.Text);
+                    wo.repeats = int.Parse(txtW5_sets.Text);
+                    wo.interval_days = txtW3_schedule.Text;
+
+
+                    Buisness_Logic.workout_repository wr = new Buisness_Logic.workout_repository();
+
+
+                    if (wr.addWorkouts(wo))
+                    {
+                        MessageBox.Show("Succesfull.", "Data Insertion.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unsucesfull.", "Data Insertion.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
 
 
                 }
-                else
+                catch (Exception exp)
                 {
-                    MessageBox.Show("Unsucesfull.", "Data Insertion.", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                    throw;
                 }
 
-
             }
-            catch (Exception exp)
+            else
             {
+               
 
-                throw;
             }
-
+            
         }
 
         private void btnworkout_clear_Click(object sender, EventArgs e)
@@ -202,8 +256,7 @@ namespace GymMSystem.Interfaces
                 }
                 else
                 {
-                    MessageBox.Show("Unsucesfull.", "Data Insertion.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    
                 }
             }
             catch (Exception exp)
@@ -217,7 +270,51 @@ namespace GymMSystem.Interfaces
 
         private void btnworkout_update_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                Buisness_Logic.workout work = new Buisness_Logic.workout();
+
+                work.workout_name = txtW3_Wname.Text;
+                work.type = txtW6_type.Text;
+              //  work.exName = comboW1_name.SelectedItem.ToString();
+                work.BMI_rate = double.Parse(txtW2_bmi.Text);
+                work.fat_level = double.Parse(txtW4_fat.Text);
+                work.repeats = int.Parse(txtW5_sets.Text);
+                work.interval_days = txtW3_schedule.Text;
+
+                Buisness_Logic.workout_repository wk = new Buisness_Logic.workout_repository();
+
+                if (wk.addWorkouts(work))
+                {
+                    MessageBox.Show("Succesfully Updated.", "Data Insertion.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Unsucesfull.", "Data Insertion.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+            }
+            catch (Exception exp)
+            {
+
+                throw;
+            }
+        }
+
+        private void btnWm_clear_Click(object sender, EventArgs e)
+        {
+            txtW_memid.Clear();
+            txtW_weight.Clear();
+            txtW_height.Clear();
+            txtW_shedule.Clear();
+            txtW_name.Clear();
+            txtW_fatlevel.Clear();
+            txtW_bmirate.Clear();
+            txtW_time.Clear();
         }
     }
 }

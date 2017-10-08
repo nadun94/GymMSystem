@@ -365,7 +365,16 @@ namespace GymMSystem.Interfaces
             txtEmp2_profile.Text = "";
             cmbEMP2_gender.SelectedItem = null;
             cmbEMP2_post.SelectedItem = null;
-            pictureBoxEmp2.Image = null;
+            pictureBoxEmp2.Image = null; 
+        }
+
+        private void btnEmp1_clear_Click_1(object sender, EventArgs e)
+        {
+            txtEmp1_name.Clear();
+            txtEmp1_address.Clear();
+            txtEmp1_email.Clear();
+            txtEmp1_phone.Clear();
+            txtEmp1_resume.Clear();
         }
     }
 }

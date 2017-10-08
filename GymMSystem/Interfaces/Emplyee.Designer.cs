@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.employeeTabCntrl = new MetroFramework.Controls.MetroTabControl();
             this.tabAddEmp = new MetroFramework.Controls.MetroTabPage();
             this.dateTimePickeremp = new Bunifu.Framework.UI.BunifuDatepicker();
@@ -60,9 +60,6 @@
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.tabAddEmployee = new MetroFramework.Controls.MetroTabPage();
-            this.tabSalary = new MetroFramework.Controls.MetroTabPage();
-            this.openFileDialogEmp = new System.Windows.Forms.OpenFileDialog();
-            this.employeeTab = new MetroFramework.Controls.MetroTabPage();
             this.btnCalcHours = new MetroFramework.Controls.MetroTile();
             this.btnAtAdEndTime = new MetroFramework.Controls.MetroTile();
             this.btnAtAdStrtTime = new MetroFramework.Controls.MetroTile();
@@ -81,6 +78,27 @@
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.tabSalary = new MetroFramework.Controls.MetroTabPage();
+            this.btnPrAdd = new MetroFramework.Controls.MetroTile();
+            this.btnPrClear = new MetroFramework.Controls.MetroTile();
+            this.btnPrSearch = new MetroFramework.Controls.MetroTile();
+            this.textPrAmount = new MetroFramework.Controls.MetroTextBox();
+            this.textPrDeducation = new MetroFramework.Controls.MetroTextBox();
+            this.textPrTotExHrWrk = new MetroFramework.Controls.MetroTextBox();
+            this.textPrTotHrWrk = new MetroFramework.Controls.MetroTextBox();
+            this.textPrRate = new MetroFramework.Controls.MetroTextBox();
+            this.textPrCalTo = new MetroFramework.Controls.MetroTextBox();
+            this.textPrCalFrm = new MetroFramework.Controls.MetroTextBox();
+            this.textPrEid = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel40 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel41 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel42 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel43 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel44 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel45 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel46 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel47 = new MetroFramework.Controls.MetroLabel();
+            this.employeeTab = new MetroFramework.Controls.MetroTabPage();
             this.btnEMP2_search = new MetroFramework.Controls.MetroTile();
             this.bunifuCustomDataGrid2 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.btnEMP2_delete = new MetroFramework.Controls.MetroTile();
@@ -110,25 +128,7 @@
             this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
-            this.btnPrAdd = new MetroFramework.Controls.MetroTile();
-            this.btnPrClear = new MetroFramework.Controls.MetroTile();
-            this.btnPrSearch = new MetroFramework.Controls.MetroTile();
-            this.textPrAmount = new MetroFramework.Controls.MetroTextBox();
-            this.textPrDeducation = new MetroFramework.Controls.MetroTextBox();
-            this.textPrTotExHrWrk = new MetroFramework.Controls.MetroTextBox();
-            this.textPrTotHrWrk = new MetroFramework.Controls.MetroTextBox();
-            this.textPrRate = new MetroFramework.Controls.MetroTextBox();
-            this.textPrCalTo = new MetroFramework.Controls.MetroTextBox();
-            this.textPrCalFrm = new MetroFramework.Controls.MetroTextBox();
-            this.textPrEid = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel40 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel41 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel42 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel43 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel44 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel45 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel46 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel47 = new MetroFramework.Controls.MetroLabel();
+            this.openFileDialogEmp = new System.Windows.Forms.OpenFileDialog();
             this.employeeTabCntrl.SuspendLayout();
             this.tabAddEmp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
@@ -156,7 +156,7 @@
             this.employeeTabCntrl.Margin = new System.Windows.Forms.Padding(4);
             this.employeeTabCntrl.Multiline = true;
             this.employeeTabCntrl.Name = "employeeTabCntrl";
-            this.employeeTabCntrl.SelectedIndex = 1;
+            this.employeeTabCntrl.SelectedIndex = 0;
             this.employeeTabCntrl.ShowToolTips = true;
             this.employeeTabCntrl.Size = new System.Drawing.Size(1247, 613);
             this.employeeTabCntrl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -221,22 +221,22 @@
             // 
             // bunifuCustomDataGrid1
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bunifuCustomDataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuCustomDataGrid1.DoubleBuffered = true;
             this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
@@ -381,6 +381,7 @@
             this.btnEmp1_clear.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmp1_clear.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btnEmp1_clear.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btnEmp1_clear.Click += new System.EventHandler(this.btnEmp1_clear_Click_1);
             // 
             // cmbEmp1_post
             // 
@@ -628,81 +629,6 @@
             this.tabAddEmployee.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.tabAddEmployee.VerticalScrollbarBarColor = true;
             this.tabAddEmployee.VerticalScrollbarSize = 8;
-            // 
-            // tabSalary
-            // 
-            this.tabSalary.Controls.Add(this.btnPrAdd);
-            this.tabSalary.Controls.Add(this.btnPrClear);
-            this.tabSalary.Controls.Add(this.btnPrSearch);
-            this.tabSalary.Controls.Add(this.textPrAmount);
-            this.tabSalary.Controls.Add(this.textPrDeducation);
-            this.tabSalary.Controls.Add(this.textPrTotExHrWrk);
-            this.tabSalary.Controls.Add(this.textPrTotHrWrk);
-            this.tabSalary.Controls.Add(this.textPrRate);
-            this.tabSalary.Controls.Add(this.textPrCalTo);
-            this.tabSalary.Controls.Add(this.textPrCalFrm);
-            this.tabSalary.Controls.Add(this.textPrEid);
-            this.tabSalary.Controls.Add(this.metroLabel40);
-            this.tabSalary.Controls.Add(this.metroLabel41);
-            this.tabSalary.Controls.Add(this.metroLabel42);
-            this.tabSalary.Controls.Add(this.metroLabel43);
-            this.tabSalary.Controls.Add(this.metroLabel44);
-            this.tabSalary.Controls.Add(this.metroLabel45);
-            this.tabSalary.Controls.Add(this.metroLabel46);
-            this.tabSalary.Controls.Add(this.metroLabel47);
-            this.tabSalary.HorizontalScrollbarBarColor = true;
-            this.tabSalary.Location = new System.Drawing.Point(4, 74);
-            this.tabSalary.Name = "tabSalary";
-            this.tabSalary.Size = new System.Drawing.Size(1239, 535);
-            this.tabSalary.TabIndex = 3;
-            this.tabSalary.Text = "Salary";
-            this.tabSalary.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tabSalary.VerticalScrollbarBarColor = true;
-            this.tabSalary.Click += new System.EventHandler(this.metroTabPage1_Click);
-            // 
-            // openFileDialogEmp
-            // 
-            this.openFileDialogEmp.FileName = "openFileDialog1";
-            // 
-            // employeeTab
-            // 
-            this.employeeTab.Controls.Add(this.btnEMP2_search);
-            this.employeeTab.Controls.Add(this.bunifuCustomDataGrid2);
-            this.employeeTab.Controls.Add(this.btnEMP2_delete);
-            this.employeeTab.Controls.Add(this.btnEMP2_update);
-            this.employeeTab.Controls.Add(this.txtEmp2_email);
-            this.employeeTab.Controls.Add(this.txtEmp2_empid);
-            this.employeeTab.Controls.Add(this.txtEmp2_nic);
-            this.employeeTab.Controls.Add(this.metroLabel15);
-            this.employeeTab.Controls.Add(this.metroLabel16);
-            this.employeeTab.Controls.Add(this.txtEmp2_phone);
-            this.employeeTab.Controls.Add(this.metroLabel24);
-            this.employeeTab.Controls.Add(this.metroLabel17);
-            this.employeeTab.Controls.Add(this.metroLabel18);
-            this.employeeTab.Controls.Add(this.btnEMP2_clear);
-            this.employeeTab.Controls.Add(this.cmbEMP2_post);
-            this.employeeTab.Controls.Add(this.cmbEMP2_gender);
-            this.employeeTab.Controls.Add(this.btnEMP2_browse);
-            this.employeeTab.Controls.Add(this.pictureBoxEmp2);
-            this.employeeTab.Controls.Add(this.txtEmp2_profile);
-            this.employeeTab.Controls.Add(this.txtEmp2_jDate);
-            this.employeeTab.Controls.Add(this.txtEmp2_address);
-            this.employeeTab.Controls.Add(this.metroLabel19);
-            this.employeeTab.Controls.Add(this.metroLabel20);
-            this.employeeTab.Controls.Add(this.txtEmp2_dob);
-            this.employeeTab.Controls.Add(this.txtEmp2_name);
-            this.employeeTab.Controls.Add(this.metroLabel21);
-            this.employeeTab.Controls.Add(this.metroLabel22);
-            this.employeeTab.Controls.Add(this.metroLabel23);
-            this.employeeTab.Controls.Add(this.metroLabel25);
-            this.employeeTab.HorizontalScrollbarBarColor = true;
-            this.employeeTab.Location = new System.Drawing.Point(4, 74);
-            this.employeeTab.Name = "employeeTab";
-            this.employeeTab.Size = new System.Drawing.Size(1239, 535);
-            this.employeeTab.TabIndex = 4;
-            this.employeeTab.Text = "Employee";
-            this.employeeTab.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.employeeTab.VerticalScrollbarBarColor = true;
             // 
             // btnCalcHours
             // 
@@ -981,6 +907,367 @@
             this.metroLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroLabel14.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // tabSalary
+            // 
+            this.tabSalary.Controls.Add(this.btnPrAdd);
+            this.tabSalary.Controls.Add(this.btnPrClear);
+            this.tabSalary.Controls.Add(this.btnPrSearch);
+            this.tabSalary.Controls.Add(this.textPrAmount);
+            this.tabSalary.Controls.Add(this.textPrDeducation);
+            this.tabSalary.Controls.Add(this.textPrTotExHrWrk);
+            this.tabSalary.Controls.Add(this.textPrTotHrWrk);
+            this.tabSalary.Controls.Add(this.textPrRate);
+            this.tabSalary.Controls.Add(this.textPrCalTo);
+            this.tabSalary.Controls.Add(this.textPrCalFrm);
+            this.tabSalary.Controls.Add(this.textPrEid);
+            this.tabSalary.Controls.Add(this.metroLabel40);
+            this.tabSalary.Controls.Add(this.metroLabel41);
+            this.tabSalary.Controls.Add(this.metroLabel42);
+            this.tabSalary.Controls.Add(this.metroLabel43);
+            this.tabSalary.Controls.Add(this.metroLabel44);
+            this.tabSalary.Controls.Add(this.metroLabel45);
+            this.tabSalary.Controls.Add(this.metroLabel46);
+            this.tabSalary.Controls.Add(this.metroLabel47);
+            this.tabSalary.HorizontalScrollbarBarColor = true;
+            this.tabSalary.Location = new System.Drawing.Point(4, 74);
+            this.tabSalary.Name = "tabSalary";
+            this.tabSalary.Size = new System.Drawing.Size(1239, 535);
+            this.tabSalary.TabIndex = 3;
+            this.tabSalary.Text = "Salary";
+            this.tabSalary.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tabSalary.VerticalScrollbarBarColor = true;
+            this.tabSalary.Click += new System.EventHandler(this.metroTabPage1_Click);
+            // 
+            // btnPrAdd
+            // 
+            this.btnPrAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPrAdd.Location = new System.Drawing.Point(1038, 249);
+            this.btnPrAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrAdd.Name = "btnPrAdd";
+            this.btnPrAdd.Size = new System.Drawing.Size(145, 27);
+            this.btnPrAdd.Style = MetroFramework.MetroColorStyle.Teal;
+            this.btnPrAdd.TabIndex = 74;
+            this.btnPrAdd.Text = "Add";
+            this.btnPrAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPrAdd.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnPrAdd.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            // 
+            // btnPrClear
+            // 
+            this.btnPrClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPrClear.Location = new System.Drawing.Point(1038, 320);
+            this.btnPrClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrClear.Name = "btnPrClear";
+            this.btnPrClear.Size = new System.Drawing.Size(145, 27);
+            this.btnPrClear.Style = MetroFramework.MetroColorStyle.Teal;
+            this.btnPrClear.TabIndex = 73;
+            this.btnPrClear.Text = "Clear";
+            this.btnPrClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPrClear.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnPrClear.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            // 
+            // btnPrSearch
+            // 
+            this.btnPrSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPrSearch.Location = new System.Drawing.Point(1038, 188);
+            this.btnPrSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrSearch.Name = "btnPrSearch";
+            this.btnPrSearch.Size = new System.Drawing.Size(145, 27);
+            this.btnPrSearch.Style = MetroFramework.MetroColorStyle.Teal;
+            this.btnPrSearch.TabIndex = 72;
+            this.btnPrSearch.Text = "Search ";
+            this.btnPrSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPrSearch.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnPrSearch.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            // 
+            // textPrAmount
+            // 
+            this.textPrAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textPrAmount.BackColor = System.Drawing.Color.White;
+            this.textPrAmount.CustomForeColor = true;
+            this.textPrAmount.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.textPrAmount.ForeColor = System.Drawing.Color.White;
+            this.textPrAmount.Location = new System.Drawing.Point(801, 335);
+            this.textPrAmount.Margin = new System.Windows.Forms.Padding(2);
+            this.textPrAmount.Name = "textPrAmount";
+            this.textPrAmount.Size = new System.Drawing.Size(152, 23);
+            this.textPrAmount.TabIndex = 70;
+            this.textPrAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textPrAmount.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // textPrDeducation
+            // 
+            this.textPrDeducation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textPrDeducation.BackColor = System.Drawing.Color.White;
+            this.textPrDeducation.CustomForeColor = true;
+            this.textPrDeducation.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.textPrDeducation.ForeColor = System.Drawing.Color.White;
+            this.textPrDeducation.Location = new System.Drawing.Point(801, 283);
+            this.textPrDeducation.Margin = new System.Windows.Forms.Padding(2);
+            this.textPrDeducation.Name = "textPrDeducation";
+            this.textPrDeducation.Size = new System.Drawing.Size(152, 23);
+            this.textPrDeducation.TabIndex = 69;
+            this.textPrDeducation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textPrDeducation.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // textPrTotExHrWrk
+            // 
+            this.textPrTotExHrWrk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textPrTotExHrWrk.BackColor = System.Drawing.Color.White;
+            this.textPrTotExHrWrk.CustomForeColor = true;
+            this.textPrTotExHrWrk.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.textPrTotExHrWrk.ForeColor = System.Drawing.Color.White;
+            this.textPrTotExHrWrk.Location = new System.Drawing.Point(801, 230);
+            this.textPrTotExHrWrk.Margin = new System.Windows.Forms.Padding(2);
+            this.textPrTotExHrWrk.Name = "textPrTotExHrWrk";
+            this.textPrTotExHrWrk.Size = new System.Drawing.Size(152, 23);
+            this.textPrTotExHrWrk.TabIndex = 68;
+            this.textPrTotExHrWrk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textPrTotExHrWrk.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // textPrTotHrWrk
+            // 
+            this.textPrTotHrWrk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textPrTotHrWrk.BackColor = System.Drawing.Color.White;
+            this.textPrTotHrWrk.CustomForeColor = true;
+            this.textPrTotHrWrk.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.textPrTotHrWrk.ForeColor = System.Drawing.Color.White;
+            this.textPrTotHrWrk.Location = new System.Drawing.Point(801, 175);
+            this.textPrTotHrWrk.Margin = new System.Windows.Forms.Padding(2);
+            this.textPrTotHrWrk.Name = "textPrTotHrWrk";
+            this.textPrTotHrWrk.Size = new System.Drawing.Size(152, 23);
+            this.textPrTotHrWrk.TabIndex = 67;
+            this.textPrTotHrWrk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textPrTotHrWrk.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // textPrRate
+            // 
+            this.textPrRate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textPrRate.BackColor = System.Drawing.Color.White;
+            this.textPrRate.CustomForeColor = true;
+            this.textPrRate.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.textPrRate.ForeColor = System.Drawing.Color.White;
+            this.textPrRate.Location = new System.Drawing.Point(295, 335);
+            this.textPrRate.Margin = new System.Windows.Forms.Padding(2);
+            this.textPrRate.Name = "textPrRate";
+            this.textPrRate.Size = new System.Drawing.Size(152, 23);
+            this.textPrRate.TabIndex = 66;
+            this.textPrRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textPrRate.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // textPrCalTo
+            // 
+            this.textPrCalTo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textPrCalTo.BackColor = System.Drawing.Color.White;
+            this.textPrCalTo.CustomForeColor = true;
+            this.textPrCalTo.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.textPrCalTo.ForeColor = System.Drawing.Color.White;
+            this.textPrCalTo.Location = new System.Drawing.Point(295, 283);
+            this.textPrCalTo.Margin = new System.Windows.Forms.Padding(2);
+            this.textPrCalTo.Name = "textPrCalTo";
+            this.textPrCalTo.Size = new System.Drawing.Size(152, 23);
+            this.textPrCalTo.TabIndex = 71;
+            this.textPrCalTo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textPrCalTo.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // textPrCalFrm
+            // 
+            this.textPrCalFrm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textPrCalFrm.BackColor = System.Drawing.Color.White;
+            this.textPrCalFrm.CustomForeColor = true;
+            this.textPrCalFrm.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.textPrCalFrm.ForeColor = System.Drawing.Color.White;
+            this.textPrCalFrm.Location = new System.Drawing.Point(295, 230);
+            this.textPrCalFrm.Margin = new System.Windows.Forms.Padding(2);
+            this.textPrCalFrm.Name = "textPrCalFrm";
+            this.textPrCalFrm.Size = new System.Drawing.Size(152, 23);
+            this.textPrCalFrm.TabIndex = 65;
+            this.textPrCalFrm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textPrCalFrm.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // textPrEid
+            // 
+            this.textPrEid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textPrEid.BackColor = System.Drawing.Color.White;
+            this.textPrEid.CustomForeColor = true;
+            this.textPrEid.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.textPrEid.ForeColor = System.Drawing.Color.White;
+            this.textPrEid.Location = new System.Drawing.Point(295, 177);
+            this.textPrEid.Margin = new System.Windows.Forms.Padding(2);
+            this.textPrEid.Name = "textPrEid";
+            this.textPrEid.Size = new System.Drawing.Size(152, 23);
+            this.textPrEid.TabIndex = 64;
+            this.textPrEid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textPrEid.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel40
+            // 
+            this.metroLabel40.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel40.AutoSize = true;
+            this.metroLabel40.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel40.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel40.Location = new System.Drawing.Point(59, 281);
+            this.metroLabel40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel40.Name = "metroLabel40";
+            this.metroLabel40.Size = new System.Drawing.Size(116, 25);
+            this.metroLabel40.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroLabel40.TabIndex = 62;
+            this.metroLabel40.Text = "Calculated To";
+            this.metroLabel40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel40.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel41
+            // 
+            this.metroLabel41.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel41.AutoSize = true;
+            this.metroLabel41.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel41.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel41.Location = new System.Drawing.Point(550, 335);
+            this.metroLabel41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel41.Name = "metroLabel41";
+            this.metroLabel41.Size = new System.Drawing.Size(77, 25);
+            this.metroLabel41.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroLabel41.TabIndex = 61;
+            this.metroLabel41.Text = "Amount";
+            this.metroLabel41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel41.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel42
+            // 
+            this.metroLabel42.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel42.AutoSize = true;
+            this.metroLabel42.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel42.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel42.Location = new System.Drawing.Point(550, 283);
+            this.metroLabel42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel42.Name = "metroLabel42";
+            this.metroLabel42.Size = new System.Drawing.Size(94, 25);
+            this.metroLabel42.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroLabel42.TabIndex = 60;
+            this.metroLabel42.Text = "Deduction";
+            this.metroLabel42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel42.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel43
+            // 
+            this.metroLabel43.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel43.AutoSize = true;
+            this.metroLabel43.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel43.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel43.Location = new System.Drawing.Point(550, 228);
+            this.metroLabel43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel43.Name = "metroLabel43";
+            this.metroLabel43.Size = new System.Drawing.Size(206, 25);
+            this.metroLabel43.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroLabel43.TabIndex = 59;
+            this.metroLabel43.Text = "Total Exra Hours Worked";
+            this.metroLabel43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel43.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel44
+            // 
+            this.metroLabel44.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel44.AutoSize = true;
+            this.metroLabel44.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel44.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel44.Location = new System.Drawing.Point(550, 175);
+            this.metroLabel44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel44.Name = "metroLabel44";
+            this.metroLabel44.Size = new System.Drawing.Size(169, 25);
+            this.metroLabel44.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroLabel44.TabIndex = 58;
+            this.metroLabel44.Text = "Total Hours Worked";
+            this.metroLabel44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel44.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel45
+            // 
+            this.metroLabel45.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel45.AutoSize = true;
+            this.metroLabel45.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel45.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel45.Location = new System.Drawing.Point(59, 333);
+            this.metroLabel45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel45.Name = "metroLabel45";
+            this.metroLabel45.Size = new System.Drawing.Size(47, 25);
+            this.metroLabel45.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroLabel45.TabIndex = 57;
+            this.metroLabel45.Text = "Rate";
+            this.metroLabel45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel45.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel46
+            // 
+            this.metroLabel46.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel46.AutoSize = true;
+            this.metroLabel46.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel46.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel46.Location = new System.Drawing.Point(56, 230);
+            this.metroLabel46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel46.Name = "metroLabel46";
+            this.metroLabel46.Size = new System.Drawing.Size(150, 25);
+            this.metroLabel46.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroLabel46.TabIndex = 63;
+            this.metroLabel46.Text = "Chalculated From";
+            this.metroLabel46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel46.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel47
+            // 
+            this.metroLabel47.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel47.AutoSize = true;
+            this.metroLabel47.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel47.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel47.Location = new System.Drawing.Point(56, 190);
+            this.metroLabel47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroLabel47.Name = "metroLabel47";
+            this.metroLabel47.Size = new System.Drawing.Size(119, 25);
+            this.metroLabel47.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroLabel47.TabIndex = 56;
+            this.metroLabel47.Text = "Employees Id";
+            this.metroLabel47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel47.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // employeeTab
+            // 
+            this.employeeTab.Controls.Add(this.btnEMP2_search);
+            this.employeeTab.Controls.Add(this.bunifuCustomDataGrid2);
+            this.employeeTab.Controls.Add(this.btnEMP2_delete);
+            this.employeeTab.Controls.Add(this.btnEMP2_update);
+            this.employeeTab.Controls.Add(this.txtEmp2_email);
+            this.employeeTab.Controls.Add(this.txtEmp2_empid);
+            this.employeeTab.Controls.Add(this.txtEmp2_nic);
+            this.employeeTab.Controls.Add(this.metroLabel15);
+            this.employeeTab.Controls.Add(this.metroLabel16);
+            this.employeeTab.Controls.Add(this.txtEmp2_phone);
+            this.employeeTab.Controls.Add(this.metroLabel24);
+            this.employeeTab.Controls.Add(this.metroLabel17);
+            this.employeeTab.Controls.Add(this.metroLabel18);
+            this.employeeTab.Controls.Add(this.btnEMP2_clear);
+            this.employeeTab.Controls.Add(this.cmbEMP2_post);
+            this.employeeTab.Controls.Add(this.cmbEMP2_gender);
+            this.employeeTab.Controls.Add(this.btnEMP2_browse);
+            this.employeeTab.Controls.Add(this.pictureBoxEmp2);
+            this.employeeTab.Controls.Add(this.txtEmp2_profile);
+            this.employeeTab.Controls.Add(this.txtEmp2_jDate);
+            this.employeeTab.Controls.Add(this.txtEmp2_address);
+            this.employeeTab.Controls.Add(this.metroLabel19);
+            this.employeeTab.Controls.Add(this.metroLabel20);
+            this.employeeTab.Controls.Add(this.txtEmp2_dob);
+            this.employeeTab.Controls.Add(this.txtEmp2_name);
+            this.employeeTab.Controls.Add(this.metroLabel21);
+            this.employeeTab.Controls.Add(this.metroLabel22);
+            this.employeeTab.Controls.Add(this.metroLabel23);
+            this.employeeTab.Controls.Add(this.metroLabel25);
+            this.employeeTab.HorizontalScrollbarBarColor = true;
+            this.employeeTab.Location = new System.Drawing.Point(4, 74);
+            this.employeeTab.Name = "employeeTab";
+            this.employeeTab.Size = new System.Drawing.Size(1239, 535);
+            this.employeeTab.TabIndex = 4;
+            this.employeeTab.Text = "Employee";
+            this.employeeTab.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.employeeTab.VerticalScrollbarBarColor = true;
+            // 
             // btnEMP2_search
             // 
             this.btnEMP2_search.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -998,22 +1285,22 @@
             // 
             // bunifuCustomDataGrid2
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.bunifuCustomDataGrid2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuCustomDataGrid2.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.bunifuCustomDataGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.bunifuCustomDataGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuCustomDataGrid2.DoubleBuffered = true;
             this.bunifuCustomDataGrid2.EnableHeadersVisualStyles = false;
@@ -1430,295 +1717,9 @@
             this.metroLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroLabel25.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // btnPrAdd
+            // openFileDialogEmp
             // 
-            this.btnPrAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPrAdd.Location = new System.Drawing.Point(1038, 249);
-            this.btnPrAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPrAdd.Name = "btnPrAdd";
-            this.btnPrAdd.Size = new System.Drawing.Size(145, 27);
-            this.btnPrAdd.Style = MetroFramework.MetroColorStyle.Teal;
-            this.btnPrAdd.TabIndex = 74;
-            this.btnPrAdd.Text = "Add";
-            this.btnPrAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPrAdd.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnPrAdd.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            // 
-            // btnPrClear
-            // 
-            this.btnPrClear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPrClear.Location = new System.Drawing.Point(1038, 320);
-            this.btnPrClear.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPrClear.Name = "btnPrClear";
-            this.btnPrClear.Size = new System.Drawing.Size(145, 27);
-            this.btnPrClear.Style = MetroFramework.MetroColorStyle.Teal;
-            this.btnPrClear.TabIndex = 73;
-            this.btnPrClear.Text = "Clear";
-            this.btnPrClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPrClear.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnPrClear.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            // 
-            // btnPrSearch
-            // 
-            this.btnPrSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPrSearch.Location = new System.Drawing.Point(1038, 188);
-            this.btnPrSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPrSearch.Name = "btnPrSearch";
-            this.btnPrSearch.Size = new System.Drawing.Size(145, 27);
-            this.btnPrSearch.Style = MetroFramework.MetroColorStyle.Teal;
-            this.btnPrSearch.TabIndex = 72;
-            this.btnPrSearch.Text = "Search ";
-            this.btnPrSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPrSearch.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnPrSearch.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            // 
-            // textPrAmount
-            // 
-            this.textPrAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textPrAmount.BackColor = System.Drawing.Color.White;
-            this.textPrAmount.CustomForeColor = true;
-            this.textPrAmount.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.textPrAmount.ForeColor = System.Drawing.Color.White;
-            this.textPrAmount.Location = new System.Drawing.Point(801, 335);
-            this.textPrAmount.Margin = new System.Windows.Forms.Padding(2);
-            this.textPrAmount.Name = "textPrAmount";
-            this.textPrAmount.Size = new System.Drawing.Size(152, 23);
-            this.textPrAmount.TabIndex = 70;
-            this.textPrAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textPrAmount.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // textPrDeducation
-            // 
-            this.textPrDeducation.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textPrDeducation.BackColor = System.Drawing.Color.White;
-            this.textPrDeducation.CustomForeColor = true;
-            this.textPrDeducation.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.textPrDeducation.ForeColor = System.Drawing.Color.White;
-            this.textPrDeducation.Location = new System.Drawing.Point(801, 283);
-            this.textPrDeducation.Margin = new System.Windows.Forms.Padding(2);
-            this.textPrDeducation.Name = "textPrDeducation";
-            this.textPrDeducation.Size = new System.Drawing.Size(152, 23);
-            this.textPrDeducation.TabIndex = 69;
-            this.textPrDeducation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textPrDeducation.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // textPrTotExHrWrk
-            // 
-            this.textPrTotExHrWrk.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textPrTotExHrWrk.BackColor = System.Drawing.Color.White;
-            this.textPrTotExHrWrk.CustomForeColor = true;
-            this.textPrTotExHrWrk.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.textPrTotExHrWrk.ForeColor = System.Drawing.Color.White;
-            this.textPrTotExHrWrk.Location = new System.Drawing.Point(801, 230);
-            this.textPrTotExHrWrk.Margin = new System.Windows.Forms.Padding(2);
-            this.textPrTotExHrWrk.Name = "textPrTotExHrWrk";
-            this.textPrTotExHrWrk.Size = new System.Drawing.Size(152, 23);
-            this.textPrTotExHrWrk.TabIndex = 68;
-            this.textPrTotExHrWrk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textPrTotExHrWrk.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // textPrTotHrWrk
-            // 
-            this.textPrTotHrWrk.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textPrTotHrWrk.BackColor = System.Drawing.Color.White;
-            this.textPrTotHrWrk.CustomForeColor = true;
-            this.textPrTotHrWrk.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.textPrTotHrWrk.ForeColor = System.Drawing.Color.White;
-            this.textPrTotHrWrk.Location = new System.Drawing.Point(801, 175);
-            this.textPrTotHrWrk.Margin = new System.Windows.Forms.Padding(2);
-            this.textPrTotHrWrk.Name = "textPrTotHrWrk";
-            this.textPrTotHrWrk.Size = new System.Drawing.Size(152, 23);
-            this.textPrTotHrWrk.TabIndex = 67;
-            this.textPrTotHrWrk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textPrTotHrWrk.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // textPrRate
-            // 
-            this.textPrRate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textPrRate.BackColor = System.Drawing.Color.White;
-            this.textPrRate.CustomForeColor = true;
-            this.textPrRate.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.textPrRate.ForeColor = System.Drawing.Color.White;
-            this.textPrRate.Location = new System.Drawing.Point(295, 335);
-            this.textPrRate.Margin = new System.Windows.Forms.Padding(2);
-            this.textPrRate.Name = "textPrRate";
-            this.textPrRate.Size = new System.Drawing.Size(152, 23);
-            this.textPrRate.TabIndex = 66;
-            this.textPrRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textPrRate.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // textPrCalTo
-            // 
-            this.textPrCalTo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textPrCalTo.BackColor = System.Drawing.Color.White;
-            this.textPrCalTo.CustomForeColor = true;
-            this.textPrCalTo.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.textPrCalTo.ForeColor = System.Drawing.Color.White;
-            this.textPrCalTo.Location = new System.Drawing.Point(295, 283);
-            this.textPrCalTo.Margin = new System.Windows.Forms.Padding(2);
-            this.textPrCalTo.Name = "textPrCalTo";
-            this.textPrCalTo.Size = new System.Drawing.Size(152, 23);
-            this.textPrCalTo.TabIndex = 71;
-            this.textPrCalTo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textPrCalTo.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // textPrCalFrm
-            // 
-            this.textPrCalFrm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textPrCalFrm.BackColor = System.Drawing.Color.White;
-            this.textPrCalFrm.CustomForeColor = true;
-            this.textPrCalFrm.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.textPrCalFrm.ForeColor = System.Drawing.Color.White;
-            this.textPrCalFrm.Location = new System.Drawing.Point(295, 230);
-            this.textPrCalFrm.Margin = new System.Windows.Forms.Padding(2);
-            this.textPrCalFrm.Name = "textPrCalFrm";
-            this.textPrCalFrm.Size = new System.Drawing.Size(152, 23);
-            this.textPrCalFrm.TabIndex = 65;
-            this.textPrCalFrm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textPrCalFrm.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // textPrEid
-            // 
-            this.textPrEid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textPrEid.BackColor = System.Drawing.Color.White;
-            this.textPrEid.CustomForeColor = true;
-            this.textPrEid.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.textPrEid.ForeColor = System.Drawing.Color.White;
-            this.textPrEid.Location = new System.Drawing.Point(295, 177);
-            this.textPrEid.Margin = new System.Windows.Forms.Padding(2);
-            this.textPrEid.Name = "textPrEid";
-            this.textPrEid.Size = new System.Drawing.Size(152, 23);
-            this.textPrEid.TabIndex = 64;
-            this.textPrEid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textPrEid.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel40
-            // 
-            this.metroLabel40.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel40.AutoSize = true;
-            this.metroLabel40.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel40.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel40.Location = new System.Drawing.Point(59, 281);
-            this.metroLabel40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel40.Name = "metroLabel40";
-            this.metroLabel40.Size = new System.Drawing.Size(116, 25);
-            this.metroLabel40.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel40.TabIndex = 62;
-            this.metroLabel40.Text = "Calculated To";
-            this.metroLabel40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroLabel40.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel41
-            // 
-            this.metroLabel41.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel41.AutoSize = true;
-            this.metroLabel41.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel41.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel41.Location = new System.Drawing.Point(550, 335);
-            this.metroLabel41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel41.Name = "metroLabel41";
-            this.metroLabel41.Size = new System.Drawing.Size(77, 25);
-            this.metroLabel41.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel41.TabIndex = 61;
-            this.metroLabel41.Text = "Amount";
-            this.metroLabel41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroLabel41.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel42
-            // 
-            this.metroLabel42.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel42.AutoSize = true;
-            this.metroLabel42.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel42.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel42.Location = new System.Drawing.Point(550, 283);
-            this.metroLabel42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel42.Name = "metroLabel42";
-            this.metroLabel42.Size = new System.Drawing.Size(94, 25);
-            this.metroLabel42.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel42.TabIndex = 60;
-            this.metroLabel42.Text = "Deduction";
-            this.metroLabel42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroLabel42.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel43
-            // 
-            this.metroLabel43.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel43.AutoSize = true;
-            this.metroLabel43.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel43.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel43.Location = new System.Drawing.Point(550, 228);
-            this.metroLabel43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel43.Name = "metroLabel43";
-            this.metroLabel43.Size = new System.Drawing.Size(206, 25);
-            this.metroLabel43.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel43.TabIndex = 59;
-            this.metroLabel43.Text = "Total Exra Hours Worked";
-            this.metroLabel43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroLabel43.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel44
-            // 
-            this.metroLabel44.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel44.AutoSize = true;
-            this.metroLabel44.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel44.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel44.Location = new System.Drawing.Point(550, 175);
-            this.metroLabel44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel44.Name = "metroLabel44";
-            this.metroLabel44.Size = new System.Drawing.Size(169, 25);
-            this.metroLabel44.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel44.TabIndex = 58;
-            this.metroLabel44.Text = "Total Hours Worked";
-            this.metroLabel44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroLabel44.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel45
-            // 
-            this.metroLabel45.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel45.AutoSize = true;
-            this.metroLabel45.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel45.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel45.Location = new System.Drawing.Point(59, 333);
-            this.metroLabel45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel45.Name = "metroLabel45";
-            this.metroLabel45.Size = new System.Drawing.Size(47, 25);
-            this.metroLabel45.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel45.TabIndex = 57;
-            this.metroLabel45.Text = "Rate";
-            this.metroLabel45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroLabel45.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel46
-            // 
-            this.metroLabel46.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel46.AutoSize = true;
-            this.metroLabel46.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel46.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel46.Location = new System.Drawing.Point(56, 230);
-            this.metroLabel46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel46.Name = "metroLabel46";
-            this.metroLabel46.Size = new System.Drawing.Size(150, 25);
-            this.metroLabel46.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel46.TabIndex = 63;
-            this.metroLabel46.Text = "Chalculated From";
-            this.metroLabel46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroLabel46.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel47
-            // 
-            this.metroLabel47.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel47.AutoSize = true;
-            this.metroLabel47.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel47.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel47.Location = new System.Drawing.Point(56, 190);
-            this.metroLabel47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroLabel47.Name = "metroLabel47";
-            this.metroLabel47.Size = new System.Drawing.Size(119, 25);
-            this.metroLabel47.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroLabel47.TabIndex = 56;
-            this.metroLabel47.Text = "Employees Id";
-            this.metroLabel47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroLabel47.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.openFileDialogEmp.FileName = "openFileDialog1";
             // 
             // Emplyee
             // 

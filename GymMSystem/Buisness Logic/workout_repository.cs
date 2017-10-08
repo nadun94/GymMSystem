@@ -82,6 +82,9 @@ namespace GymMSystem.Buisness_Logic
                 
                 throw;
             }
+
+            if (temp == true) return true;
+            else return false;
         }
 
         public bool searchWorkouts(Buisness_Logic.workout wrk)
